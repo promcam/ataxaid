@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>AtaxAId</title>
+    
+    <!-- Estilos de Bootstrap y DataTables -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.css">
+
+    <!-- Scripts de jQuery -->
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <style>
+        span.disease, span.chemical {
+            padding: 5px; /* Espaciado alrededor del texto para mejor visualización */
+            border-radius: 3px; /* Bordes redondeados */
+            cursor:pointer;
+        }
+        span.disease {
+            background-color: #98FB98; /* Color verde pastel */
+        }
+        span.chemical {
+            background-color: #f881fa; /* Color verde pastel */
+        }
+        span.NEGATED {
+            border-bottom:4px solid #F00;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1 class="mb-4">AtaxAId</h1>
+    <p class="font-weight-bold">
+        {%for i in range(0, num_subrayados_lista)%} 
+            {% if subrayado_lista[i][1]==None %}
+            {{subrayado_lista[i][0]}}
+            {%else%}
+            <span title="{{subrayado_lista[i][1]}}" class="{{subrayado_lista[i][2]}} {{subrayado_lista[i][3]}}">{{subrayado_lista[i][0]}}</span></td>
+            {%endif%}
+        {%endfor%}
+    </p>
+    <h2 class="mb-3">Listado de términos encontrados:</h2>
+    
+    <table class="table table-striped" id="miTabla">
+        <thead class="thead-dark">
+            <tr>
+                <th>Término encontrado</th>
+                <th>Término HPO</th>
+                <th>Código HPO</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for i in range(0, num_listado)%}
+            <tr>
+                <td>{{listado[i][0]}}</td>
+                <td>{{listado[i][1]}}</td>
+                {% if listado[i][2] == "--NO MATCH--" %}
+                <td>{{listado[i][2]}}</td>
+                {%else%}
+                <td><a href="https://hpo.jax.org/app/browse/term/{{listado[i][2]}}" target="_blank">{{listado[i][2]}}</a></td>
+                {%endif%}
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+    <button type="submit" class="btn btn-primary mb-3" id="exportar">Exportar</button>
+    <h2 class="mb-3">Posibles diagnósticos jerarquizados:</h2>
+    <p>Tabla</p>
+    <button type="submit" class="btn btn-success mb-3">Descargar</button>
+    <p><a href="/" class="btn btn-outline-dark">INICIO</a></p>
+</div>
+
+<!-- Scripts de Bootstrap, Popper.js y DataTables -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+<script>
+$(document).ready( function () {
+    var table = $('#miTabla').DataTable();
+
+    $('#exportar').click(function() {
+        var uri = 'data:application/csv;charset=UTF-8,' + encodeURIComponent(table.data().toArray().map(row => row.join(',')).join('\n'));
+        var downloadLink = document.createElement('a');
+        downloadLink.href = uri;
+        downloadLink.download = 'data.csv';
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+    });
+} );
+</script>
+
+    
+
+</body>
+</html>

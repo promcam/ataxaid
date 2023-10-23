@@ -15,7 +15,7 @@ PROJ_DIR = os.path.realpath(os.path.dirname(os.path.dirname(__file__)))
 
 HPOMatch = namedtuple('HPOMatch', ['query', 'HPO', 'matching_HPO_term', 'distance'])
 
-def _remove_contractions(phrase):
+def remove_contractions(phrase):
     phrase = re.sub(r"won\'t", "will not", phrase)
     phrase = re.sub(r"can\'t", "can not", phrase)
     phrase = re.sub(r"n\'t", " not", phrase)
@@ -35,7 +35,7 @@ def extract_entities_from_file(path:str) -> list[Span]:
 nlp_model = None # Global variable to retain between calls and avoid loading the model everytime
 
 def extract_entities(text:str) -> list[Span]:
-    text = _remove_contractions(text)
+    text = remove_contractions(text)
 
     # Load spaCy model
     global nlp_model
