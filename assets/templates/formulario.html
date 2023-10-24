@@ -1,22 +1,45 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- Título de la pestaña -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AtaxAId</title>
+
+    <!-- Estilos de Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
-    <h1>AtaxAId</h1>
-    <form action="/resultados" method="post">
-        <label for="informe_escrito">Introduzca el texto o cargue archivo:</label>
-        <textarea name="informe_escrito">You're being tested. It's OK. A 54 year old man fell from a scaffold without losing consciousness and suffered from headache . Neurological examination revealed right homonymous hemianopsia . Computed tomography CT scan of the brain showed left occipital hyperintensity indicating bleeding . He was discharged after 3 days . Six weeks later he lost appetite and slowly developed gait disturbances hearing deficits and disorientation . Neurological examination revealed bilateral sensorineural hearing and visual deficits meningism without fever bilateral ataxic fingernose and heelshin test ataxic gait negative Rombergs test dementia forgetfulness nonattention apathy but no sensible or motor deficits . CT fig 1A and magnetic resonance imaging MRI fig 1B showed a new right occipital bleeding and latter a rim of haemosiderin indicating superficial central nervous system CNS siderosis fig 1C . Cerebral angiography was regular . Cerebrospinal fluid CSF showed haemosiderophages free haemoglobin 35 mgdl increased erythrocytes 42600l leucocytes 139l normal5 protein 330 mgdl normal 45 lactate 55 mgdl normal20 and decreased glucose 41 mgdl normal 5075 . Routine blood tests were regular complete blood count CBC electrolytes liver and kidney parameters . Pathogens in CSF and vasculitis screening antinuclear antibody ANA antineutrophil cytoplasmic antibody ANCA were negative . Coagulation studies were regular partial thromboplastin time PTT international normalised ratio INR antithrombin AT III protein CS factor VIII activated protein C resistance anticardiolipin antibodies . The patient was treated with antihypertensives corticosteroids vitamins C and E and desferrioxamine . A third cerebral bleeding left parietal caused his death . Autopsy showed subarachnoid haemorrhage brain herniation and metastases of an undifferentiated carcinoma left occipital and right parietooccipital but no primary tumour in the whole body . Superficial CNS siderosis is caused by chronic bleeding into the subarachnoid space . The combination of ataxia hypoacusis and dementia following head trauma has high diagnostic value for superficial CNS siderosis .</textarea>
-        <input type="file" name="informe_cargado" id="informe_cargado">
-        <br>
-        <label for="fichero">Cargue el archivo genético:</label>
-        <input type="file" name="fichero" id="fichero">
-        <br>
-        <button type="submit">Enviar</button>
+
+<div class="container mt-5">
+    <h1 class="mb-4">AtaxAId</h1>
+    <form action="/resultados" method="post" id="ataxaForm" class="bg-light p-4 rounded border">
+        <div class="form-group">
+            <label for="informe_escrito">Introduzca el texto o cargue archivo:</label>
+            <textarea name="informe_escrito" class="form-control" rows="10">A 22 year old man presented with 5 years history of progressive neurological symptoms manifesting as ataxia dysarthria and vertigo . The patient was apparently normal 5 years back when he had an episode of fever for 45 days that got relieved spontaneously and after few days the patient noticed swaying from side to side during work and his gait become ataxic . It was progressive with time and at present the patient is unable to walk without support . After 1 month of ataxia the patient started having a slurred speech . For the last 3 months the patient was having mild vertigo without any associated vomiting . There was no history of altered sensorium motor weakness or sensory loss . There was no history of seizures fever and headache or head injury . On neurological examination the patient was alert friendly cooperative and oriented to time place and person . His speech appeared to scan each syllable . The patient had horizontal nystagmus on both vertical and lateral gaze . There was bilateral fingertonose ataxia and impaired heel knee test . The motor strength and reflexes were normal . He was investigated with a CT head figure 1 and MRI figures 2 and 3.</textarea>
+        </div>
+
+        <div class="form-group">
+            <input type="file" name="informe_cargado" id="informe_cargado" class="form-control-file">
+        </div>
+
+        <div class="form-group">
+            <label for="fichero">Cargue el archivo genético:</label>
+            <input type="file" name="fichero" id="fichero" class="form-control-file">
+        </div>
     </form>
+    <button class="btn btn-primary mt-3" onclick="submitForm()">Enviar</button>
+</div>
+
+<script>
+    function submitForm() {
+        document.getElementById('ataxaForm').submit();
+    }
+</script>
+<!-- Scripts de Bootstrap y jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>
