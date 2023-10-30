@@ -9,9 +9,13 @@ from collections import namedtuple
 from collections.abc import Iterable
 import nltk
 from nltk.stem import PorterStemmer
-
+import pickle
 import os
+import numpy as np
+import googletrans
+
 PROJ_DIR = os.path.realpath(os.path.dirname(os.path.dirname(__file__)))
+DB_PATH = os.path.join(PROJ_DIR, 'assets', 'database.pickle')
 
 HPOMatch = namedtuple('HPOMatch', ['query', 'HPO', 'matching_HPO_term', 'distance'])
 
@@ -34,7 +38,10 @@ def extract_entities_from_file(path:str) -> list[Span]:
 
 nlp_model = None # Global variable to retain between calls and avoid loading the model everytime
 
-def extract_entities(text:str) -> list[Span]:
+def extract_entities(text:str) -> tuple[list[Span], str]: #Also returns the text
+    translator = googletrans.Translator()
+    if translator.detect(text).lang=="es":
+        text = translator.translate(text, dest='en').text
     text = remove_contractions(text)
 
     # Load spaCy model
@@ -45,7 +52,7 @@ def extract_entities(text:str) -> list[Span]:
         nlp_model.add_pipe("negex", config={"ent_types":["DISEASE"]})
 
     spacy_doc = nlp_model(text)
-    return list(spacy_doc.ents)
+    return list(spacy_doc.ents), text
 
 def _get_combinations(token_list:list[Token]) -> list[str]:
     '''
@@ -261,10 +268,33 @@ def get_HPO_matches(entity:Span) -> list[HPOMatch]:
     # TODO - Remove duplicates
     return all_matches
 
+def find_matching_diseases(patient_clinical_HPO:list[str]) -> list[tuple[str, str, float]]:
+    '''
+    Given a list of syntom HPO codes, returns a list of ranked matching diseases with their OMIM code and their matching score
+    '''
+    with open(DB_PATH, 'rb') as f:
+        database = pickle.load(f)
+    symptom_index = database['symptom_index']
+    disease_list = database['disease_list']
+    matrix = database['matrix']
+    total_sum = np.zeros(len(disease_list))
+    for hpo in patient_clinical_HPO:
+        if hpo in symptom_index:
+            total_sum += matrix[symptom_index[hpo]]
+    top_indices = np.argsort(total_sum)[-10:][::-1]  # Indices of top 10 matching diseases
+    result = []
+    for index in top_indices:
+        if total_sum[index] > 0:
+            result.append((disease_list[index][0], disease_list[index][1], total_sum[index]))
+    return result
+       
+
+
+
 if __name__ == '__main__':
     #logging.getLogger().setLevel(logging.INFO)
     #logging.basicConfig(level=logging.INFO, filename=os.path.join(PROJ_DIR, 'logs', 'test-log.txt'),filemode="w")
-    FILE_PATH = './data/informe_ejemplo_en.txt'
+    '''FILE_PATH = './data/informe_ejemplo_en.txt'
     print(f'Extracting entities from {FILE_PATH}...')
     entities = extract_entities_from_file(FILE_PATH)
 
@@ -288,3 +318,6 @@ if __name__ == '__main__':
                 print(f'\t{m.HPO.id} - {m.HPO.name} ({m.query} vs. {m.matching_HPO_term} - dist={m.distance})')
         else:
             print(f'No se han detectado términos HPO para "{entity.text}"')
+    '''
+    print(find_matching_diseases(['HP:0000158','HP:0001344', 'HP:0006380']))
+

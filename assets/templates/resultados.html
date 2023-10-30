@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>AtaxAId</title>
-    
-    <!-- Estilos de Bootstrap y DataTables -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.css">
+{% extends "base.html" %}
 
-    <!-- Scripts de jQuery -->
-    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.css">
     <style>
         span.disease, span.chemical {
             padding: 5px; /* Espaciado alrededor del texto para mejor visualización */
@@ -27,12 +17,29 @@
         span.NEGATED {
             border-bottom:4px solid #F00;
         }
+         /* Estilos adicionales para la leyenda */
+         .leyenda {
+            background-color: #f8f9fa; /* Fondo gris claro */
+            padding: 15px;
+            margin: auto; /* Centrado */
+            width: 80%; /* Menos anchura */
+            text-align: center;
+            font-size: 0.85em; /* Texto más pequeño */
+            border-radius: 5px; /* Bordes redondeados */
+            box-shadow: 0px 0px 10px #ccc; /* Sombra ligera para resaltar */
+        }
+        .leyenda span {
+            width: 30px; /* Ancho fijo para los cuadros de color */
+            height: 15px; /* Altura para los cuadros de color */
+        }
+        .leyenda-item {
+            display: inline-block;
+            margin-right: 20px; /* Espacio entre los elementos de la leyenda */
+        }
     </style>
-</head>
-<body>
+{% endblock %}
 
-<div class="container mt-5">
-    <h1 class="mb-4">AtaxAId</h1>
+{% block content %}
     <p class="font-weight-bold">
         {%for i in range(0, num_subrayados_lista)%} 
             {% if subrayado_lista[i][1]==None %}
@@ -42,6 +49,15 @@
             {%endif%}
         {%endfor%}
     </p>
+    <!-- Leyenda para los colores -->
+    <div class="leyenda mb-3">
+        <div>
+            <div class="leyenda-item"><span class="disease">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Enfermedad</div>
+            <div class="leyenda-item"><span class="chemical">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Químico</div>
+            <div class="leyenda-item"><span class="NEGATED">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Negado</div>
+        </div>
+    </div>
+    
     <h2 class="mb-3">Listado de términos encontrados:</h2>
     
     <table class="table table-striped" id="miTabla">
@@ -67,33 +83,64 @@
         </tbody>
     </table>
     <button type="submit" class="btn btn-primary mb-3" id="exportar">Exportar</button>
-    <h2 class="mb-3">Posibles diagnósticos jerarquizados:</h2>
-    <p>Tabla</p>
-    <button type="submit" class="btn btn-success mb-3">Descargar</button>
-    <p><a href="/" class="btn btn-outline-dark">INICIO</a></p>
-</div>
-
-<!-- Scripts de Bootstrap, Popper.js y DataTables -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
-<script>
-$(document).ready( function () {
-    var table = $('#miTabla').DataTable();
-
-    $('#exportar').click(function() {
-        var uri = 'data:application/csv;charset=UTF-8,' + encodeURIComponent(table.data().toArray().map(row => row.join(',')).join('\n'));
-        var downloadLink = document.createElement('a');
-        downloadLink.href = uri;
-        downloadLink.download = 'data.csv';
-        document.body.appendChild(downloadLink);
-        downloadLink.click();
-        document.body.removeChild(downloadLink);
-    });
-} );
-</script>
-
     
+    <h2 class="mb-3">Posibles diagnósticos jerarquizados:</h2>
+    
+    <table class="table table-striped" id="diseases">
+        <thead class="thead-dark">
+            <tr>
+                <th>Enfermedad</th>
+                <th>Puntuación</th>
+                <th>Info</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for i in range(0, num_diseases)%}
+            <tr>
+                <td>{{disease_hits[i][0]}}</td>
+                <td>{{disease_hits[i][2]}}/{{num_listado}}</td>
+                <td><a target="_blank" href="https://www.omim.org/entry/{{disease_hits[i][1]}}">{{disease_hits[i][1]}}</a></td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+    <button type="submit" class="btn btn-primary mb-3" id="export_diseases">Exportar</button>
+    <p><a href="/" class="btn btn-outline-dark">INICIO</a></p>
+{% endblock %}
 
-</body>
-</html>
+{% block scripts %}
+    <!-- Scripts de Bootstrap, Popper.js y DataTables -->
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+
+    <script>
+    $(document).ready( function () {
+        var table = $('#miTabla').DataTable({
+            "pageLength": 25
+        });
+        var table_diseases = $('#diseases').DataTable({
+            "paging": false,
+            "order": [[1, "desc"]] // Ordena por la segunda columna (índice 1), en orden decreciente
+        });
+
+        $('#exportar').click(function() {
+            var uri = 'data:application/csv;charset=UTF-8,' + encodeURIComponent(table.data().toArray().map(row => row.join(',')).join('\n'));
+            var downloadLink = document.createElement('a');
+            downloadLink.href = uri;
+            downloadLink.download = 'data.csv';
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+        });
+
+        $('#export_diseases').click(function() {
+            var uri = 'data:application/csv;charset=UTF-8,' + encodeURIComponent(table_diseases.data().toArray().map(row => row.join('\t')).join('\n'));
+            var downloadLink = document.createElement('a');
+            downloadLink.href = uri;
+            downloadLink.download = 'data.csv';
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+        });
+    } );
+    </script>
+{% endblock %}

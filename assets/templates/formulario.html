@@ -1,27 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AtaxAId</title>
+{% extends "base.html" %}
 
-    <!-- Estilos de Bootstrap -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
-</head>
-<body>
-
-<div class="container mt-5">
-    <h1 class="mb-4">AtaxAId</h1>
+{% block content %}
     <form action="/resultados" method="post" id="ataxaForm" class="bg-light p-4 rounded border">
         <div class="form-group">
-            <label for="informe_escrito">Introduzca el texto o cargue archivo:</label>
-            <textarea name="informe_escrito" class="form-control" rows="10">A 22 year old man presented with 5 years history of progressive neurological symptoms manifesting as ataxia dysarthria and vertigo . The patient was apparently normal 5 years back when he had an episode of fever for 45 days that got relieved spontaneously and after few days the patient noticed swaying from side to side during work and his gait become ataxic . It was progressive with time and at present the patient is unable to walk without support . After 1 month of ataxia the patient started having a slurred speech . For the last 3 months the patient was having mild vertigo without any associated vomiting . There was no history of altered sensorium motor weakness or sensory loss . There was no history of seizures fever and headache or head injury . On neurological examination the patient was alert friendly cooperative and oriented to time place and person . His speech appeared to scan each syllable . The patient had horizontal nystagmus on both vertical and lateral gaze . There was bilateral fingertonose ataxia and impaired heel knee test . The motor strength and reflexes were normal . He was investigated with a CT head figure 1 and MRI figures 2 and 3.</textarea>
+            <label for="informe_escrito">Introduzca el texto o seleccione ejemplo:</label>
+            <textarea name="informe_escrito" id="informe_escrito" class="form-control" rows="10"></textarea>
         </div>
 
+        <!-- Botón Ejemplo -->
+        <button type="button" class="btn btn-secondary mb-3" onclick="cargarEjemploENa()">Ejemplo ENa</button>
+        <button type="button" class="btn btn-secondary mb-3" onclick="cargarEjemploENb()">Ejemplo ENb</button>
+        <button type="button" class="btn btn-secondary mb-3" onclick="cargarEjemploESa()">Ejemplo ESa</button>
+        <button type="button" class="btn btn-secondary mb-3" onclick="cargarEjemploESb()">Ejemplo ESb</button>
+
+        <!--
         <div class="form-group">
             <input type="file" name="informe_cargado" id="informe_cargado" class="form-control-file">
-        </div>
+        </div>-->
 
         <div class="form-group">
             <label for="fichero">Cargue el archivo genético:</label>
@@ -29,17 +24,37 @@
         </div>
     </form>
     <button class="btn btn-primary mt-3" onclick="submitForm()">Enviar</button>
-</div>
+{% endblock %}
 
-<script>
-    function submitForm() {
-        document.getElementById('ataxaForm').submit();
-    }
-</script>
-<!-- Scripts de Bootstrap y jQuery -->
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Pool de casos -->
+<!-- Informe1: A 54 year old man fell from a scaffold without losing consciousness and suffered from headache. Neurological examination revealed right homonymous hemianopsia. Computed tomography CT scan of the brain showed left occipital hyperintensity, indicating bleeding. He was discharged after 3 days. Six weeks later he lost appetite and slowly developed gait disturbances, hearing deficits and disorientation. Neurological examination revealed bilateral sensorineural hearing and visual deficits, bilateral ataxic fingernose test and heelshin test, ataxic gait, negative Romberg test and meningism without fever. Dementia, forgetfulness, nonattention, apathy but no sensible or motor deficits. Magnetic resonance imaging MRI showed a new right occipital bleeding and latter a rim of haemosiderin indicating superficial central nervous system CNS siderosis. Cerebral angiography was regular. Cerebrospinal fluid CSF showed haemosiderophages free, haemoglobin 35 mgdl, increased erythrocytes 42600l, leucocytes 139l normal, protein 330 mgdl normal, lactate 55 mgdl normal, and decreased glucose 41 mgdl.  Coagulation studies were regular. The patient was treated with antihypertensives corticosteroids vitamins C and E and desferrioxamine . A third cerebral bleeding left parietal caused his death . Autopsy showed subarachnoid haemorrhage, brain herniation and metastases of an undifferentiated carcinoma left occipital and right parietooccipital but no primary tumour in the whole body . Superficial CNS siderosis is caused by chronic bleeding into the subarachnoid space . The combination of ataxia hypoacusis and dementia following head trauma has high diagnostic value for superficial CNS siderosis.-->
+<!-- Informe2: A 22 year old man presented with 5 years history of progressive neurologic deterioration manifesting as dysarthria and vertigo. The patient was apparently normal 5 years back when he had an episode of fever for 45 days that got relieved spontaneously and after few days the patient noticed swaying from side to side during work and started with ataxic gait. It was progressive with time and at present the patient is unable to walk without support. After 1 month of ataxia the patient started having a slurred speech. For the last 3 months the patient was having mild vertigo without any associated vomiting. There was no history of altered sensorium motor weakness or distal sensory impairment. There was no history of seizures fever or headache. On neurological examination the patient was alert friendly cooperative and without symptoms of disorientation to time place and person. Sanning speech in each syllable. The patient had horizontal nystagmus on both vertical and lateral gaze. There was dysmetria. The motor strength and reflexes were normal. -->
+<!-- A 23-year-old male patient presented with an array of neurological and systemic complaints. The patient had noticeably short stature below average and hypogonadism. He reported recurrent episodes of sinusitis and bronchitis. Upon physical examination, several cafe-au-lait spots were observed on his skin. Neurologically, he exhibited reduced deep tendon reflexes, choreoathetosis, dystonia, and myoclonus, alongside a notable tremor in both hands. He also reported occasional seizures and disclosed a history of delayed puberty. Further probing revealed a history of glucose intolerance, and recent diagnostic tests indicated diabetes mellitus. An immunological assessment showed thymus hypoplasia, defective B cell differentiation, and lymphocytopenia, suggesting a compromised immune system. The patient medical history included a recent diagnosis of non-Hodgkin lymphoma, and he reported reduced IgA levels in his latest blood work. Further diagnostic evaluations will be scheduled to confirm the diagnosis and determine an appropriate treatment plan.-->
+<!-- NPC1:  Se evaluó a un paciente masculino de 9 años, quien acudió acompañado de sus padres manifestando síntomas neurológicos preocupantes. Relataron que en el último año, ha bajado el rendimiento escolar, ha tenido un notable retraso en su desarrollo con disartria primero y pérdida del habla. Además, ha mostrado disfagia y episodios ocasionales de ictericia. Durante la exploración física, se pudo apreciar hipotonía, así como signos evidentes de hepatomegalia y esplenomegalia. Además, al evaluar sus reflejos oculares, se detectó apraxia oculomotora y una parálisis vertical de la mirada. -->
+<!-- SPG15: Se evalua a una paciente femenina de 28 años que relata un progresivo debilitamiento muscular, afectando más notoriamente a las extremidades inferiores, así como una notable hiperreflexia en las mismas. Además, manifiesta episodios de incontinencia urinaria y fecal, y una marcada disartria que dificulta su comunicación. Al examen oftalmológico, no presenta nistagmo, pero se evidencian lesiones en la retina y signos de degeneración retinal pigmentaria, lo que le acarrea disminución de la agudeza visual. La paciente remite pérdida de audición desde hace 5 meses. A nivel cognitivo, la paciente muestra signos de deterioro, con pérdida de memoria y de concentración, con cambios de humor repentinos. La exploración física revela dismetria en miembros superiores y síntomas de neuropatía axonal periférica, con temblor de Holmes, clonus inagotable y signo de Babinski bilateral. Durante la evaluación, la paciente presentó movimientos oculares sacádicos anormales. La resonancia magnética indicó una morfología anormal de la sustancia blanca cerebral y una hipoplasia del cuerpo calloso. -->
 
-</body>
-</html>
+{% block scripts %}
+    <script>
+        function submitForm() {
+            document.getElementById('ataxaForm').submit();
+
+        <!-- Botón Ejemplo -->
+        }
+        function cargarEjemploENa() {
+            var textoEjemplo = 'A 22 year old man presented with 5 years history of progressive neurologic deterioration manifesting as dysarthria and vertigo. The patient was apparently normal 5 years back when he had an episode of fever for 45 days that got relieved spontaneously and after few days the patient noticed swaying from side to side during work and started with ataxic gait. It was progressive with time and at present the patient is unable to walk without support. After 1 month of ataxia the patient started having a slurred speech. For the last 3 months the patient was having mild vertigo without any associated vomiting. There was no history of altered sensorium motor weakness or distal sensory impairment. There was no history of seizures fever or headache. On neurological examination the patient was alert friendly cooperative and without symptoms of disorientation to time place and person. Sanning speech in each syllable. The patient had horizontal nystagmus on both vertical and lateral gaze. There was dysmetria. The motor strength and reflexes were normal.';
+            document.getElementById('informe_escrito').value = textoEjemplo;
+        }
+        function cargarEjemploENb() {
+            var textoEjemplo = 'A 23-year-old male patient presented with an array of neurological and systemic complaints. The patient had noticeably short stature below average and hypogonadism. He reported recurrent episodes of sinusitis and bronchitis. Upon physical examination, several cafe-au-lait spots were observed on his skin. Neurologically, he exhibited reduced deep tendon reflexes, choreoathetosis, dystonia, and myoclonus, alongside a notable tremor in both hands. He also reported occasional seizures and disclosed a history of delayed puberty. Further probing revealed a history of glucose intolerance, and recent diagnostic tests indicated diabetes mellitus. An immunological assessment showed thymus hypoplasia, defective B cell differentiation, and lymphocytopenia, suggesting a compromised immune system. The patient medical history included a recent diagnosis of non-Hodgkin lymphoma, and he reported reduced IgA levels in his latest blood work. Further diagnostic evaluations will be scheduled to confirm the diagnosis and determine an appropriate treatment plan.';
+            document.getElementById('informe_escrito').value = textoEjemplo;
+        }
+        function cargarEjemploESa() {
+            var textoEjemplo = 'Se evaluó a un paciente masculino de 9 años, quien acudió acompañado de sus padres manifestando síntomas neurológicos preocupantes. Relataron que en el último año, ha bajado el rendimiento escolar, ha tenido un notable retraso en su desarrollo con disartria primero y pérdida del habla. Además, ha mostrado disfagia y episodios ocasionales de ictericia. Durante la exploración física, se pudo apreciar hipotonía, así como signos evidentes de hepatomegalia y esplenomegalia. Además, al evaluar sus reflejos oculares, se detectó apraxia oculomotora y una parálisis vertical de la mirada.';
+            document.getElementById('informe_escrito').value = textoEjemplo;
+        }
+        function cargarEjemploESb() {
+            var textoEjemplo = 'Se evalua a una paciente femenina de 28 años que relata un progresivo debilitamiento muscular, afectando más notoriamente a las extremidades inferiores, así como una notable hiperreflexia en las mismas. Además, manifiesta episodios de incontinencia urinaria y fecal, y una marcada disartria que dificulta su comunicación. Al examen oftalmológico, no presenta nistagmo, pero se evidencian lesiones en la retina y signos de degeneración retinal pigmentaria, lo que le acarrea disminución de la agudeza visual. La paciente remite pérdida de audición desde hace 5 meses. A nivel cognitivo, la paciente muestra signos de deterioro, con pérdida de memoria y de concentración, con cambios de humor repentinos. La exploración física revela dismetria en miembros superiores y síntomas de neuropatía axonal periférica, con temblor de Holmes, clonus inagotable y signo de Babinski bilateral. Durante la evaluación, la paciente presentó movimientos oculares sacádicos anormales. La resonancia magnética indicó una morfología anormal de la sustancia blanca cerebral y una hipoplasia del cuerpo calloso.';
+            document.getElementById('informe_escrito').value = textoEjemplo;
+        }
+    </script>
+{% endblock %}

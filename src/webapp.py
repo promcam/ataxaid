@@ -2,27 +2,12 @@ from flask import Flask, render_template, request, redirect
 # Import main library
 import os
 import sys
-PROJ_DIR = os.path.realpath(os.path.dirname(os.path.abspath('')))
+PROJ_DIR = os.path.realpath(os.path.abspath(''))
 sys.path.append(os.path.join(PROJ_DIR,'src'))
 import ataxaid
 
-app = Flask(__name__, template_folder='../assets/templates')
+app = Flask(__name__, template_folder='../assets/templates', static_folder=os.path.join(PROJ_DIR, 'static'))
 
-
-@app.route('/gaitas', methods=['GET', 'POST'])
-def gaitas():
-    username = None
-    if 'username' in request.form:
-        username = request.form['username']
-    #print(username)
-
-    pokemons =["Pikachu", "Charizard", "Squirtle", "Jigglypuff", "Bulbasaur", "Gengar", "Charmander", "Mew", "Lugia", "Gyarados"] 
-
-    if username is not None:
-        return render_template('gaitas.html', usuario=username, pokemons=pokemons, num_pokemons=len(pokemons))
-    else:
-        return render_template('formulario.html', usuario=username)
-    
 @app.route('/', methods=['GET'])
 def principal():
     return render_template('formulario.html')
@@ -35,9 +20,7 @@ def resultados():
     if informe is None or informe == '':
         return redirect("/?error=1", code=302)
     
-    informe = ataxaid.remove_contractions(informe)
-
-    entities = ataxaid.extract_entities(informe)
+    entities, informe = ataxaid.extract_entities(informe)
     #entities_str = []
     elementos_informe:list[tuple[str, str, str, str]] = []
     last_printed_char = 0
@@ -55,6 +38,7 @@ def resultados():
     all_matches:list[ataxaid.HPOMatch] = []
     unmatched:list[str] = []
     listado = []
+    patient_hpos = []
     for entity in entities:
         if entity in processed: # Skip entities that have already been processed
             continue
@@ -66,9 +50,12 @@ def resultados():
             #for m in matches:
             m = matches[0]
             listado.append((entity,m.HPO.name,m.HPO.id))
+            patient_hpos.append(m.HPO.id)
         elif entity.label_ == 'DISEASE':
             listado.append((entity, '--NO MATCH--', '--NO MATCH--'))
-    return render_template('resultados.html', subrayado_lista=elementos_informe, num_subrayados_lista=len(elementos_informe), listado=listado, num_listado=len(listado))
+
+    disease_hits = ataxaid.find_matching_diseases(patient_hpos)
+    return render_template('resultados.html', subrayado_lista=elementos_informe, num_subrayados_lista=len(elementos_informe), listado=listado, num_listado=len(listado), disease_hits=disease_hits, num_diseases=len(disease_hits))
 
 if __name__ == "__main__":
     app.run(port=3458)

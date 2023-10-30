@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AtaxAId</title>
+
+    <!-- Estilos de Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@400;700&display=swap');
+
+        h1 {
+            font-family: 'Fira Sans Condensed', sans-serif;
+            font-weight: bolder;
+            color:black;
+            font-size: 40px;
+        }
+        h1 a, h1 a:hover {
+            color: black;
+            text-decoration: none;
+        }
+        h1 span
+        {
+            color: rgb(201, 34, 106);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f0f0f0; /* Color de fondo del pie de página */
+            margin-top: 25px;
+        }
+
+        .footer img {
+            height: 60px;
+            margin: 0 10px; /* Espacio horizontal entre logotipos */
+        }
+    </style>
+    {% block styles %}
+    {% endblock %}
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h1 class="mb-4"><a href="/">Atax<span>AI</span>d</a></h1>
+        {% block content %}
+        <!-- Contenido específico de la página -->
+        {% endblock %}
+        <div class="footer">
+            <img src="{{ url_for('static', filename='images/CITIC_logo.png') }}" alt="CITIC">
+            <img style="height:40px" src="{{ url_for('static', filename='images/UDClogo_cor.png') }}" alt="Universidade da Coruña">
+            <img src="{{ url_for('static', filename='images/LIDIA_logo.png') }}" alt="Grupo LIDIA">
+        </div>
+    </div>
+
+        
+        <!-- Scripts de Bootstrap y jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        {% block scripts %}
+        <!-- Scripts específicos de la página -->
+        {% endblock %}
+    </body>
+</html>
