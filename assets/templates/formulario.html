@@ -8,11 +8,11 @@
         </div>
 
         <!-- Botón Ejemplo -->
-        <button type="button" class="btn btn-secondary mb-3" onclick="cargarEjemploENa()">Ejemplo ENa</button>
-        <button type="button" class="btn btn-secondary mb-3" onclick="cargarEjemploENb()">Ejemplo ENb</button>
         <button type="button" class="btn btn-secondary mb-3" onclick="cargarEjemploESa()">Ejemplo ESa</button>
         <button type="button" class="btn btn-secondary mb-3" onclick="cargarEjemploESb()">Ejemplo ESb</button>
-
+        <button type="button" class="btn btn-secondary mb-3" onclick="cargarEjemploENa()">Ejemplo ENa</button>
+        <button type="button" class="btn btn-secondary mb-3" onclick="cargarEjemploENb()">Ejemplo ENb</button>
+        <!---->
         <!--
         <div class="form-group">
             <input type="file" name="informe_cargado" id="informe_cargado" class="form-control-file">
@@ -40,11 +40,11 @@
 
         <!-- Botón Ejemplo -->
         }
-        function cargarEjemploENa() {
+        function cargarEjemploENb() {
             var textoEjemplo = 'A 22 year old man presented with 5 years history of progressive neurologic deterioration manifesting as dysarthria and vertigo. The patient was apparently normal 5 years back when he had an episode of fever for 45 days that got relieved spontaneously and after few days the patient noticed swaying from side to side during work and started with ataxic gait. It was progressive with time and at present the patient is unable to walk without support. After 1 month of ataxia the patient started having a slurred speech. For the last 3 months the patient was having mild vertigo without any associated vomiting. There was no history of altered sensorium motor weakness or distal sensory impairment. There was no history of seizures fever or headache. On neurological examination the patient was alert friendly cooperative and without symptoms of disorientation to time place and person. Sanning speech in each syllable. The patient had horizontal nystagmus on both vertical and lateral gaze. There was dysmetria. The motor strength and reflexes were normal.';
             document.getElementById('informe_escrito').value = textoEjemplo;
         }
-        function cargarEjemploENb() {
+        function cargarEjemploENa() {
             var textoEjemplo = 'A 23-year-old male patient presented with an array of neurological and systemic complaints. The patient had noticeably short stature below average and hypogonadism. He reported recurrent episodes of sinusitis and bronchitis. Upon physical examination, several cafe-au-lait spots were observed on his skin. Neurologically, he exhibited reduced deep tendon reflexes, choreoathetosis, dystonia, and myoclonus, alongside a notable tremor in both hands. He also reported occasional seizures and disclosed a history of delayed puberty. Further probing revealed a history of glucose intolerance, and recent diagnostic tests indicated diabetes mellitus. An immunological assessment showed thymus hypoplasia, defective B cell differentiation, and lymphocytopenia, suggesting a compromised immune system. The patient medical history included a recent diagnosis of non-Hodgkin lymphoma, and he reported reduced IgA levels in his latest blood work. Further diagnostic evaluations will be scheduled to confirm the diagnosis and determine an appropriate treatment plan.';
             document.getElementById('informe_escrito').value = textoEjemplo;
         }
