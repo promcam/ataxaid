@@ -1,0 +1,7836 @@
+Nombre del archivo: 10_Nosotros_terms.txt
+
+TERMS:
+	ground_truth:
+		2 years before the first...
+		breast carcinoma
+		cerebellar gait ataxia
+		cervical myoclonus
+		dysarthria
+		nausea
+		opsoclonus
+		oscillopsia
+		she has refused mastectomy
+		vomiting
+	model_output:
+		adriamicin
+		breast carcinoma
+		cerebellar gait ataxia
+		ciclophosphamide
+		dysarthria opsoclonus
+		gait ataxia
+		myoclonic
+		myoclonus
+		nausea vomiting
+		opsoclonus
+		opsoclonusmyoclonus syndrome
+		oscillopsia
+	true_positives:
+		breast carcinoma
+		cerebellar gait ataxia
+		opsoclonus
+		oscillopsia
+	true_positives_partial:
+		('gait ataxia', 'cerebellar gait ataxia')
+		('myoclonus', 'cervical myoclonus')
+	false_positives:
+		adriamicin
+		ciclophosphamide
+		dysarthria opsoclonus
+		myoclonic
+		nausea vomiting
+		opsoclonusmyoclonus syndrome
+	false_negatives:
+		2 years before the first...
+		dysarthria
+		nausea
+		she has refused mastectomy
+		vomiting
+
+
+Nombre del archivo: 4_ChatGPT_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000238
+		hp:0001249
+		hp:0001305
+		hp:0001317
+		hp:0001320
+		hp:0002013
+		hp:0002315
+		hp:0002317
+		hp:0003698
+	model_output:
+		hp:0000238
+		hp:0000707
+		hp:0001251
+		hp:0001256
+		hp:0001320
+		hp:0002017
+		hp:0002072
+		hp:0002315
+		hp:0007291
+	true_positives:
+		hp:0000238
+		hp:0001320
+		hp:0002315
+	true_positives_partial:
+	false_positives:
+		hp:0000707
+		hp:0001251
+		hp:0001256
+		hp:0002017
+		hp:0002072
+		hp:0007291
+	false_negatives:
+		hp:0001249
+		hp:0001305
+		hp:0001317
+		hp:0002013
+		hp:0002317
+		hp:0003698
+
+
+Nombre del archivo: 14_ChatGPT_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000238
+		hp:0000651
+		hp:0001251
+		hp:0001342
+		hp:0002060
+	model_output:
+		hp:0000238
+		hp:0000651
+		hp:0001251
+		hp:0100610
+		hp:0100634
+	true_positives:
+		hp:0000238
+		hp:0000651
+		hp:0001251
+	true_positives_partial:
+	false_positives:
+		hp:0100610
+		hp:0100634
+	false_negatives:
+		hp:0001342
+		hp:0002060
+
+
+Nombre del archivo: 13_Doc2HPO_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000819
+		hp:0001026
+		hp:0001260
+		hp:0001336
+		hp:0001350
+		hp:0002015
+		hp:0002070
+		hp:0002174
+		hp:0002317
+		hp:0002345
+		hp:0002406
+	model_output:
+		hp:0001251
+		hp:0001260
+		hp:0001298
+		hp:0001310
+		hp:0001336
+		hp:0001337
+		hp:0002015
+		hp:0002345
+		hp:0009830
+	true_positives:
+		hp:0001260
+		hp:0001336
+		hp:0002015
+		hp:0002345
+	true_positives_partial:
+	false_positives:
+		hp:0001251
+		hp:0001298
+		hp:0001310
+		hp:0001337
+		hp:0009830
+	false_negatives:
+		hp:0000819
+		hp:0001026
+		hp:0001350
+		hp:0002070
+		hp:0002174
+		hp:0002317
+		hp:0002406
+
+
+Nombre del archivo: 13_ataxaid_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000819
+		hp:0001026
+		hp:0001260
+		hp:0001336
+		hp:0001350
+		hp:0002015
+		hp:0002070
+		hp:0002174
+		hp:0002317
+		hp:0002345
+		hp:0002406
+	model_output:
+		hp:0001026
+		hp:0001251
+		hp:0001260
+		hp:0001288
+		hp:0001298
+		hp:0001310
+		hp:0001336
+		hp:0001337
+		hp:0001959
+		hp:0002015
+		hp:0002317
+		hp:0004904
+		hp:0009830
+	true_positives:
+		hp:0001026
+		hp:0001260
+		hp:0001336
+		hp:0002015
+		hp:0002317
+	true_positives_partial:
+	false_positives:
+		hp:0001251
+		hp:0001288
+		hp:0001298
+		hp:0001310
+		hp:0001337
+		hp:0001959
+		hp:0004904
+		hp:0009830
+	false_negatives:
+		hp:0000819
+		hp:0001350
+		hp:0002070
+		hp:0002174
+		hp:0002345
+		hp:0002406
+
+
+Nombre del archivo: 15_PubCaseFinder_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000639
+		hp:0001252
+		hp:0001270
+		hp:0002078
+		hp:0030903
+	model_output:
+		hp:0000639
+		hp:0001263
+		hp:0001290
+		hp:0002078
+	true_positives:
+		hp:0000639
+		hp:0002078
+	true_positives_partial:
+	false_positives:
+		hp:0001263
+		hp:0001290
+	false_negatives:
+		hp:0001252
+		hp:0001270
+		hp:0030903
+
+
+Nombre del archivo: 12_Charlotte2_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0001270
+		hp:0001350
+		hp:0002066
+		hp:0002078
+		hp:0002168
+		hp:0002342
+		hp:0012418
+		hp:5200012
+	model_output:
+		hp:0001270
+		hp:0001350
+		hp:0002066
+		hp:0002078
+		hp:0002168
+		hp:0002342
+		hp:5200012
+	true_positives:
+		hp:0001270
+		hp:0001350
+		hp:0002066
+		hp:0002078
+		hp:0002168
+		hp:0002342
+		hp:5200012
+	true_positives_partial:
+	false_positives:
+	false_negatives:
+		hp:0012418
+
+
+Nombre del archivo: 1_Charlotte2_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000365
+		hp:0000505
+		hp:0000726
+		hp:0000736
+		hp:0000741
+		hp:0001288
+		hp:0001289
+		hp:0001342
+		hp:0002066
+		hp:0002070
+		hp:0002138
+		hp:0002315
+		hp:0002354
+		hp:0002403
+		hp:0004396
+		hp:0008619
+		hp:0030516
+		hp:0030731
+		hp:0031179
+	model_output:
+		hp:0000365
+		hp:0000505
+		hp:0000726
+		hp:0000741
+		hp:0001289
+		hp:0001310
+		hp:0002066
+		hp:0002315
+		hp:0002354
+		hp:0002403
+		hp:0004396
+		hp:0008619
+		hp:0030516
+		hp:0031179
+		hp:0033360
+	true_positives:
+		hp:0000365
+		hp:0000505
+		hp:0000726
+		hp:0000741
+		hp:0001289
+		hp:0002066
+		hp:0002315
+		hp:0002354
+		hp:0002403
+		hp:0004396
+		hp:0008619
+		hp:0030516
+		hp:0031179
+	true_positives_partial:
+	false_positives:
+		hp:0001310
+		hp:0033360
+	false_negatives:
+		hp:0000736
+		hp:0001288
+		hp:0001342
+		hp:0002070
+		hp:0002138
+		hp:0030731
+
+
+Nombre del archivo: 2_Charlotte2_terms.txt
+
+TERMS:
+	ground_truth:
+		alert
+		altered sensorium
+		ataxia
+		bilateral fingertonose ataxia
+		deep tendon reflexes
+		dysarthria
+		fever
+		head injury
+		headache
+		his speech apeared to scan each syllable
+		horizontal nystagmus
+		impaired heel knee test
+		motor strength
+		oriented
+		reflexes were normal
+		seizures
+		sensory loss
+		vertigo
+	model_output:
+		5 years history
+		ataxia
+		bilateral fingertonose ataxia
+		dysarthria
+		episode of fever for 45 days
+		horizontal nystagmus on both vertical and lateral gaze
+		impaired heel knee test
+		progressive
+		relieved spontaneously
+		vertigo
+	true_positives:
+		ataxia
+		bilateral fingertonose ataxia
+		dysarthria
+		impaired heel knee test
+		vertigo
+	true_positives_partial:
+	false_positives:
+		5 years history
+		episode of fever for 45 days
+		horizontal nystagmus on both vertical and lateral gaze
+		progressive
+		relieved spontaneously
+	false_negatives:
+		alert
+		altered sensorium
+		deep tendon reflexes
+		fever
+		head injury
+		headache
+		his speech apeared to scan each syllable
+		horizontal nystagmus
+		motor strength
+		oriented
+		reflexes were normal
+		seizures
+		sensory loss
+
+
+Nombre del archivo: 12_ataxaid_terms.txt
+
+TERMS:
+	ground_truth:
+		he walk independently onlu from the age of three
+		independent for activities of daily living
+		mild perinatal hypoxic injury
+		mini mental status examination score 25/30
+		moderate mental retardation
+		motor milestones were acquired late
+		nonprogressive gait ataxia
+		scanning
+		slurred
+		staccato speech
+		truncal ataxia
+	model_output:
+		gait ataxia
+		hypotonia
+		hypoxic injury
+		slurred
+		truncal ataxia
+	true_positives:
+		slurred
+		truncal ataxia
+	true_positives_partial:
+		('gait ataxia', 'nonprogressive gait ataxia')
+		('hypoxic injury', 'mild perinatal hypoxic injury')
+	false_positives:
+		hypotonia
+	false_negatives:
+		he walk independently onlu from the age of three
+		independent for activities of daily living
+		mini mental status examination score 25/30
+		moderate mental retardation
+		motor milestones were acquired late
+		scanning
+		staccato speech
+
+
+Nombre del archivo: 1_Nosotros_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000365
+		hp:0000505
+		hp:0000726
+		hp:0000736
+		hp:0000741
+		hp:0001288
+		hp:0001289
+		hp:0001342
+		hp:0002066
+		hp:0002070
+		hp:0002138
+		hp:0002315
+		hp:0002354
+		hp:0002403
+		hp:0004396
+		hp:0008619
+		hp:0030516
+		hp:0030731
+		hp:0031179
+	model_output:
+		hp:0000365
+		hp:0000407
+		hp:0000726
+		hp:0000741
+		hp:0001251
+		hp:0001288
+		hp:0001289
+		hp:0001945
+		hp:0002138
+		hp:0002315
+		hp:0002354
+		hp:0002633
+		hp:0002664
+		hp:0004302
+		hp:0008441
+		hp:0030516
+		hp:0030731
+		hp:0031179
+		hp:0100543
+		hp:0100608
+		hp:0100758
+		hp:0500260
+	true_positives:
+		hp:0000365
+		hp:0000726
+		hp:0000741
+		hp:0001288
+		hp:0001289
+		hp:0002138
+		hp:0002315
+		hp:0002354
+		hp:0030516
+		hp:0030731
+		hp:0031179
+	true_positives_partial:
+	false_positives:
+		hp:0000407
+		hp:0001251
+		hp:0001945
+		hp:0002633
+		hp:0002664
+		hp:0004302
+		hp:0008441
+		hp:0100543
+		hp:0100608
+		hp:0100758
+		hp:0500260
+	false_negatives:
+		hp:0000505
+		hp:0000736
+		hp:0001342
+		hp:0002066
+		hp:0002070
+		hp:0002403
+		hp:0004396
+		hp:0008619
+
+
+Nombre del archivo: 7_Charlotte2_terms.txt
+
+TERMS:
+	ground_truth:
+		abnormal gait
+		ataxia of stance and gait
+		generalised myoclonic jerks
+		jerky limb movements
+		opsoclonus
+	model_output:
+		ataxia of gait
+		ataxia of stance
+		few days history
+		generalised myoclonic jerks
+		opsoclonus
+	true_positives:
+		generalised myoclonic jerks
+		opsoclonus
+	true_positives_partial:
+		('ataxia of stance', 'ataxia of stance and gait')
+	false_positives:
+		ataxia of gait
+		few days history
+	false_negatives:
+		abnormal gait
+		jerky limb movements
+
+
+Nombre del archivo: 15_Nosotros_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000639
+		hp:0001252
+		hp:0001270
+		hp:0002078
+		hp:0030903
+	model_output:
+		hp:0000639
+		hp:0001252
+		hp:0002078
+		hp:0030903
+	true_positives:
+		hp:0000639
+		hp:0001252
+		hp:0002078
+		hp:0030903
+	true_positives_partial:
+	false_positives:
+	false_negatives:
+		hp:0001270
+
+
+Nombre del archivo: 15_ClinPhen_terms.txt
+
+TERMS:
+	ground_truth:
+		delayed milestones
+		developemental delay
+		hypotonia
+		not able to pull to sit or stand
+		nystagmus
+		premature grasp
+		second degree consanguineous
+		swaying from side to side when pulled to sit
+		tremulousness
+		truncal ataxia
+	model_output:
+	true_positives:
+	true_positives_partial:
+	false_positives:
+	false_negatives:
+		delayed milestones
+		developemental delay
+		hypotonia
+		not able to pull to sit or stand
+		nystagmus
+		premature grasp
+		second degree consanguineous
+		swaying from side to side when pulled to sit
+		tremulousness
+		truncal ataxia
+
+
+Nombre del archivo: 6_ClinPhen_terms.txt
+
+TERMS:
+	ground_truth:
+		both planter reflexes were flexors
+		conjunctival telangiectasias
+		patients eyes were red and....this is a chronic allergy
+		recurrent upper respiratory tract infections
+		the girl sways back and forth and side by side when she stands and walks
+		vitiligo
+	model_output:
+	true_positives:
+	true_positives_partial:
+	false_positives:
+	false_negatives:
+		both planter reflexes were flexors
+		conjunctival telangiectasias
+		patients eyes were red and....this is a chronic allergy
+		recurrent upper respiratory tract infections
+		the girl sways back and forth and side by side when she stands and walks
+		vitiligo
+
+
+Nombre del archivo: 8_Charlotte2_terms.txt
+
+TERMS:
+	ground_truth:
+		(leftsided) miosis
+		1 year history of ataxia
+		bilateral limb ataxia
+		he lost balance
+		hiccough
+		hypertension for 10 years
+		leaned to the left side while standing
+		leftsided ptosis
+		leftsided vertebral artery dolichoectasia
+		rightsided hypaesthesia
+	model_output:
+		1 year history of ataxia
+		bilateral limb ataxia
+		contralateral hypaesthesia
+		ipsilateral horners symptom
+		leaned to the left side while standing when putting his feet together
+		leftsided miosis
+		leftsided ptosis
+		limb and truncal ataxia more prominent ipsilaterally
+		more prominent on the left side
+		recently developed hiccough
+		rightsided hypaesthesia
+	true_positives:
+		1 year history of ataxia
+		bilateral limb ataxia
+		leftsided ptosis
+		rightsided hypaesthesia
+	true_positives_partial:
+	false_positives:
+		contralateral hypaesthesia
+		ipsilateral horners symptom
+		leaned to the left side while standing when putting his feet together
+		leftsided miosis
+		limb and truncal ataxia more prominent ipsilaterally
+		more prominent on the left side
+		recently developed hiccough
+	false_negatives:
+		(leftsided) miosis
+		he lost balance
+		hiccough
+		hypertension for 10 years
+		leaned to the left side while standing
+		leftsided vertebral artery dolichoectasia
+
+
+Nombre del archivo: 4_PubCaseFinder_terms.txt
+
+TERMS:
+	ground_truth:
+		cerebellar incoordination
+		dandywalker complex
+		headache
+		hydrocephalus
+		mild mental subnormality
+		progressive instability of stance and gait since the age of 2 years
+		vermis is hypoplastic
+		vomiting
+	model_output:
+		acrania
+		cerebral palsy
+		headache
+		headaches
+		hydrocephalus
+		incoordination
+		mega cisterna magna
+		pica
+		posterior fossa cyst
+		vomiting
+	true_positives:
+		headache
+		hydrocephalus
+		vomiting
+	true_positives_partial:
+		('incoordination', 'cerebellar incoordination')
+	false_positives:
+		acrania
+		cerebral palsy
+		headaches
+		mega cisterna magna
+		pica
+		posterior fossa cyst
+	false_negatives:
+		dandywalker complex
+		mild mental subnormality
+		progressive instability of stance and gait since the age of 2 years
+		vermis is hypoplastic
+
+
+Nombre del archivo: 14_Charlotte1_terms.txt
+
+TERMS:
+	ground_truth:
+		diplopia
+		haemorrhage in midbrain
+		hydrocephalus
+		lobulated lesion
+		worsening ataxia
+	model_output:
+		4week history
+		diplopia
+		worsening ataxia
+	true_positives:
+		diplopia
+		worsening ataxia
+	true_positives_partial:
+	false_positives:
+		4week history
+	false_negatives:
+		haemorrhage in midbrain
+		hydrocephalus
+		lobulated lesion
+
+
+Nombre del archivo: 6_PubCaseFinder_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000524
+		hp:0001045
+		hp:0002317
+		hp:0002788
+		hp:0003487
+		hp:0003698
+		hp:0007717
+		hp:0025337
+	model_output:
+		hp:0000509
+		hp:0000524
+		hp:0000777
+		hp:0001009
+		hp:0001045
+		hp:0001251
+		hp:0002665
+		hp:0002788
+		hp:0002972
+		hp:0012393
+		hp:0025337
+		hp:0100021
+	true_positives:
+		hp:0000524
+		hp:0001045
+		hp:0002788
+		hp:0025337
+	true_positives_partial:
+	false_positives:
+		hp:0000509
+		hp:0000777
+		hp:0001009
+		hp:0001251
+		hp:0002665
+		hp:0002972
+		hp:0012393
+		hp:0100021
+	false_negatives:
+		hp:0002317
+		hp:0003487
+		hp:0003698
+		hp:0007717
+
+
+Nombre del archivo: 4_Charlotte1_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000238
+		hp:0001249
+		hp:0001305
+		hp:0001317
+		hp:0001320
+		hp:0002013
+		hp:0002315
+		hp:0002317
+		hp:0003698
+	model_output:
+		hp:0001251
+		hp:0001256
+		hp:0001272
+		hp:0001288
+		hp:0002013
+		hp:0002315
+	true_positives:
+		hp:0002013
+		hp:0002315
+	true_positives_partial:
+	false_positives:
+		hp:0001251
+		hp:0001256
+		hp:0001272
+		hp:0001288
+	false_negatives:
+		hp:0000238
+		hp:0001249
+		hp:0001305
+		hp:0001317
+		hp:0001320
+		hp:0002317
+		hp:0003698
+
+
+Nombre del archivo: 12_Doc2HPO_terms.txt
+
+TERMS:
+	ground_truth:
+		he walk independently onlu from the age of three
+		independent for activities of daily living
+		mild perinatal hypoxic injury
+		mini mental status examination score 25/30
+		moderate mental retardation
+		motor milestones were acquired late
+		nonprogressive gait ataxia
+		scanning
+		slurred
+		staccato speech
+		truncal ataxia
+	model_output:
+		hypotonia
+		moderate mental retardation
+		truncal ataxia
+	true_positives:
+		moderate mental retardation
+		truncal ataxia
+	true_positives_partial:
+	false_positives:
+		hypotonia
+	false_negatives:
+		he walk independently onlu from the age of three
+		independent for activities of daily living
+		mild perinatal hypoxic injury
+		mini mental status examination score 25/30
+		motor milestones were acquired late
+		nonprogressive gait ataxia
+		scanning
+		slurred
+		staccato speech
+
+
+Nombre del archivo: 1_ChatGPT_terms.txt
+
+TERMS:
+	ground_truth:
+		apathy
+		ataxic fingernose and heelshin test negative
+		ataxic gait
+		bilateral sensorineural hearing and visual deficits
+		brain hernation
+		cerebral bleeding
+		dementia
+		disorientation
+		fell without losing consciousness
+		forgetfulness
+		gait disturbance
+		headache
+		hearing deficits
+		lost appetite
+		meningism
+		metastases
+		negative rombergs test
+		nonattention
+		right homonymous hemianopsia
+		right occipital bleeding
+		siderosis
+		subarachnoid haemorrhage
+		undifferentiated carcinoma
+		visual deficits
+	model_output:
+		apathy
+		ataxia
+		bleeding in the brain
+		brain herniation
+		cerebral angiography
+		dementia
+		disorientation
+		forgetfulness
+		gait disturbances
+		headache
+		hearing deficits
+		meningism
+		metastases of an undifferentiated carcinoma
+		nonattention
+		right homonymous hemianopsia
+		subarachnoid hemorrhage
+		superficial cns siderosis
+	true_positives:
+		apathy
+		dementia
+		disorientation
+		forgetfulness
+		headache
+		hearing deficits
+		meningism
+		nonattention
+		right homonymous hemianopsia
+	true_positives_partial:
+	false_positives:
+		ataxia
+		bleeding in the brain
+		brain herniation
+		cerebral angiography
+		gait disturbances
+		metastases of an undifferentiated carcinoma
+		subarachnoid hemorrhage
+		superficial cns siderosis
+	false_negatives:
+		ataxic fingernose and heelshin test negative
+		ataxic gait
+		bilateral sensorineural hearing and visual deficits
+		brain hernation
+		cerebral bleeding
+		fell without losing consciousness
+		gait disturbance
+		lost appetite
+		metastases
+		negative rombergs test
+		right occipital bleeding
+		siderosis
+		subarachnoid haemorrhage
+		undifferentiated carcinoma
+		visual deficits
+
+
+Nombre del archivo: 14_Charlotte1_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000238
+		hp:0000651
+		hp:0001251
+		hp:0001342
+		hp:0002060
+	model_output:
+		hp:0000651
+	true_positives:
+		hp:0000651
+	true_positives_partial:
+	false_positives:
+	false_negatives:
+		hp:0000238
+		hp:0001251
+		hp:0001342
+		hp:0002060
+
+
+Nombre del archivo: 7_Charlotte1_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000733
+		hp:0001288
+		hp:0001336
+		hp:0002066
+		hp:0003698
+		hp:0010543
+	model_output:
+		hp:0000553
+		hp:0001251
+		hp:0002123
+	true_positives:
+	true_positives_partial:
+	false_positives:
+		hp:0000553
+		hp:0001251
+		hp:0002123
+	false_negatives:
+		hp:0000733
+		hp:0001288
+		hp:0001336
+		hp:0002066
+		hp:0003698
+		hp:0010543
+
+
+Nombre del archivo: 12_Charlotte2_terms.txt
+
+TERMS:
+	ground_truth:
+		he walk independently onlu from the age of three
+		independent for activities of daily living
+		mild perinatal hypoxic injury
+		mini mental status examination score 25/30
+		moderate mental retardation
+		motor milestones were acquired late
+		nonprogressive gait ataxia
+		scanning
+		slurred
+		staccato speech
+		truncal ataxia
+	model_output:
+		hypotonia
+		moderate mental retardation
+		motor milestones were acquired late
+		nonprogressive gait ataxia
+		since childhood
+		slurred scanning
+		staccato speech
+		truncal ataxia
+	true_positives:
+		moderate mental retardation
+		motor milestones were acquired late
+		nonprogressive gait ataxia
+		staccato speech
+		truncal ataxia
+	true_positives_partial:
+	false_positives:
+		hypotonia
+		since childhood
+		slurred scanning
+	false_negatives:
+		he walk independently onlu from the age of three
+		independent for activities of daily living
+		mild perinatal hypoxic injury
+		mini mental status examination score 25/30
+		scanning
+		slurred
+
+
+Nombre del archivo: 13_ataxaid_terms.txt
+
+TERMS:
+	ground_truth:
+		action tremor
+		appendicular dysmetria
+		diabetic
+		dysarthria
+		foot ulcers
+		gait unsteadiness
+		generalised postural tremor
+		hyperintensity of dentate nuclei
+		mild dysphagia over 2 months
+		progressive slurring of speech
+		severe axial ataxia
+		spontaneous myoclonus of lower face
+	model_output:
+		appendicular dysmetria
+		ataxia
+		axial ataxia
+		chronic foot ulcers
+		diabetic
+		dysarthria
+		dysphagia
+		encephalopathy
+		myoclonus
+		peripheral neuropathy
+		slurring of speech gait unsteadiness
+		tremor
+		upper extremities
+		visual disturbances
+	true_positives:
+		appendicular dysmetria
+		diabetic
+		dysarthria
+	true_positives_partial:
+		('ataxia', 'severe axial ataxia')
+		('axial ataxia', 'severe axial ataxia')
+		('dysphagia', 'mild dysphagia over 2 months')
+		('myoclonus', 'spontaneous myoclonus of lower face')
+		('tremor', 'generalised postural tremor')
+	false_positives:
+		chronic foot ulcers
+		encephalopathy
+		peripheral neuropathy
+		slurring of speech gait unsteadiness
+		upper extremities
+		visual disturbances
+	false_negatives:
+		action tremor
+		foot ulcers
+		gait unsteadiness
+		hyperintensity of dentate nuclei
+		progressive slurring of speech
+
+
+Nombre del archivo: 15_ClinPhen_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000639
+		hp:0001252
+		hp:0001270
+		hp:0002078
+		hp:0030903
+	model_output:
+		hp:0001251
+		hp:0001263
+		hp:0001290
+		hp:0001319
+		hp:0002078
+		hp:0011398
+	true_positives:
+		hp:0002078
+	true_positives_partial:
+	false_positives:
+		hp:0001251
+		hp:0001263
+		hp:0001290
+		hp:0001319
+		hp:0011398
+	false_negatives:
+		hp:0000639
+		hp:0001252
+		hp:0001270
+		hp:0030903
+
+
+Nombre del archivo: 1_ClinPhen_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000365
+		hp:0000505
+		hp:0000726
+		hp:0000736
+		hp:0000741
+		hp:0001288
+		hp:0001289
+		hp:0001342
+		hp:0002066
+		hp:0002070
+		hp:0002138
+		hp:0002315
+		hp:0002354
+		hp:0002403
+		hp:0004396
+		hp:0008619
+		hp:0030516
+		hp:0030731
+		hp:0031179
+	model_output:
+		hp:0000365
+		hp:0000726
+		hp:0001251
+		hp:0001288
+		hp:0001289
+		hp:0001342
+		hp:0002138
+		hp:0012175
+		hp:0012377
+		hp:0030516
+		hp:0030731
+	true_positives:
+		hp:0000365
+		hp:0000726
+		hp:0001288
+		hp:0001289
+		hp:0001342
+		hp:0002138
+		hp:0030516
+		hp:0030731
+	true_positives_partial:
+	false_positives:
+		hp:0001251
+		hp:0012175
+		hp:0012377
+	false_negatives:
+		hp:0000505
+		hp:0000736
+		hp:0000741
+		hp:0002066
+		hp:0002070
+		hp:0002315
+		hp:0002354
+		hp:0002403
+		hp:0004396
+		hp:0008619
+		hp:0031179
+
+
+Nombre del archivo: 4_ChatGPT_terms.txt
+
+TERMS:
+	ground_truth:
+		cerebellar incoordination
+		dandywalker complex
+		headache
+		hydrocephalus
+		mild mental subnormality
+		progressive instability of stance and gait since the age of 2 years
+		vermis is hypoplastic
+		vomiting
+	model_output:
+		enlarged cisterna magna and vallecula
+		headache
+		hydrocephalus
+		hypoplastic midline vermis
+		mild mental subnormality
+		multiple intracranial and extracranial anomalies
+		progressive instability of stance and gait
+		signs of cerebellar incoordination
+		supratentorial malformations
+		vomiting
+	true_positives:
+		headache
+		hydrocephalus
+		mild mental subnormality
+		vomiting
+	true_positives_partial:
+		('progressive instability of stance and gait', 'progressive instability of stance and gait since the age of 2 years')
+	false_positives:
+		enlarged cisterna magna and vallecula
+		hypoplastic midline vermis
+		multiple intracranial and extracranial anomalies
+		signs of cerebellar incoordination
+		supratentorial malformations
+	false_negatives:
+		cerebellar incoordination
+		dandywalker complex
+		vermis is hypoplastic
+
+
+Nombre del archivo: 1_Charlotte1_terms.txt
+
+TERMS:
+	ground_truth:
+		apathy
+		ataxic fingernose and heelshin test negative
+		ataxic gait
+		bilateral sensorineural hearing and visual deficits
+		brain hernation
+		cerebral bleeding
+		dementia
+		disorientation
+		fell without losing consciousness
+		forgetfulness
+		gait disturbance
+		headache
+		hearing deficits
+		lost appetite
+		meningism
+		metastases
+		negative rombergs test
+		nonattention
+		right homonymous hemianopsia
+		right occipital bleeding
+		siderosis
+		subarachnoid haemorrhage
+		undifferentiated carcinoma
+		visual deficits
+	model_output:
+		apathy
+		ataxic fingernose negative
+		ataxic gait
+		bilateral sensorineural hearing deficits
+		dementia
+		disorientation
+		fell without losing consciousness
+		forgetfulness
+		headache
+		hearing deficits
+		heelshin test negative
+		lost appetite
+		meningism
+		negative rombergs test
+		nonattention
+		right homonymous hemianopsia
+		visual deficits
+	true_positives:
+		apathy
+		ataxic gait
+		dementia
+		disorientation
+		fell without losing consciousness
+		forgetfulness
+		headache
+		hearing deficits
+		lost appetite
+		meningism
+		negative rombergs test
+		nonattention
+		right homonymous hemianopsia
+		visual deficits
+	true_positives_partial:
+		('heelshin test negative', 'ataxic fingernose and heelshin test negative')
+	false_positives:
+		ataxic fingernose negative
+		bilateral sensorineural hearing deficits
+	false_negatives:
+		bilateral sensorineural hearing and visual deficits
+		brain hernation
+		cerebral bleeding
+		gait disturbance
+		metastases
+		right occipital bleeding
+		siderosis
+		subarachnoid haemorrhage
+		undifferentiated carcinoma
+
+
+Nombre del archivo: 4_PubCaseFinder_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000238
+		hp:0001249
+		hp:0001305
+		hp:0001317
+		hp:0001320
+		hp:0002013
+		hp:0002315
+		hp:0002317
+		hp:0003698
+	model_output:
+		hp:0000238
+		hp:0002013
+		hp:0002280
+		hp:0002311
+		hp:0002315
+		hp:0007291
+		hp:0011856
+		hp:0030716
+		hp:0100021
+	true_positives:
+		hp:0000238
+		hp:0002013
+		hp:0002315
+	true_positives_partial:
+	false_positives:
+		hp:0002280
+		hp:0002311
+		hp:0007291
+		hp:0011856
+		hp:0030716
+		hp:0100021
+	false_negatives:
+		hp:0001249
+		hp:0001305
+		hp:0001317
+		hp:0001320
+		hp:0002317
+		hp:0003698
+
+
+Nombre del archivo: 15_PubCaseFinder_terms.txt
+
+TERMS:
+	ground_truth:
+		delayed milestones
+		developemental delay
+		hypotonia
+		not able to pull to sit or stand
+		nystagmus
+		premature grasp
+		second degree consanguineous
+		swaying from side to side when pulled to sit
+		tremulousness
+		truncal ataxia
+	model_output:
+		delayed milestones
+		developmental delay
+		hypotonia
+		nystagmus
+		truncal ataxia
+	true_positives:
+		delayed milestones
+		hypotonia
+		nystagmus
+		truncal ataxia
+	true_positives_partial:
+	false_positives:
+		developmental delay
+	false_negatives:
+		developemental delay
+		not able to pull to sit or stand
+		premature grasp
+		second degree consanguineous
+		swaying from side to side when pulled to sit
+		tremulousness
+
+
+Nombre del archivo: 8_ClinPhen_terms.txt
+
+TERMS:
+	ground_truth:
+		(leftsided) miosis
+		1 year history of ataxia
+		bilateral limb ataxia
+		he lost balance
+		hiccough
+		hypertension for 10 years
+		leaned to the left side while standing
+		leftsided ptosis
+		leftsided vertebral artery dolichoectasia
+		rightsided hypaesthesia
+	model_output:
+	true_positives:
+	true_positives_partial:
+	false_positives:
+	false_negatives:
+		(leftsided) miosis
+		1 year history of ataxia
+		bilateral limb ataxia
+		he lost balance
+		hiccough
+		hypertension for 10 years
+		leaned to the left side while standing
+		leftsided ptosis
+		leftsided vertebral artery dolichoectasia
+		rightsided hypaesthesia
+
+
+Nombre del archivo: 4_Charlotte1_terms.txt
+
+TERMS:
+	ground_truth:
+		cerebellar incoordination
+		dandywalker complex
+		headache
+		hydrocephalus
+		mild mental subnormality
+		progressive instability of stance and gait since the age of 2 years
+		vermis is hypoplastic
+		vomiting
+	model_output:
+		cerebellar dysfunction
+		cerebellar incoordination
+		headache
+		mild mental subnormality
+		occasional vomiting
+		progressive instability of stance and gait since the age of 2 years
+	true_positives:
+		cerebellar incoordination
+		headache
+		mild mental subnormality
+		progressive instability of stance and gait since the age of 2 years
+	true_positives_partial:
+	false_positives:
+		cerebellar dysfunction
+		occasional vomiting
+	false_negatives:
+		dandywalker complex
+		hydrocephalus
+		vermis is hypoplastic
+		vomiting
+
+
+Nombre del archivo: 14_ataxaid_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000238
+		hp:0000651
+		hp:0001251
+		hp:0001342
+		hp:0002060
+	model_output:
+		hp:0000238
+		hp:0000421
+		hp:0000651
+		hp:0001251
+		hp:0002239
+	true_positives:
+		hp:0000238
+		hp:0000651
+		hp:0001251
+	true_positives_partial:
+	false_positives:
+		hp:0000421
+		hp:0002239
+	false_negatives:
+		hp:0001342
+		hp:0002060
+
+
+Nombre del archivo: 4_Doc2HPO_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000238
+		hp:0001249
+		hp:0001305
+		hp:0001317
+		hp:0001320
+		hp:0002013
+		hp:0002315
+		hp:0002317
+		hp:0003698
+	model_output:
+		hp:0000238
+		hp:0002013
+		hp:0002280
+		hp:0002311
+		hp:0002315
+		hp:0100021
+	true_positives:
+		hp:0000238
+		hp:0002013
+		hp:0002315
+	true_positives_partial:
+	false_positives:
+		hp:0002280
+		hp:0002311
+		hp:0100021
+	false_negatives:
+		hp:0001249
+		hp:0001305
+		hp:0001317
+		hp:0001320
+		hp:0002317
+		hp:0003698
+
+
+Nombre del archivo: 4_ataxaid_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000238
+		hp:0001249
+		hp:0001305
+		hp:0001317
+		hp:0001320
+		hp:0002013
+		hp:0002315
+		hp:0002317
+		hp:0003698
+	model_output:
+		hp:0000077
+		hp:0000238
+		hp:0000377
+		hp:0001251
+		hp:0002013
+		hp:0002311
+		hp:0002315
+		hp:0002317
+		hp:0010959
+		hp:0012719
+		hp:0100021
+	true_positives:
+		hp:0000238
+		hp:0002013
+		hp:0002315
+		hp:0002317
+	true_positives_partial:
+	false_positives:
+		hp:0000077
+		hp:0000377
+		hp:0001251
+		hp:0002311
+		hp:0010959
+		hp:0012719
+		hp:0100021
+	false_negatives:
+		hp:0001249
+		hp:0001305
+		hp:0001317
+		hp:0001320
+		hp:0003698
+
+
+Nombre del archivo: 14_Doc2HPO_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000238
+		hp:0000651
+		hp:0001251
+		hp:0001342
+		hp:0002060
+	model_output:
+		hp:0000238
+		hp:0000651
+		hp:0001251
+	true_positives:
+		hp:0000238
+		hp:0000651
+		hp:0001251
+	true_positives_partial:
+	false_positives:
+	false_negatives:
+		hp:0001342
+		hp:0002060
+
+
+Nombre del archivo: 13_Nosotros_terms.txt
+
+TERMS:
+	ground_truth:
+		action tremor
+		appendicular dysmetria
+		diabetic
+		dysarthria
+		foot ulcers
+		gait unsteadiness
+		generalised postural tremor
+		hyperintensity of dentate nuclei
+		mild dysphagia over 2 months
+		progressive slurring of speech
+		severe axial ataxia
+		spontaneous myoclonus of lower face
+	model_output:
+		appendicular dysmetria
+		ataxia
+		axial ataxia
+		chronic foot ulcers
+		diabetic
+		dysarthria
+		dysphagia
+		encephalopathy
+		metronidazole
+		myoclonus
+		peripheral neuropathy
+		slurring of speech gait unsteadiness
+		tremor
+		upper extremities
+		visual disturbances
+	true_positives:
+		appendicular dysmetria
+		diabetic
+		dysarthria
+	true_positives_partial:
+		('ataxia', 'severe axial ataxia')
+		('axial ataxia', 'severe axial ataxia')
+		('dysphagia', 'mild dysphagia over 2 months')
+		('myoclonus', 'spontaneous myoclonus of lower face')
+		('tremor', 'generalised postural tremor')
+	false_positives:
+		chronic foot ulcers
+		encephalopathy
+		metronidazole
+		peripheral neuropathy
+		slurring of speech gait unsteadiness
+		upper extremities
+		visual disturbances
+	false_negatives:
+		action tremor
+		foot ulcers
+		gait unsteadiness
+		hyperintensity of dentate nuclei
+		progressive slurring of speech
+
+
+Nombre del archivo: 2_Charlotte2_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000639
+		hp:0001250
+		hp:0001251
+		hp:0001260
+		hp:0001289
+		hp:0001315
+		hp:0001324
+		hp:0001347
+		hp:0001365
+		hp:0001945
+		hp:0002070
+		hp:0002168
+		hp:0002315
+		hp:0002321
+		hp:0003474
+		hp:0025267
+	model_output:
+		hp:0000666
+		hp:0001251
+		hp:0001260
+		hp:0002321
+		hp:0033399
+	true_positives:
+		hp:0001251
+		hp:0001260
+		hp:0002321
+	true_positives_partial:
+	false_positives:
+		hp:0000666
+		hp:0033399
+	false_negatives:
+		hp:0000639
+		hp:0001250
+		hp:0001289
+		hp:0001315
+		hp:0001324
+		hp:0001347
+		hp:0001365
+		hp:0001945
+		hp:0002070
+		hp:0002168
+		hp:0002315
+		hp:0003474
+		hp:0025267
+
+
+Nombre del archivo: 13_ChatGPT_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000819
+		hp:0001026
+		hp:0001260
+		hp:0001336
+		hp:0001350
+		hp:0002015
+		hp:0002070
+		hp:0002174
+		hp:0002317
+		hp:0002345
+		hp:0002406
+	model_output:
+		hp:0000819
+		hp:0001260
+		hp:0001337
+		hp:0002015
+		hp:0002070
+		hp:0002077
+		hp:0002078
+		hp:0002174, hp:0002331
+		hp:0011320
+		hp:0032438
+	true_positives:
+		hp:0000819
+		hp:0001260
+		hp:0002015
+		hp:0002070
+	true_positives_partial:
+	false_positives:
+		hp:0001337
+		hp:0002077
+		hp:0002078
+		hp:0002174, hp:0002331
+		hp:0011320
+		hp:0032438
+	false_negatives:
+		hp:0001026
+		hp:0001336
+		hp:0001350
+		hp:0002174
+		hp:0002317
+		hp:0002345
+		hp:0002406
+
+
+Nombre del archivo: 13_Doc2HPO_terms.txt
+
+TERMS:
+	ground_truth:
+		action tremor
+		appendicular dysmetria
+		diabetic
+		dysarthria
+		foot ulcers
+		gait unsteadiness
+		generalised postural tremor
+		hyperintensity of dentate nuclei
+		mild dysphagia over 2 months
+		progressive slurring of speech
+		severe axial ataxia
+		spontaneous myoclonus of lower face
+	model_output:
+		action tremor
+		ataxia
+		dysarthria
+		dysmetria
+		dysphagia
+		encephalopathy
+		myoclonus
+		peripheral neuropathy
+		tremor
+	true_positives:
+		action tremor
+		dysarthria
+	true_positives_partial:
+		('ataxia', 'severe axial ataxia')
+		('dysmetria', 'appendicular dysmetria')
+		('dysphagia', 'mild dysphagia over 2 months')
+		('myoclonus', 'spontaneous myoclonus of lower face')
+		('tremor', 'generalised postural tremor')
+	false_positives:
+		encephalopathy
+		peripheral neuropathy
+	false_negatives:
+		diabetic
+		foot ulcers
+		gait unsteadiness
+		hyperintensity of dentate nuclei
+		progressive slurring of speech
+
+
+Nombre del archivo: 15_Charlotte1_terms.txt
+
+TERMS:
+	ground_truth:
+		delayed milestones
+		developemental delay
+		hypotonia
+		not able to pull to sit or stand
+		nystagmus
+		premature grasp
+		second degree consanguineous
+		swaying from side to side when pulled to sit
+		tremulousness
+		truncal ataxia
+	model_output:
+		consanguineous
+		delayed milestones
+		generalised hypotonia
+		not able to pull to sit or stand
+		premature grasp
+		tremulousness
+		truncal ataxia
+	true_positives:
+		delayed milestones
+		not able to pull to sit or stand
+		premature grasp
+		tremulousness
+		truncal ataxia
+	true_positives_partial:
+		('consanguineous', 'second degree consanguineous')
+	false_positives:
+		generalised hypotonia
+	false_negatives:
+		developemental delay
+		hypotonia
+		nystagmus
+		swaying from side to side when pulled to sit
+
+
+Nombre del archivo: 14_Nosotros_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000238
+		hp:0000651
+		hp:0001251
+		hp:0001342
+		hp:0002060
+	model_output:
+		hp:0000238
+		hp:0000651
+		hp:0001251
+		hp:0100310
+	true_positives:
+		hp:0000238
+		hp:0000651
+		hp:0001251
+	true_positives_partial:
+	false_positives:
+		hp:0100310
+	false_negatives:
+		hp:0001342
+		hp:0002060
+
+
+Nombre del archivo: 10_ClinPhen_terms.txt
+
+TERMS:
+	ground_truth:
+		2 years before the first...
+		breast carcinoma
+		cerebellar gait ataxia
+		cervical myoclonus
+		dysarthria
+		nausea
+		opsoclonus
+		oscillopsia
+		she has refused mastectomy
+		vomiting
+	model_output:
+	true_positives:
+	true_positives_partial:
+	false_positives:
+	false_negatives:
+		2 years before the first...
+		breast carcinoma
+		cerebellar gait ataxia
+		cervical myoclonus
+		dysarthria
+		nausea
+		opsoclonus
+		oscillopsia
+		she has refused mastectomy
+		vomiting
+
+
+Nombre del archivo: 2_ChatGPT_terms.txt
+
+TERMS:
+	ground_truth:
+		alert
+		altered sensorium
+		ataxia
+		bilateral fingertonose ataxia
+		deep tendon reflexes
+		dysarthria
+		fever
+		head injury
+		headache
+		his speech apeared to scan each syllable
+		horizontal nystagmus
+		impaired heel knee test
+		motor strength
+		oriented
+		reflexes were normal
+		seizures
+		sensory loss
+		vertigo
+	model_output:
+		altered sensorium
+		ataxia
+		bilateral fingertonose ataxia
+		dysarthria
+		fever
+		head injury
+		headache
+		horizontal nystagmus
+		impaired heel knee test
+		mild vertigo
+		motor strength
+		motor weakness
+		reflexes
+		seizures
+		sensory loss
+		slurred speech
+		vertigo
+	true_positives:
+		altered sensorium
+		ataxia
+		bilateral fingertonose ataxia
+		dysarthria
+		fever
+		head injury
+		headache
+		horizontal nystagmus
+		impaired heel knee test
+		motor strength
+		seizures
+		sensory loss
+		vertigo
+	true_positives_partial:
+		('reflexes', 'reflexes were normal')
+	false_positives:
+		mild vertigo
+		motor weakness
+		slurred speech
+	false_negatives:
+		alert
+		deep tendon reflexes
+		his speech apeared to scan each syllable
+		oriented
+
+
+Nombre del archivo: 4_Charlotte2_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000238
+		hp:0001249
+		hp:0001305
+		hp:0001317
+		hp:0001320
+		hp:0002013
+		hp:0002315
+		hp:0002317
+		hp:0003698
+	model_output:
+		hp:0001251
+		hp:0001256
+		hp:0001272
+		hp:0002013
+		hp:0002315
+		hp:0002317
+	true_positives:
+		hp:0002013
+		hp:0002315
+		hp:0002317
+	true_positives_partial:
+	false_positives:
+		hp:0001251
+		hp:0001256
+		hp:0001272
+	false_negatives:
+		hp:0000238
+		hp:0001249
+		hp:0001305
+		hp:0001317
+		hp:0001320
+		hp:0003698
+
+
+Nombre del archivo: 10_ataxaid_terms.txt
+
+TERMS:
+	ground_truth:
+		2 years before the first...
+		breast carcinoma
+		cerebellar gait ataxia
+		cervical myoclonus
+		dysarthria
+		nausea
+		opsoclonus
+		oscillopsia
+		she has refused mastectomy
+		vomiting
+	model_output:
+		breast carcinoma
+		cerebellar gait ataxia
+		dysarthria
+		gait ataxia
+		myoclonic
+		myoclonus
+		nausea vomiting
+		opsoclonus
+		opsoclonus myoclonus syndrome
+	true_positives:
+		breast carcinoma
+		cerebellar gait ataxia
+		dysarthria
+		opsoclonus
+	true_positives_partial:
+		('gait ataxia', 'cerebellar gait ataxia')
+		('myoclonus', 'cervical myoclonus')
+	false_positives:
+		myoclonic
+		nausea vomiting
+		opsoclonus myoclonus syndrome
+	false_negatives:
+		2 years before the first...
+		nausea
+		oscillopsia
+		she has refused mastectomy
+		vomiting
+
+
+Nombre del archivo: 10_Charlotte1_terms.txt
+
+TERMS:
+	ground_truth:
+		2 years before the first...
+		breast carcinoma
+		cerebellar gait ataxia
+		cervical myoclonus
+		dysarthria
+		nausea
+		opsoclonus
+		oscillopsia
+		she has refused mastectomy
+		vomiting
+	model_output:
+		cerebellar gait ataxia
+		cervical myoclonus
+		nausea
+		opsoclonus related oscillopsia
+		vomiting
+	true_positives:
+		cerebellar gait ataxia
+		cervical myoclonus
+		nausea
+		vomiting
+	true_positives_partial:
+	false_positives:
+		opsoclonus related oscillopsia
+	false_negatives:
+		2 years before the first...
+		breast carcinoma
+		dysarthria
+		opsoclonus
+		oscillopsia
+		she has refused mastectomy
+
+
+Nombre del archivo: 15_Doc2HPO_terms.txt
+
+TERMS:
+	ground_truth:
+		delayed milestones
+		developemental delay
+		hypotonia
+		not able to pull to sit or stand
+		nystagmus
+		premature grasp
+		second degree consanguineous
+		swaying from side to side when pulled to sit
+		tremulousness
+		truncal ataxia
+	model_output:
+		delayed milestones
+		hypotonia
+		nystagmus
+		truncal ataxia
+	true_positives:
+		delayed milestones
+		hypotonia
+		nystagmus
+		truncal ataxia
+	true_positives_partial:
+	false_positives:
+	false_negatives:
+		developemental delay
+		not able to pull to sit or stand
+		premature grasp
+		second degree consanguineous
+		swaying from side to side when pulled to sit
+		tremulousness
+
+
+Nombre del archivo: 6_Nosotros_terms.txt
+
+TERMS:
+	ground_truth:
+		both planter reflexes were flexors
+		conjunctival telangiectasias
+		patients eyes were red and....this is a chronic allergy
+		recurrent upper respiratory tract infections
+		the girl sways back and forth and side by side when she stands and walks
+		vitiligo
+	model_output:
+		allergy
+		ataxia
+		ataxia telangiectasia
+		ataxic cerebral palsy
+		burkitts lymphoma
+		chronic conjunctivitis
+		conjunctival telangiectasias
+		humour
+		impaired delayed hypersensitivity
+		impairment in stance and gait since the
+		malignancies
+		perennial allergy
+		respiratory tract infections
+		thymic hypoplasia
+		vitiligo
+	true_positives:
+		conjunctival telangiectasias
+		vitiligo
+	true_positives_partial:
+		('allergy', 'patients eyes were red and....this is a chronic allergy')
+		('respiratory tract infections', 'recurrent upper respiratory tract infections')
+	false_positives:
+		ataxia
+		ataxia telangiectasia
+		ataxic cerebral palsy
+		burkitts lymphoma
+		chronic conjunctivitis
+		humour
+		impaired delayed hypersensitivity
+		impairment in stance and gait since the
+		malignancies
+		perennial allergy
+		thymic hypoplasia
+	false_negatives:
+		both planter reflexes were flexors
+		the girl sways back and forth and side by side when she stands and walks
+
+
+Nombre del archivo: 2_PubCaseFinder_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000639
+		hp:0001250
+		hp:0001251
+		hp:0001260
+		hp:0001289
+		hp:0001315
+		hp:0001324
+		hp:0001347
+		hp:0001365
+		hp:0001945
+		hp:0002070
+		hp:0002168
+		hp:0002315
+		hp:0002321
+		hp:0003474
+		hp:0025267
+	model_output:
+		hp:0000666
+		hp:0001250
+		hp:0001251
+		hp:0001260
+		hp:0001350
+		hp:0001945
+		hp:0002013
+		hp:0002315
+		hp:0002321
+	true_positives:
+		hp:0001250
+		hp:0001251
+		hp:0001260
+		hp:0001945
+		hp:0002315
+		hp:0002321
+	true_positives_partial:
+	false_positives:
+		hp:0000666
+		hp:0001350
+		hp:0002013
+	false_negatives:
+		hp:0000639
+		hp:0001289
+		hp:0001315
+		hp:0001324
+		hp:0001347
+		hp:0001365
+		hp:0002070
+		hp:0002168
+		hp:0003474
+		hp:0025267
+
+
+Nombre del archivo: 15_Nosotros_terms.txt
+
+TERMS:
+	ground_truth:
+		delayed milestones
+		developemental delay
+		hypotonia
+		not able to pull to sit or stand
+		nystagmus
+		premature grasp
+		second degree consanguineous
+		swaying from side to side when pulled to sit
+		tremulousness
+		truncal ataxia
+	model_output:
+		hypotonia
+		nystagmus
+		premature grasp and tremulousness
+		truncal ataxia
+	true_positives:
+		hypotonia
+		nystagmus
+		truncal ataxia
+	true_positives_partial:
+	false_positives:
+		premature grasp and tremulousness
+	false_negatives:
+		delayed milestones
+		developemental delay
+		not able to pull to sit or stand
+		premature grasp
+		second degree consanguineous
+		swaying from side to side when pulled to sit
+		tremulousness
+
+
+Nombre del archivo: 7_ChatGPT_terms.txt
+
+TERMS:
+	ground_truth:
+		abnormal gait
+		ataxia of stance and gait
+		generalised myoclonic jerks
+		jerky limb movements
+		opsoclonus
+	model_output:
+		abnormal gait
+		ataxia of stance and gait
+		autoantibodies
+		clonazepam
+		idiopathic
+		intravenous immunoglobulin
+		jerky limb movements
+		myoclonus
+		nystagmus
+		ocular dyskinesia
+		ocular flutter
+		opsoclonus
+		opsoclonusmyoclonusataxia
+		oscillopsia
+		parainfectious
+		paraneoplastic neuroblastoma
+		seronegative
+		small cell lung cancer
+		visual blurring
+	true_positives:
+		abnormal gait
+		ataxia of stance and gait
+		jerky limb movements
+		opsoclonus
+	true_positives_partial:
+	false_positives:
+		autoantibodies
+		clonazepam
+		idiopathic
+		intravenous immunoglobulin
+		myoclonus
+		nystagmus
+		ocular dyskinesia
+		ocular flutter
+		opsoclonusmyoclonusataxia
+		oscillopsia
+		parainfectious
+		paraneoplastic neuroblastoma
+		seronegative
+		small cell lung cancer
+		visual blurring
+	false_negatives:
+		generalised myoclonic jerks
+
+
+Nombre del archivo: 12_Charlotte1_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0001270
+		hp:0001350
+		hp:0002066
+		hp:0002078
+		hp:0002168
+		hp:0002342
+		hp:0012418
+		hp:5200012
+	model_output:
+		hp:0001251
+		hp:0001252
+		hp:0002064
+		hp:0002078
+		hp:0002168
+		hp:0002194
+		hp:0002342
+	true_positives:
+		hp:0002078
+		hp:0002168
+		hp:0002342
+	true_positives_partial:
+	false_positives:
+		hp:0001251
+		hp:0001252
+		hp:0002064
+		hp:0002194
+	false_negatives:
+		hp:0001270
+		hp:0001350
+		hp:0002066
+		hp:0012418
+		hp:5200012
+
+
+Nombre del archivo: 1_Charlotte1_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000365
+		hp:0000505
+		hp:0000726
+		hp:0000736
+		hp:0000741
+		hp:0001288
+		hp:0001289
+		hp:0001342
+		hp:0002066
+		hp:0002070
+		hp:0002138
+		hp:0002315
+		hp:0002354
+		hp:0002403
+		hp:0004396
+		hp:0008619
+		hp:0030516
+		hp:0030731
+		hp:0031179
+	model_output:
+		hp:0000365
+		hp:0000505
+		hp:0000553
+		hp:0000726
+		hp:0000736
+		hp:0000741
+		hp:0001251
+		hp:0001288
+		hp:0002066
+		hp:0002315
+		hp:0002354
+		hp:0004396
+		hp:0007183
+		hp:0008619
+	true_positives:
+		hp:0000365
+		hp:0000505
+		hp:0000726
+		hp:0000736
+		hp:0000741
+		hp:0001288
+		hp:0002066
+		hp:0002315
+		hp:0002354
+		hp:0004396
+		hp:0008619
+	true_positives_partial:
+	false_positives:
+		hp:0000553
+		hp:0001251
+		hp:0007183
+	false_negatives:
+		hp:0001289
+		hp:0001342
+		hp:0002070
+		hp:0002138
+		hp:0002403
+		hp:0030516
+		hp:0030731
+		hp:0031179
+
+
+Nombre del archivo: 4_ClinPhen_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000238
+		hp:0001249
+		hp:0001305
+		hp:0001317
+		hp:0001320
+		hp:0002013
+		hp:0002315
+		hp:0002317
+		hp:0003698
+	model_output:
+		hp:0000238
+		hp:0001251
+		hp:0001317
+		hp:0002013
+		hp:0002198
+		hp:0002280
+		hp:0002311
+		hp:0002315
+		hp:0100021
+	true_positives:
+		hp:0000238
+		hp:0001317
+		hp:0002013
+		hp:0002315
+	true_positives_partial:
+	false_positives:
+		hp:0001251
+		hp:0002198
+		hp:0002280
+		hp:0002311
+		hp:0100021
+	false_negatives:
+		hp:0001249
+		hp:0001305
+		hp:0001320
+		hp:0002317
+		hp:0003698
+
+
+Nombre del archivo: 12_ChatGPT_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0001270
+		hp:0001350
+		hp:0002066
+		hp:0002078
+		hp:0002168
+		hp:0002342
+		hp:0012418
+		hp:5200012
+	model_output:
+		hp:0001252
+		hp:0001256
+		hp:0001260
+		hp:0002066
+		hp:0002078
+		hp:0011766
+	true_positives:
+		hp:0002066
+		hp:0002078
+	true_positives_partial:
+	false_positives:
+		hp:0001252
+		hp:0001256
+		hp:0001260
+		hp:0011766
+	false_negatives:
+		hp:0001270
+		hp:0001350
+		hp:0002168
+		hp:0002342
+		hp:0012418
+		hp:5200012
+
+
+Nombre del archivo: 2_ChatGPT_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000639
+		hp:0001250
+		hp:0001251
+		hp:0001260
+		hp:0001289
+		hp:0001315
+		hp:0001324
+		hp:0001347
+		hp:0001365
+		hp:0001945
+		hp:0002070
+		hp:0002168
+		hp:0002315
+		hp:0002321
+		hp:0003474
+		hp:0025267
+	model_output:
+		hp:0000666
+		hp:0001250
+		hp:0001251
+		hp:0001260
+		hp:0001324
+		hp:0001945
+		hp:0002167
+		hp:0002315
+		hp:0002321
+		hp:0003474
+		hp:0006801
+		hp:0009159
+		hp:0020149
+	true_positives:
+		hp:0001250
+		hp:0001251
+		hp:0001260
+		hp:0001324
+		hp:0001945
+		hp:0002315
+		hp:0002321
+		hp:0003474
+	true_positives_partial:
+	false_positives:
+		hp:0000666
+		hp:0002167
+		hp:0006801
+		hp:0009159
+		hp:0020149
+	false_negatives:
+		hp:0000639
+		hp:0001289
+		hp:0001315
+		hp:0001347
+		hp:0001365
+		hp:0002070
+		hp:0002168
+		hp:0025267
+
+
+Nombre del archivo: 15_ataxaid_terms.txt
+
+TERMS:
+	ground_truth:
+		delayed milestones
+		developemental delay
+		hypotonia
+		not able to pull to sit or stand
+		nystagmus
+		premature grasp
+		second degree consanguineous
+		swaying from side to side when pulled to sit
+		tremulousness
+		truncal ataxia
+	model_output:
+		hypotonia
+		nystagmus
+		premature grasp and tremulousness
+		truncal ataxia
+	true_positives:
+		hypotonia
+		nystagmus
+		truncal ataxia
+	true_positives_partial:
+	false_positives:
+		premature grasp and tremulousness
+	false_negatives:
+		delayed milestones
+		developemental delay
+		not able to pull to sit or stand
+		premature grasp
+		second degree consanguineous
+		swaying from side to side when pulled to sit
+		tremulousness
+
+
+Nombre del archivo: 6_Charlotte2_terms.txt
+
+TERMS:
+	ground_truth:
+		both planter reflexes were flexors
+		conjunctival telangiectasias
+		patients eyes were red and....this is a chronic allergy
+		recurrent upper respiratory tract infections
+		the girl sways back and forth and side by side when she stands and walks
+		vitiligo
+	model_output:
+		ataxia
+		conjunctival telangiectasias
+		progressive impairment in stance and gait since the age of 20 months
+		recurrent upper respiratory tract infections
+		vitiligo
+	true_positives:
+		conjunctival telangiectasias
+		recurrent upper respiratory tract infections
+		vitiligo
+	true_positives_partial:
+	false_positives:
+		ataxia
+		progressive impairment in stance and gait since the age of 20 months
+	false_negatives:
+		both planter reflexes were flexors
+		patients eyes were red and....this is a chronic allergy
+		the girl sways back and forth and side by side when she stands and walks
+
+
+Nombre del archivo: 10_ClinPhen_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0001260
+		hp:0001336
+		hp:0002013
+		hp:0002018
+		hp:0002066
+		hp:0003002
+		hp:0010543
+		hp:4000033
+	model_output:
+		hp:0000619
+		hp:0001251
+		hp:0001336
+		hp:0002066
+		hp:0003002
+		hp:0010543
+		hp:0030731
+	true_positives:
+		hp:0001336
+		hp:0002066
+		hp:0003002
+		hp:0010543
+	true_positives_partial:
+	false_positives:
+		hp:0000619
+		hp:0001251
+		hp:0030731
+	false_negatives:
+		hp:0001260
+		hp:0002013
+		hp:0002018
+		hp:4000033
+
+
+Nombre del archivo: 10_Doc2HPO_terms.txt
+
+TERMS:
+	ground_truth:
+		2 years before the first...
+		breast carcinoma
+		cerebellar gait ataxia
+		cervical myoclonus
+		dysarthria
+		nausea
+		opsoclonus
+		oscillopsia
+		she has refused mastectomy
+		vomiting
+	model_output:
+		breast carcinoma
+		dysarthria
+		gait ataxia
+		myoclonus
+		nausea
+		opsoclonus
+		vomiting
+	true_positives:
+		breast carcinoma
+		dysarthria
+		nausea
+		opsoclonus
+		vomiting
+	true_positives_partial:
+		('gait ataxia', 'cerebellar gait ataxia')
+		('myoclonus', 'cervical myoclonus')
+	false_positives:
+	false_negatives:
+		2 years before the first...
+		oscillopsia
+		she has refused mastectomy
+
+
+Nombre del archivo: 15_ataxaid_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000639
+		hp:0001252
+		hp:0001270
+		hp:0002078
+		hp:0030903
+	model_output:
+		hp:0000639
+		hp:0001252
+		hp:0002078
+		hp:0030903
+	true_positives:
+		hp:0000639
+		hp:0001252
+		hp:0002078
+		hp:0030903
+	true_positives_partial:
+	false_positives:
+	false_negatives:
+		hp:0001270
+
+
+Nombre del archivo: 15_Doc2HPO_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000639
+		hp:0001252
+		hp:0001270
+		hp:0002078
+		hp:0030903
+	model_output:
+		hp:0000639
+		hp:0001263
+		hp:0001290
+		hp:0002078
+	true_positives:
+		hp:0000639
+		hp:0002078
+	true_positives_partial:
+	false_positives:
+		hp:0001263
+		hp:0001290
+	false_negatives:
+		hp:0001252
+		hp:0001270
+		hp:0030903
+
+
+Nombre del archivo: 2_ataxaid_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000639
+		hp:0001250
+		hp:0001251
+		hp:0001260
+		hp:0001289
+		hp:0001315
+		hp:0001324
+		hp:0001347
+		hp:0001365
+		hp:0001945
+		hp:0002070
+		hp:0002168
+		hp:0002315
+		hp:0002321
+		hp:0003474
+		hp:0025267
+	model_output:
+		hp:0000256
+		hp:0000639
+		hp:0001251
+		hp:0001350
+		hp:0001596
+		hp:0001945
+		hp:0002013
+		hp:0002315
+		hp:0002321
+		hp:0002816
+		hp:0025267
+	true_positives:
+		hp:0000639
+		hp:0001251
+		hp:0001945
+		hp:0002315
+		hp:0002321
+		hp:0025267
+	true_positives_partial:
+	false_positives:
+		hp:0000256
+		hp:0001350
+		hp:0001596
+		hp:0002013
+		hp:0002816
+	false_negatives:
+		hp:0001250
+		hp:0001260
+		hp:0001289
+		hp:0001315
+		hp:0001324
+		hp:0001347
+		hp:0001365
+		hp:0002070
+		hp:0002168
+		hp:0003474
+
+
+Nombre del archivo: 12_Doc2HPO_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0001270
+		hp:0001350
+		hp:0002066
+		hp:0002078
+		hp:0002168
+		hp:0002342
+		hp:0012418
+		hp:5200012
+	model_output:
+		hp:0001290
+		hp:0002078
+		hp:0002342
+	true_positives:
+		hp:0002078
+		hp:0002342
+	true_positives_partial:
+	false_positives:
+		hp:0001290
+	false_negatives:
+		hp:0001270
+		hp:0001350
+		hp:0002066
+		hp:0002168
+		hp:0012418
+		hp:5200012
+
+
+Nombre del archivo: 12_ataxaid_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0001270
+		hp:0001350
+		hp:0002066
+		hp:0002078
+		hp:0002168
+		hp:0002342
+		hp:0012418
+		hp:5200012
+	model_output:
+		hp:0001252
+		hp:0001350
+		hp:0002066
+		hp:0002078
+		hp:0100716
+	true_positives:
+		hp:0001350
+		hp:0002066
+		hp:0002078
+	true_positives_partial:
+	false_positives:
+		hp:0001252
+		hp:0100716
+	false_negatives:
+		hp:0001270
+		hp:0002168
+		hp:0002342
+		hp:0012418
+		hp:5200012
+
+
+Nombre del archivo: 2_Doc2HPO_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000639
+		hp:0001250
+		hp:0001251
+		hp:0001260
+		hp:0001289
+		hp:0001315
+		hp:0001324
+		hp:0001347
+		hp:0001365
+		hp:0001945
+		hp:0002070
+		hp:0002168
+		hp:0002315
+		hp:0002321
+		hp:0003474
+		hp:0025267
+	model_output:
+		hp:0000666
+		hp:0001250
+		hp:0001251
+		hp:0001260
+		hp:0001350
+		hp:0001945
+		hp:0002013
+		hp:0002315
+		hp:0002321
+	true_positives:
+		hp:0001250
+		hp:0001251
+		hp:0001260
+		hp:0001945
+		hp:0002315
+		hp:0002321
+	true_positives_partial:
+	false_positives:
+		hp:0000666
+		hp:0001350
+		hp:0002013
+	false_negatives:
+		hp:0000639
+		hp:0001289
+		hp:0001315
+		hp:0001324
+		hp:0001347
+		hp:0001365
+		hp:0002070
+		hp:0002168
+		hp:0003474
+		hp:0025267
+
+
+Nombre del archivo: 7_PubCaseFinder_terms.txt
+
+TERMS:
+	ground_truth:
+		abnormal gait
+		ataxia of stance and gait
+		generalised myoclonic jerks
+		jerky limb movements
+		opsoclonus
+	model_output:
+		abnormal gait
+		ataxia
+		dyskinesia
+		lung cancer
+		myoclonic jerks
+		myoclonus
+		neuroblastoma
+		nystagmus
+		ocular flutter
+		opsoclonus
+		tumour
+	true_positives:
+		abnormal gait
+		opsoclonus
+	true_positives_partial:
+		('ataxia', 'ataxia of stance and gait')
+		('myoclonic jerks', 'generalised myoclonic jerks')
+	false_positives:
+		dyskinesia
+		lung cancer
+		myoclonus
+		neuroblastoma
+		nystagmus
+		ocular flutter
+		tumour
+	false_negatives:
+		jerky limb movements
+
+
+Nombre del archivo: 8_ataxaid_terms.txt
+
+TERMS:
+	ground_truth:
+		(leftsided) miosis
+		1 year history of ataxia
+		bilateral limb ataxia
+		he lost balance
+		hiccough
+		hypertension for 10 years
+		leaned to the left side while standing
+		leftsided ptosis
+		leftsided vertebral artery dolichoectasia
+		rightsided hypaesthesia
+	model_output:
+		ataxia
+		brain injury
+		cerebellar atrophy stroke
+		chronic ataxia
+		contralateral hypaesthesia
+		dolichoectasia
+		gastrointestinal disease diaphragm irritation
+		hiccough
+		horners
+		hypaesthesia
+		hypertension
+		lateral medullar syndrome
+		ptosis miosis
+		stroke
+		trauma
+		truncal ataxia
+		vascular wall damage
+		vertebral artery dolichoectasia
+	true_positives:
+		hiccough
+	true_positives_partial:
+		('ataxia', '1 year history of ataxia')
+		('dolichoectasia', 'leftsided vertebral artery dolichoectasia')
+		('hypaesthesia', 'rightsided hypaesthesia')
+		('hypertension', 'hypertension for 10 years')
+		('vertebral artery dolichoectasia', 'leftsided vertebral artery dolichoectasia')
+	false_positives:
+		brain injury
+		cerebellar atrophy stroke
+		chronic ataxia
+		contralateral hypaesthesia
+		gastrointestinal disease diaphragm irritation
+		horners
+		lateral medullar syndrome
+		ptosis miosis
+		stroke
+		trauma
+		truncal ataxia
+		vascular wall damage
+	false_negatives:
+		(leftsided) miosis
+		bilateral limb ataxia
+		he lost balance
+		leaned to the left side while standing
+		leftsided ptosis
+
+
+Nombre del archivo: 15_ChatGPT_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000639
+		hp:0001252
+		hp:0001270
+		hp:0002078
+		hp:0030903
+	model_output:
+		hp:0000252
+		hp:0000639
+		hp:0001263
+		hp:0001290
+		hp:0001337
+		hp:0001518
+		hp:0002078
+		hp:0002464
+	true_positives:
+		hp:0000639
+		hp:0002078
+	true_positives_partial:
+	false_positives:
+		hp:0000252
+		hp:0001263
+		hp:0001290
+		hp:0001337
+		hp:0001518
+		hp:0002464
+	false_negatives:
+		hp:0001252
+		hp:0001270
+		hp:0030903
+
+
+Nombre del archivo: 14_ClinPhen_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000238
+		hp:0000651
+		hp:0001251
+		hp:0001342
+		hp:0002060
+	model_output:
+		hp:0000238
+		hp:0000651
+		hp:0001251
+	true_positives:
+		hp:0000238
+		hp:0000651
+		hp:0001251
+	true_positives_partial:
+	false_positives:
+	false_negatives:
+		hp:0001342
+		hp:0002060
+
+
+Nombre del archivo: 2_Charlotte1_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000639
+		hp:0001250
+		hp:0001251
+		hp:0001260
+		hp:0001289
+		hp:0001315
+		hp:0001324
+		hp:0001347
+		hp:0001365
+		hp:0001945
+		hp:0002070
+		hp:0002168
+		hp:0002315
+		hp:0002321
+		hp:0003474
+		hp:0025267
+	model_output:
+		hp:0001096
+		hp:0001251
+		hp:0001260
+		hp:0001288
+		hp:0001954
+		hp:0002321
+	true_positives:
+		hp:0001251
+		hp:0001260
+		hp:0002321
+	true_positives_partial:
+	false_positives:
+		hp:0001096
+		hp:0001288
+		hp:0001954
+	false_negatives:
+		hp:0000639
+		hp:0001250
+		hp:0001289
+		hp:0001315
+		hp:0001324
+		hp:0001347
+		hp:0001365
+		hp:0001945
+		hp:0002070
+		hp:0002168
+		hp:0002315
+		hp:0003474
+		hp:0025267
+
+
+Nombre del archivo: 14_Doc2HPO_terms.txt
+
+TERMS:
+	ground_truth:
+		diplopia
+		haemorrhage in midbrain
+		hydrocephalus
+		lobulated lesion
+		worsening ataxia
+	model_output:
+		ataxia
+		diplopia
+		hydrocephalus
+	true_positives:
+		diplopia
+		hydrocephalus
+	true_positives_partial:
+		('ataxia', 'worsening ataxia')
+	false_positives:
+	false_negatives:
+		haemorrhage in midbrain
+		lobulated lesion
+
+
+Nombre del archivo: 8_PubCaseFinder_terms.txt
+
+TERMS:
+	ground_truth:
+		(leftsided) miosis
+		1 year history of ataxia
+		bilateral limb ataxia
+		he lost balance
+		hiccough
+		hypertension for 10 years
+		leaned to the left side while standing
+		leftsided ptosis
+		leftsided vertebral artery dolichoectasia
+		rightsided hypaesthesia
+	model_output:
+		ataxia
+		cerebellar atrophy
+		cough
+		gastrointestinal disease
+		hypertension
+		limb ataxia
+		miosis
+		pica
+		ptosis
+		stroke
+		truncal ataxia
+	true_positives:
+	true_positives_partial:
+		('ataxia', '1 year history of ataxia')
+		('cough', 'hiccough')
+		('hypertension', 'hypertension for 10 years')
+		('limb ataxia', 'bilateral limb ataxia')
+		('miosis', '(leftsided) miosis')
+		('ptosis', 'leftsided ptosis')
+	false_positives:
+		cerebellar atrophy
+		gastrointestinal disease
+		pica
+		stroke
+		truncal ataxia
+	false_negatives:
+		he lost balance
+		leaned to the left side while standing
+		leftsided vertebral artery dolichoectasia
+		rightsided hypaesthesia
+
+
+Nombre del archivo: 12_PubCaseFinder_terms.txt
+
+TERMS:
+	ground_truth:
+		he walk independently onlu from the age of three
+		independent for activities of daily living
+		mild perinatal hypoxic injury
+		mini mental status examination score 25/30
+		moderate mental retardation
+		motor milestones were acquired late
+		nonprogressive gait ataxia
+		scanning
+		slurred
+		staccato speech
+		truncal ataxia
+	model_output:
+		hypotonia
+		moderate mental retardation
+		progressive gait ataxia
+		truncal ataxia
+	true_positives:
+		moderate mental retardation
+		truncal ataxia
+	true_positives_partial:
+		('progressive gait ataxia', 'nonprogressive gait ataxia')
+	false_positives:
+		hypotonia
+	false_negatives:
+		he walk independently onlu from the age of three
+		independent for activities of daily living
+		mild perinatal hypoxic injury
+		mini mental status examination score 25/30
+		motor milestones were acquired late
+		scanning
+		slurred
+		staccato speech
+
+
+Nombre del archivo: 8_PubCaseFinder_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000508
+		hp:0000616
+		hp:0000822
+		hp:0001251
+		hp:0002070
+		hp:0002172
+		hp:0002936
+		hp:0020038
+		hp:0100247
+	model_output:
+		hp:0000508
+		hp:0000616
+		hp:0000822
+		hp:0001251
+		hp:0001272
+		hp:0001297
+		hp:0002070
+		hp:0002078
+		hp:0011024
+		hp:0011856
+		hp:0012735
+	true_positives:
+		hp:0000508
+		hp:0000616
+		hp:0000822
+		hp:0001251
+		hp:0002070
+	true_positives_partial:
+	false_positives:
+		hp:0001272
+		hp:0001297
+		hp:0002078
+		hp:0011024
+		hp:0011856
+		hp:0012735
+	false_negatives:
+		hp:0002172
+		hp:0002936
+		hp:0020038
+		hp:0100247
+
+
+Nombre del archivo: 6_ChatGPT_terms.txt
+
+TERMS:
+	ground_truth:
+		both planter reflexes were flexors
+		conjunctival telangiectasias
+		patients eyes were red and....this is a chronic allergy
+		recurrent upper respiratory tract infections
+		the girl sways back and forth and side by side when she stands and walks
+		vitiligo
+	model_output:
+		ataxia telangiectasia
+		ataxic cerebral palsy
+		high risk of malignancies
+		impaired delayed hypersensitivity reactions
+		low levels of serum iga, ige, and igg subclass 2
+		recurrent upper respiratory tract infections
+		red eyes
+		swaying when standing and walking
+		thymic hypoplasia
+		vitiligo
+	true_positives:
+		recurrent upper respiratory tract infections
+		vitiligo
+	true_positives_partial:
+	false_positives:
+		ataxia telangiectasia
+		ataxic cerebral palsy
+		high risk of malignancies
+		impaired delayed hypersensitivity reactions
+		low levels of serum iga, ige, and igg subclass 2
+		red eyes
+		swaying when standing and walking
+		thymic hypoplasia
+	false_negatives:
+		both planter reflexes were flexors
+		conjunctival telangiectasias
+		patients eyes were red and....this is a chronic allergy
+		the girl sways back and forth and side by side when she stands and walks
+
+
+Nombre del archivo: 8_Doc2HPO_terms.txt
+
+TERMS:
+	ground_truth:
+		(leftsided) miosis
+		1 year history of ataxia
+		bilateral limb ataxia
+		he lost balance
+		hiccough
+		hypertension for 10 years
+		leaned to the left side while standing
+		leftsided ptosis
+		leftsided vertebral artery dolichoectasia
+		rightsided hypaesthesia
+	model_output:
+		ataxia
+		cerebellar atrophy
+		gastrointestinal disease
+		hypertension
+		limb ataxia
+		miosis
+		ptosis
+		stroke
+		truncal ataxia
+	true_positives:
+	true_positives_partial:
+		('ataxia', '1 year history of ataxia')
+		('hypertension', 'hypertension for 10 years')
+		('limb ataxia', 'bilateral limb ataxia')
+		('miosis', '(leftsided) miosis')
+		('ptosis', 'leftsided ptosis')
+	false_positives:
+		cerebellar atrophy
+		gastrointestinal disease
+		stroke
+		truncal ataxia
+	false_negatives:
+		he lost balance
+		hiccough
+		leaned to the left side while standing
+		leftsided vertebral artery dolichoectasia
+		rightsided hypaesthesia
+
+
+Nombre del archivo: 14_Charlotte2_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000238
+		hp:0000651
+		hp:0001251
+		hp:0001342
+		hp:0002060
+	model_output:
+		hp:0000651
+		hp:0001251
+	true_positives:
+		hp:0000651
+		hp:0001251
+	true_positives_partial:
+	false_positives:
+	false_negatives:
+		hp:0000238
+		hp:0001342
+		hp:0002060
+
+
+Nombre del archivo: 7_Charlotte2_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000733
+		hp:0001288
+		hp:0001336
+		hp:0002066
+		hp:0003698
+		hp:0010543
+	model_output:
+		hp:0000553
+		hp:0002066
+		hp:0002123
+		hp:0003698
+	true_positives:
+		hp:0002066
+		hp:0003698
+	true_positives_partial:
+	false_positives:
+		hp:0000553
+		hp:0002123
+	false_negatives:
+		hp:0000733
+		hp:0001288
+		hp:0001336
+		hp:0010543
+
+
+Nombre del archivo: 8_Nosotros_terms.txt
+
+TERMS:
+	ground_truth:
+		(leftsided) miosis
+		1 year history of ataxia
+		bilateral limb ataxia
+		he lost balance
+		hiccough
+		hypertension for 10 years
+		leaned to the left side while standing
+		leftsided ptosis
+		leftsided vertebral artery dolichoectasia
+		rightsided hypaesthesia
+	model_output:
+		alcohol
+		ataxia
+		brain injury
+		cerebellar atrophy stroke
+		chronic ataxia
+		contralateral hypaesthesia
+		dolichoectasia
+		gastrointestinal  diaphragm irritation
+		hiccough
+		horners
+		hypaesthesia
+		hypertension
+		ischaemia
+		lateral medullar syndrome
+		ptosis miosis
+		stroke
+		trauma
+		truncal ataxia
+		vascular wall damage
+		vertebral artery dolichoectasia
+	true_positives:
+		hiccough
+	true_positives_partial:
+		('ataxia', '1 year history of ataxia')
+		('dolichoectasia', 'leftsided vertebral artery dolichoectasia')
+		('hypaesthesia', 'rightsided hypaesthesia')
+		('hypertension', 'hypertension for 10 years')
+		('vertebral artery dolichoectasia', 'leftsided vertebral artery dolichoectasia')
+	false_positives:
+		alcohol
+		brain injury
+		cerebellar atrophy stroke
+		chronic ataxia
+		contralateral hypaesthesia
+		gastrointestinal  diaphragm irritation
+		horners
+		ischaemia
+		lateral medullar syndrome
+		ptosis miosis
+		stroke
+		trauma
+		truncal ataxia
+		vascular wall damage
+	false_negatives:
+		(leftsided) miosis
+		bilateral limb ataxia
+		he lost balance
+		leaned to the left side while standing
+		leftsided ptosis
+
+
+Nombre del archivo: 13_ClinPhen_terms.txt
+
+TERMS:
+	ground_truth:
+		action tremor
+		appendicular dysmetria
+		diabetic
+		dysarthria
+		foot ulcers
+		gait unsteadiness
+		generalised postural tremor
+		hyperintensity of dentate nuclei
+		mild dysphagia over 2 months
+		progressive slurring of speech
+		severe axial ataxia
+		spontaneous myoclonus of lower face
+	model_output:
+	true_positives:
+	true_positives_partial:
+	false_positives:
+	false_negatives:
+		action tremor
+		appendicular dysmetria
+		diabetic
+		dysarthria
+		foot ulcers
+		gait unsteadiness
+		generalised postural tremor
+		hyperintensity of dentate nuclei
+		mild dysphagia over 2 months
+		progressive slurring of speech
+		severe axial ataxia
+		spontaneous myoclonus of lower face
+
+
+Nombre del archivo: 14_ataxaid_terms.txt
+
+TERMS:
+	ground_truth:
+		diplopia
+		haemorrhage in midbrain
+		hydrocephalus
+		lobulated lesion
+		worsening ataxia
+	model_output:
+		ataxia
+		brainstem haemorrhage
+		diplopia
+		haemorrhage
+		hydrocephalus
+	true_positives:
+		diplopia
+		hydrocephalus
+	true_positives_partial:
+		('ataxia', 'worsening ataxia')
+		('haemorrhage', 'haemorrhage in midbrain')
+	false_positives:
+		brainstem haemorrhage
+	false_negatives:
+		lobulated lesion
+
+
+Nombre del archivo: 10_Nosotros_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0001260
+		hp:0001336
+		hp:0002013
+		hp:0002018
+		hp:0002066
+		hp:0003002
+		hp:0010543
+		hp:4000033
+	model_output:
+		hp:0001251
+		hp:0001336
+		hp:0002013
+		hp:0002066
+		hp:0003002
+		hp:0010543
+		hp:0033054
+		hp:0100580
+		p:0003002
+	true_positives:
+		hp:0001336
+		hp:0002013
+		hp:0002066
+		hp:0003002
+		hp:0010543
+	true_positives_partial:
+	false_positives:
+		hp:0001251
+		hp:0033054
+		hp:0100580
+		p:0003002
+	false_negatives:
+		hp:0001260
+		hp:0002018
+		hp:4000033
+
+
+Nombre del archivo: 13_Charlotte2_terms.txt
+
+TERMS:
+	ground_truth:
+		action tremor
+		appendicular dysmetria
+		diabetic
+		dysarthria
+		foot ulcers
+		gait unsteadiness
+		generalised postural tremor
+		hyperintensity of dentate nuclei
+		mild dysphagia over 2 months
+		progressive slurring of speech
+		severe axial ataxia
+		spontaneous myoclonus of lower face
+	model_output:
+		action tremor
+		appendicular dysmetria
+		dysarthria
+		gait unsteadiness
+		generalised postural tremor
+		mild dysphagia over 2 months
+		negative myoclonus of upper extremities
+		progressive slurring of speech
+		severe axial ataxia
+		spontaneous myoclonus of lower face
+	true_positives:
+		action tremor
+		appendicular dysmetria
+		dysarthria
+		gait unsteadiness
+		generalised postural tremor
+		mild dysphagia over 2 months
+		progressive slurring of speech
+		severe axial ataxia
+		spontaneous myoclonus of lower face
+	true_positives_partial:
+	false_positives:
+		negative myoclonus of upper extremities
+	false_negatives:
+		diabetic
+		foot ulcers
+		hyperintensity of dentate nuclei
+
+
+Nombre del archivo: 13_PubCaseFinder_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000819
+		hp:0001026
+		hp:0001260
+		hp:0001336
+		hp:0001350
+		hp:0002015
+		hp:0002070
+		hp:0002174
+		hp:0002317
+		hp:0002345
+		hp:0002406
+	model_output:
+		hp:0001251
+		hp:0001260
+		hp:0001298
+		hp:0001310
+		hp:0001336
+		hp:0001337
+		hp:0002015
+		hp:0002345
+		hp:0009830
+	true_positives:
+		hp:0001260
+		hp:0001336
+		hp:0002015
+		hp:0002345
+	true_positives_partial:
+	false_positives:
+		hp:0001251
+		hp:0001298
+		hp:0001310
+		hp:0001337
+		hp:0009830
+	false_negatives:
+		hp:0000819
+		hp:0001026
+		hp:0001350
+		hp:0002070
+		hp:0002174
+		hp:0002317
+		hp:0002406
+
+
+Nombre del archivo: 4_Nosotros_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000238
+		hp:0001249
+		hp:0001305
+		hp:0001317
+		hp:0001320
+		hp:0002013
+		hp:0002315
+		hp:0002317
+		hp:0003698
+	model_output:
+		hp:0000238
+		hp:0001251
+		hp:0002013
+		hp:0002311
+		hp:0002315
+		hp:0008462
+		hp:0011297
+		hp:0100021
+		hp:0100026
+		hp:0100639
+	true_positives:
+		hp:0000238
+		hp:0002013
+		hp:0002315
+	true_positives_partial:
+	false_positives:
+		hp:0001251
+		hp:0002311
+		hp:0008462
+		hp:0011297
+		hp:0100021
+		hp:0100026
+		hp:0100639
+	false_negatives:
+		hp:0001249
+		hp:0001305
+		hp:0001317
+		hp:0001320
+		hp:0002317
+		hp:0003698
+
+
+Nombre del archivo: 10_Charlotte1_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0001260
+		hp:0001336
+		hp:0002013
+		hp:0002018
+		hp:0002066
+		hp:0003002
+		hp:0010543
+		hp:4000033
+	model_output:
+		hp:0002013
+		hp:0002018
+		hp:0002267
+		hp:0006851
+		hp:0007776
+	true_positives:
+		hp:0002013
+		hp:0002018
+	true_positives_partial:
+	false_positives:
+		hp:0002267
+		hp:0006851
+		hp:0007776
+	false_negatives:
+		hp:0001260
+		hp:0001336
+		hp:0002066
+		hp:0003002
+		hp:0010543
+		hp:4000033
+
+
+Nombre del archivo: 4_ataxaid_terms.txt
+
+TERMS:
+	ground_truth:
+		cerebellar incoordination
+		dandywalker complex
+		headache
+		hydrocephalus
+		mild mental subnormality
+		progressive instability of stance and gait since the age of 2 years
+		vermis is hypoplastic
+		vomiting
+	model_output:
+		anomalies
+		ataxic
+		cerebellar dysfunction
+		cerebellar incoordination
+		cerebral palsy
+		headache
+		headaches
+		hydrocephalus
+		instability of stance
+		intracranial and extracranial anomalies
+		malformations
+		supratentorial malformations
+		vomiting
+	true_positives:
+		cerebellar incoordination
+		headache
+		hydrocephalus
+		vomiting
+	true_positives_partial:
+		('instability of stance', 'progressive instability of stance and gait since the age of 2 years')
+	false_positives:
+		anomalies
+		ataxic
+		cerebellar dysfunction
+		cerebral palsy
+		headaches
+		intracranial and extracranial anomalies
+		malformations
+		supratentorial malformations
+	false_negatives:
+		dandywalker complex
+		mild mental subnormality
+		vermis is hypoplastic
+
+
+Nombre del archivo: 8_Nosotros_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000508
+		hp:0000616
+		hp:0000822
+		hp:0001251
+		hp:0002070
+		hp:0002172
+		hp:0002936
+		hp:0020038
+		hp:0100247
+	model_output:
+		hp:0000616
+		hp:0000822
+		hp:0001251
+		hp:0001272
+		hp:0001297
+		hp:0002078
+		hp:0002277
+		hp:0009831
+		hp:0011024
+		hp:0012155
+		hp:0020038
+		hp:0033676
+		hp:0034179
+		hp:0100247
+		hp:0100580
+		hp:0100716
+	true_positives:
+		hp:0000616
+		hp:0000822
+		hp:0001251
+		hp:0020038
+		hp:0100247
+	true_positives_partial:
+	false_positives:
+		hp:0001272
+		hp:0001297
+		hp:0002078
+		hp:0002277
+		hp:0009831
+		hp:0011024
+		hp:0012155
+		hp:0033676
+		hp:0034179
+		hp:0100580
+		hp:0100716
+	false_negatives:
+		hp:0000508
+		hp:0002070
+		hp:0002172
+		hp:0002936
+
+
+Nombre del archivo: 1_PubCaseFinder_terms.txt
+
+TERMS:
+	ground_truth:
+		apathy
+		ataxic fingernose and heelshin test negative
+		ataxic gait
+		bilateral sensorineural hearing and visual deficits
+		brain hernation
+		cerebral bleeding
+		dementia
+		disorientation
+		fell without losing consciousness
+		forgetfulness
+		gait disturbance
+		headache
+		hearing deficits
+		lost appetite
+		meningism
+		metastases
+		negative rombergs test
+		nonattention
+		right homonymous hemianopsia
+		right occipital bleeding
+		siderosis
+		subarachnoid haemorrhage
+		undifferentiated carcinoma
+		visual deficits
+	model_output:
+		activated protein c resistance
+		apathy
+		ataxia
+		ataxic gait
+		carcinoma
+		dementia
+		disorientation
+		fever
+		forgetfulness
+		gait disturbances
+		headache
+		hernia
+		homonymous hemianopsia
+		hypoacusis
+		meningism
+		subarachnoid haemorrhage
+		tumour
+		vasculitis
+	true_positives:
+		apathy
+		ataxic gait
+		dementia
+		disorientation
+		forgetfulness
+		headache
+		meningism
+		subarachnoid haemorrhage
+	true_positives_partial:
+		('carcinoma', 'undifferentiated carcinoma')
+		('homonymous hemianopsia', 'right homonymous hemianopsia')
+	false_positives:
+		activated protein c resistance
+		ataxia
+		fever
+		gait disturbances
+		hernia
+		hypoacusis
+		tumour
+		vasculitis
+	false_negatives:
+		ataxic fingernose and heelshin test negative
+		bilateral sensorineural hearing and visual deficits
+		brain hernation
+		cerebral bleeding
+		fell without losing consciousness
+		gait disturbance
+		hearing deficits
+		lost appetite
+		metastases
+		negative rombergs test
+		nonattention
+		right occipital bleeding
+		siderosis
+		visual deficits
+
+
+Nombre del archivo: 10_Charlotte2_terms.txt
+
+TERMS:
+	ground_truth:
+		2 years before the first...
+		breast carcinoma
+		cerebellar gait ataxia
+		cervical myoclonus
+		dysarthria
+		nausea
+		opsoclonus
+		oscillopsia
+		she has refused mastectomy
+		vomiting
+	model_output:
+		cerebellar gait ataxia
+		cervical myoclonus
+		nausea
+		opsoclonus related oscillopsia
+		vomiting
+	true_positives:
+		cerebellar gait ataxia
+		cervical myoclonus
+		nausea
+		vomiting
+	true_positives_partial:
+	false_positives:
+		opsoclonus related oscillopsia
+	false_negatives:
+		2 years before the first...
+		breast carcinoma
+		dysarthria
+		opsoclonus
+		oscillopsia
+		she has refused mastectomy
+
+
+Nombre del archivo: 1_Doc2HPO_terms.txt
+
+TERMS:
+	ground_truth:
+		apathy
+		ataxic fingernose and heelshin test negative
+		ataxic gait
+		bilateral sensorineural hearing and visual deficits
+		brain hernation
+		cerebral bleeding
+		dementia
+		disorientation
+		fell without losing consciousness
+		forgetfulness
+		gait disturbance
+		headache
+		hearing deficits
+		lost appetite
+		meningism
+		metastases
+		negative rombergs test
+		nonattention
+		right homonymous hemianopsia
+		right occipital bleeding
+		siderosis
+		subarachnoid haemorrhage
+		undifferentiated carcinoma
+		visual deficits
+	model_output:
+		activated protein c resistance
+		apathy
+		ataxia
+		ataxic gait
+		carcinoma
+		dementia
+		disorientation
+		fever
+		forgetfulness
+		gait disturbances
+		headache
+		homonymous hemianopsia
+		hypoacusis
+		meningism
+		subarachnoid haemorrhage
+		tumour
+		vasculitis
+	true_positives:
+		apathy
+		ataxic gait
+		dementia
+		disorientation
+		forgetfulness
+		headache
+		meningism
+		subarachnoid haemorrhage
+	true_positives_partial:
+		('carcinoma', 'undifferentiated carcinoma')
+		('homonymous hemianopsia', 'right homonymous hemianopsia')
+	false_positives:
+		activated protein c resistance
+		ataxia
+		fever
+		gait disturbances
+		hypoacusis
+		tumour
+		vasculitis
+	false_negatives:
+		ataxic fingernose and heelshin test negative
+		bilateral sensorineural hearing and visual deficits
+		brain hernation
+		cerebral bleeding
+		fell without losing consciousness
+		gait disturbance
+		hearing deficits
+		lost appetite
+		metastases
+		negative rombergs test
+		nonattention
+		right occipital bleeding
+		siderosis
+		visual deficits
+
+
+Nombre del archivo: 14_PubCaseFinder_terms.txt
+
+TERMS:
+	ground_truth:
+		diplopia
+		haemorrhage in midbrain
+		hydrocephalus
+		lobulated lesion
+		worsening ataxia
+	model_output:
+		ataxia
+		diplopia
+		hydrocephalus
+	true_positives:
+		diplopia
+		hydrocephalus
+	true_positives_partial:
+		('ataxia', 'worsening ataxia')
+	false_positives:
+	false_negatives:
+		haemorrhage in midbrain
+		lobulated lesion
+
+
+Nombre del archivo: 7_PubCaseFinder_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000733
+		hp:0001288
+		hp:0001336
+		hp:0002066
+		hp:0003698
+		hp:0010543
+	model_output:
+		hp:0000639
+		hp:0001251
+		hp:0001288
+		hp:0001336
+		hp:0002664
+		hp:0003006
+		hp:0010543
+		hp:0031931
+		hp:0100526
+		hp:0100660
+	true_positives:
+		hp:0001288
+		hp:0001336
+		hp:0010543
+	true_positives_partial:
+	false_positives:
+		hp:0000639
+		hp:0001251
+		hp:0002664
+		hp:0003006
+		hp:0031931
+		hp:0100526
+		hp:0100660
+	false_negatives:
+		hp:0000733
+		hp:0002066
+		hp:0003698
+
+
+Nombre del archivo: 7_ClinPhen_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000733
+		hp:0001288
+		hp:0001336
+		hp:0002066
+		hp:0003698
+		hp:0010543
+	model_output:
+		hp:0000639
+		hp:0000733
+		hp:0001251
+		hp:0001288
+		hp:0001336
+		hp:0002664
+		hp:0003006
+		hp:0006742
+		hp:0006934
+		hp:0010543
+		hp:0011675
+		hp:0031931
+		hp:0100526
+		hp:0100660
+	true_positives:
+		hp:0000733
+		hp:0001288
+		hp:0001336
+		hp:0010543
+	true_positives_partial:
+	false_positives:
+		hp:0000639
+		hp:0001251
+		hp:0002664
+		hp:0003006
+		hp:0006742
+		hp:0006934
+		hp:0011675
+		hp:0031931
+		hp:0100526
+		hp:0100660
+	false_negatives:
+		hp:0002066
+		hp:0003698
+
+
+Nombre del archivo: 8_Doc2HPO_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000508
+		hp:0000616
+		hp:0000822
+		hp:0001251
+		hp:0002070
+		hp:0002172
+		hp:0002936
+		hp:0020038
+		hp:0100247
+	model_output:
+		hp:0000508
+		hp:0000616
+		hp:0000822
+		hp:0001251
+		hp:0001272
+		hp:0001297
+		hp:0002070
+		hp:0002078
+		hp:0011024
+	true_positives:
+		hp:0000508
+		hp:0000616
+		hp:0000822
+		hp:0001251
+		hp:0002070
+	true_positives_partial:
+	false_positives:
+		hp:0001272
+		hp:0001297
+		hp:0002078
+		hp:0011024
+	false_negatives:
+		hp:0002172
+		hp:0002936
+		hp:0020038
+		hp:0100247
+
+
+Nombre del archivo: 8_ataxaid_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000508
+		hp:0000616
+		hp:0000822
+		hp:0001251
+		hp:0002070
+		hp:0002172
+		hp:0002936
+		hp:0020038
+		hp:0100247
+	model_output:
+		hp:0000112
+		hp:0000508
+		hp:0000822
+		hp:0001251
+		hp:0001272
+		hp:0001297
+		hp:0002078
+		hp:0002277
+		hp:0011024
+		hp:0011097
+		hp:0012155
+		hp:0020038
+		hp:0033676
+		hp:0034179
+		hp:0100247
+		hp:0100716
+	true_positives:
+		hp:0000508
+		hp:0000822
+		hp:0001251
+		hp:0020038
+		hp:0100247
+	true_positives_partial:
+	false_positives:
+		hp:0000112
+		hp:0001272
+		hp:0001297
+		hp:0002078
+		hp:0002277
+		hp:0011024
+		hp:0011097
+		hp:0012155
+		hp:0033676
+		hp:0034179
+		hp:0100716
+	false_negatives:
+		hp:0000616
+		hp:0002070
+		hp:0002172
+		hp:0002936
+
+
+Nombre del archivo: 15_Charlotte2_terms.txt
+
+TERMS:
+	ground_truth:
+		delayed milestones
+		developemental delay
+		hypotonia
+		not able to pull to sit or stand
+		nystagmus
+		premature grasp
+		second degree consanguineous
+		swaying from side to side when pulled to sit
+		tremulousness
+		truncal ataxia
+	model_output:
+		consanguineous
+		delayed milestones
+		generalised hypotonia
+		not able to pull to sit or stand
+		premature grasp
+		tremulousness
+		truncal ataxia
+	true_positives:
+		delayed milestones
+		not able to pull to sit or stand
+		premature grasp
+		tremulousness
+		truncal ataxia
+	true_positives_partial:
+		('consanguineous', 'second degree consanguineous')
+	false_positives:
+		generalised hypotonia
+	false_negatives:
+		developemental delay
+		hypotonia
+		nystagmus
+		swaying from side to side when pulled to sit
+
+
+Nombre del archivo: 13_ClinPhen_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000819
+		hp:0001026
+		hp:0001260
+		hp:0001336
+		hp:0001350
+		hp:0002015
+		hp:0002070
+		hp:0002174
+		hp:0002317
+		hp:0002345
+		hp:0002406
+	model_output:
+		hp:0001251
+		hp:0001260
+		hp:0001298
+		hp:0001317
+		hp:0001336
+		hp:0001337
+		hp:0002015
+		hp:0002500
+		hp:0006903
+		hp:0007239
+		hp:0009830
+		hp:0010950
+		hp:0045007
+		hp:0100321
+	true_positives:
+		hp:0001260
+		hp:0001336
+		hp:0002015
+	true_positives_partial:
+	false_positives:
+		hp:0001251
+		hp:0001298
+		hp:0001317
+		hp:0001337
+		hp:0002500
+		hp:0006903
+		hp:0007239
+		hp:0009830
+		hp:0010950
+		hp:0045007
+		hp:0100321
+	false_negatives:
+		hp:0000819
+		hp:0001026
+		hp:0001350
+		hp:0002070
+		hp:0002174
+		hp:0002317
+		hp:0002345
+		hp:0002406
+
+
+Nombre del archivo: 1_ataxaid_terms.txt
+
+TERMS:
+	ground_truth:
+		apathy
+		ataxic fingernose and heelshin test negative
+		ataxic gait
+		bilateral sensorineural hearing and visual deficits
+		brain hernation
+		cerebral bleeding
+		dementia
+		disorientation
+		fell without losing consciousness
+		forgetfulness
+		gait disturbance
+		headache
+		hearing deficits
+		lost appetite
+		meningism
+		metastases
+		negative rombergs test
+		nonattention
+		right homonymous hemianopsia
+		right occipital bleeding
+		siderosis
+		subarachnoid haemorrhage
+		undifferentiated carcinoma
+		visual deficits
+	model_output:
+		apathy
+		ataxia hypoacusis
+		ataxic
+		bleeding
+		cerebral bleeding
+		chronic bleeding
+		death
+		dementia
+		disorientation
+		fever
+		forgetfulness
+		gait disturbances
+		head trauma
+		headache
+		hearing deficits
+		herniation
+		meningism
+		motor deficits
+		right homonymous hemianopsia
+		sensorineural hearing and visual deficits
+		subarachnoid haemorrhage
+		tumour
+		undifferentiated carcinoma
+		vasculitis
+	true_positives:
+		apathy
+		cerebral bleeding
+		dementia
+		disorientation
+		forgetfulness
+		headache
+		hearing deficits
+		meningism
+		right homonymous hemianopsia
+		subarachnoid haemorrhage
+		undifferentiated carcinoma
+	true_positives_partial:
+		('ataxic', 'ataxic fingernose and heelshin test negative')
+		('bleeding', 'cerebral bleeding')
+		('sensorineural hearing and visual deficits', 'bilateral sensorineural hearing and visual deficits')
+	false_positives:
+		ataxia hypoacusis
+		chronic bleeding
+		death
+		fever
+		gait disturbances
+		head trauma
+		herniation
+		motor deficits
+		tumour
+		vasculitis
+	false_negatives:
+		ataxic gait
+		brain hernation
+		fell without losing consciousness
+		gait disturbance
+		lost appetite
+		metastases
+		negative rombergs test
+		nonattention
+		right occipital bleeding
+		siderosis
+		visual deficits
+
+
+Nombre del archivo: 10_ChatGPT_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0001260
+		hp:0001336
+		hp:0002013
+		hp:0002018
+		hp:0002066
+		hp:0003002
+		hp:0010543
+		hp:4000033
+	model_output:
+		hp:0001092
+		hp:0001260
+		hp:0001336
+		hp:0002013
+		hp:0002018
+		hp:0002073
+		hp:0002136
+		hp:0002513
+		hp:0030280
+	true_positives:
+		hp:0001260
+		hp:0001336
+		hp:0002013
+		hp:0002018
+	true_positives_partial:
+	false_positives:
+		hp:0001092
+		hp:0002073
+		hp:0002136
+		hp:0002513
+		hp:0030280
+	false_negatives:
+		hp:0002066
+		hp:0003002
+		hp:0010543
+		hp:4000033
+
+
+Nombre del archivo: 14_PubCaseFinder_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000238
+		hp:0000651
+		hp:0001251
+		hp:0001342
+		hp:0002060
+	model_output:
+		hp:0000238
+		hp:0000651
+		hp:0001251
+	true_positives:
+		hp:0000238
+		hp:0000651
+		hp:0001251
+	true_positives_partial:
+	false_positives:
+	false_negatives:
+		hp:0001342
+		hp:0002060
+
+
+Nombre del archivo: 12_ClinPhen_terms.txt
+
+TERMS:
+	ground_truth:
+		he walk independently onlu from the age of three
+		independent for activities of daily living
+		mild perinatal hypoxic injury
+		mini mental status examination score 25/30
+		moderate mental retardation
+		motor milestones were acquired late
+		nonprogressive gait ataxia
+		scanning
+		slurred
+		staccato speech
+		truncal ataxia
+	model_output:
+	true_positives:
+	true_positives_partial:
+	false_positives:
+	false_negatives:
+		he walk independently onlu from the age of three
+		independent for activities of daily living
+		mild perinatal hypoxic injury
+		mini mental status examination score 25/30
+		moderate mental retardation
+		motor milestones were acquired late
+		nonprogressive gait ataxia
+		scanning
+		slurred
+		staccato speech
+		truncal ataxia
+
+
+Nombre del archivo: 1_ClinPhen_terms.txt
+
+TERMS:
+	ground_truth:
+		apathy
+		ataxic fingernose and heelshin test negative
+		ataxic gait
+		bilateral sensorineural hearing and visual deficits
+		brain hernation
+		cerebral bleeding
+		dementia
+		disorientation
+		fell without losing consciousness
+		forgetfulness
+		gait disturbance
+		headache
+		hearing deficits
+		lost appetite
+		meningism
+		metastases
+		negative rombergs test
+		nonattention
+		right homonymous hemianopsia
+		right occipital bleeding
+		siderosis
+		subarachnoid haemorrhage
+		undifferentiated carcinoma
+		visual deficits
+	model_output:
+	true_positives:
+	true_positives_partial:
+	false_positives:
+	false_negatives:
+		apathy
+		ataxic fingernose and heelshin test negative
+		ataxic gait
+		bilateral sensorineural hearing and visual deficits
+		brain hernation
+		cerebral bleeding
+		dementia
+		disorientation
+		fell without losing consciousness
+		forgetfulness
+		gait disturbance
+		headache
+		hearing deficits
+		lost appetite
+		meningism
+		metastases
+		negative rombergs test
+		nonattention
+		right homonymous hemianopsia
+		right occipital bleeding
+		siderosis
+		subarachnoid haemorrhage
+		undifferentiated carcinoma
+		visual deficits
+
+
+Nombre del archivo: 4_Doc2HPO_terms.txt
+
+TERMS:
+	ground_truth:
+		cerebellar incoordination
+		dandywalker complex
+		headache
+		hydrocephalus
+		mild mental subnormality
+		progressive instability of stance and gait since the age of 2 years
+		vermis is hypoplastic
+		vomiting
+	model_output:
+		cerebral palsy
+		headache
+		hydrocephalus
+		incoordination
+		mega cisterna magna
+		vomiting
+	true_positives:
+		headache
+		hydrocephalus
+		vomiting
+	true_positives_partial:
+		('incoordination', 'cerebellar incoordination')
+	false_positives:
+		cerebral palsy
+		mega cisterna magna
+	false_negatives:
+		dandywalker complex
+		mild mental subnormality
+		progressive instability of stance and gait since the age of 2 years
+		vermis is hypoplastic
+
+
+Nombre del archivo: 6_Charlotte1_terms.txt
+
+TERMS:
+	ground_truth:
+		both planter reflexes were flexors
+		conjunctival telangiectasias
+		patients eyes were red and....this is a chronic allergy
+		recurrent upper respiratory tract infections
+		the girl sways back and forth and side by side when she stands and walks
+		vitiligo
+	model_output:
+		ataxia
+		conjunctival telangiectasias
+		progressive impairment in stance and gait since the age of 20 months
+		recurrent upper respiratory tract infections
+		vitiligo
+	true_positives:
+		conjunctival telangiectasias
+		recurrent upper respiratory tract infections
+		vitiligo
+	true_positives_partial:
+	false_positives:
+		ataxia
+		progressive impairment in stance and gait since the age of 20 months
+	false_negatives:
+		both planter reflexes were flexors
+		patients eyes were red and....this is a chronic allergy
+		the girl sways back and forth and side by side when she stands and walks
+
+
+Nombre del archivo: 7_ataxaid_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000733
+		hp:0001288
+		hp:0001336
+		hp:0002066
+		hp:0003698
+		hp:0010543
+	model_output:
+		hp:0000622
+		hp:0000639
+		hp:0001251
+		hp:0001336
+		hp:0002664
+		hp:0002936
+		hp:0003006
+		hp:0007295
+		hp:0010543
+		hp:0031931
+		hp:0033552
+		hp:0100526
+		hp:0100660
+		hp:0410133
+	true_positives:
+		hp:0001336
+		hp:0010543
+	true_positives_partial:
+	false_positives:
+		hp:0000622
+		hp:0000639
+		hp:0001251
+		hp:0002664
+		hp:0002936
+		hp:0003006
+		hp:0007295
+		hp:0031931
+		hp:0033552
+		hp:0100526
+		hp:0100660
+		hp:0410133
+	false_negatives:
+		hp:0000733
+		hp:0001288
+		hp:0002066
+		hp:0003698
+
+
+Nombre del archivo: 7_Doc2HPO_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000733
+		hp:0001288
+		hp:0001336
+		hp:0002066
+		hp:0003698
+		hp:0010543
+	model_output:
+		hp:0000639
+		hp:0001251
+		hp:0001288
+		hp:0001336
+		hp:0002664
+		hp:0003006
+		hp:0010543
+		hp:0100526
+		hp:0100660
+	true_positives:
+		hp:0001288
+		hp:0001336
+		hp:0010543
+	true_positives_partial:
+	false_positives:
+		hp:0000639
+		hp:0001251
+		hp:0002664
+		hp:0003006
+		hp:0100526
+		hp:0100660
+	false_negatives:
+		hp:0000733
+		hp:0002066
+		hp:0003698
+
+
+Nombre del archivo: 15_Charlotte2_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000639
+		hp:0001252
+		hp:0001270
+		hp:0002078
+		hp:0030903
+	model_output:
+	true_positives:
+	true_positives_partial:
+	false_positives:
+	false_negatives:
+		hp:0000639
+		hp:0001252
+		hp:0001270
+		hp:0002078
+		hp:0030903
+
+
+Nombre del archivo: 6_Charlotte2_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000524
+		hp:0001045
+		hp:0002317
+		hp:0002788
+		hp:0003487
+		hp:0003698
+		hp:0007717
+		hp:0025337
+	model_output:
+		hp:0000524
+		hp:0001045
+		hp:0001251
+		hp:0001288
+		hp:0003698
+		hp:0004875
+	true_positives:
+		hp:0000524
+		hp:0001045
+		hp:0003698
+	true_positives_partial:
+	false_positives:
+		hp:0001251
+		hp:0001288
+		hp:0004875
+	false_negatives:
+		hp:0002317
+		hp:0002788
+		hp:0003487
+		hp:0007717
+		hp:0025337
+
+
+Nombre del archivo: 13_ChatGPT_terms.txt
+
+TERMS:
+	ground_truth:
+		action tremor
+		appendicular dysmetria
+		diabetic
+		dysarthria
+		foot ulcers
+		gait unsteadiness
+		generalised postural tremor
+		hyperintensity of dentate nuclei
+		mild dysphagia over 2 months
+		progressive slurring of speech
+		severe axial ataxia
+		spontaneous myoclonus of lower face
+	model_output:
+		appendicular dysmetria
+		axial ataxia
+		complete resolution at 1 month
+		diabetic
+		dysphagia
+		gait unsteadiness
+		generalized postural and action tremor
+		metronidazole medication
+		mri normalization at 3 months
+		myoclonus of lower face
+		negative myoclonus of upper extremities
+		rapid neurological improvement after drug suspension
+		slurred speech
+		t2flair hyperintensity of dentate nuclei
+	true_positives:
+		appendicular dysmetria
+		diabetic
+		gait unsteadiness
+	true_positives_partial:
+		('axial ataxia', 'severe axial ataxia')
+		('dysphagia', 'mild dysphagia over 2 months')
+		('myoclonus of lower face', 'spontaneous myoclonus of lower face')
+	false_positives:
+		complete resolution at 1 month
+		generalized postural and action tremor
+		metronidazole medication
+		mri normalization at 3 months
+		negative myoclonus of upper extremities
+		rapid neurological improvement after drug suspension
+		slurred speech
+		t2flair hyperintensity of dentate nuclei
+	false_negatives:
+		action tremor
+		dysarthria
+		foot ulcers
+		generalised postural tremor
+		hyperintensity of dentate nuclei
+		progressive slurring of speech
+
+
+Nombre del archivo: 4_Nosotros_terms.txt
+
+TERMS:
+	ground_truth:
+		cerebellar incoordination
+		dandywalker complex
+		headache
+		hydrocephalus
+		mild mental subnormality
+		progressive instability of stance and gait since the age of 2 years
+		vermis is hypoplastic
+		vomiting
+	model_output:
+		anomalies
+		ataxic
+		cerebellar dysfunction
+		cerebellar incoordination
+		cerebral palsy
+		headache
+		headaches
+		hydrocephalus
+		instability of stance
+		intracranial and extracranial anomalies
+		malformations
+		supratentorial malformations
+		vomiting
+	true_positives:
+		cerebellar incoordination
+		headache
+		hydrocephalus
+		vomiting
+	true_positives_partial:
+		('instability of stance', 'progressive instability of stance and gait since the age of 2 years')
+	false_positives:
+		anomalies
+		ataxic
+		cerebellar dysfunction
+		cerebral palsy
+		headaches
+		intracranial and extracranial anomalies
+		malformations
+		supratentorial malformations
+	false_negatives:
+		dandywalker complex
+		mild mental subnormality
+		vermis is hypoplastic
+
+
+Nombre del archivo: 8_Charlotte2_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000508
+		hp:0000616
+		hp:0000822
+		hp:0001251
+		hp:0002070
+		hp:0002172
+		hp:0002936
+		hp:0020038
+		hp:0100247
+	model_output:
+		hp:0000616
+		hp:0001251
+		hp:0002070
+		hp:0002078
+		hp:0002277
+		hp:0007687
+		hp:0100247
+	true_positives:
+		hp:0000616
+		hp:0001251
+		hp:0002070
+		hp:0100247
+	true_positives_partial:
+	false_positives:
+		hp:0002078
+		hp:0002277
+		hp:0007687
+	false_negatives:
+		hp:0000508
+		hp:0000822
+		hp:0002172
+		hp:0002936
+		hp:0020038
+
+
+Nombre del archivo: 10_PubCaseFinder_terms.txt
+
+TERMS:
+	ground_truth:
+		2 years before the first...
+		breast carcinoma
+		cerebellar gait ataxia
+		cervical myoclonus
+		dysarthria
+		nausea
+		opsoclonus
+		oscillopsia
+		she has refused mastectomy
+		vomiting
+	model_output:
+		breast carcinoma
+		dysarthria
+		gait ataxia
+		myoclonus
+		nausea
+		opsoclonus
+		vomiting
+	true_positives:
+		breast carcinoma
+		dysarthria
+		nausea
+		opsoclonus
+		vomiting
+	true_positives_partial:
+		('gait ataxia', 'cerebellar gait ataxia')
+		('myoclonus', 'cervical myoclonus')
+	false_positives:
+	false_negatives:
+		2 years before the first...
+		oscillopsia
+		she has refused mastectomy
+
+
+Nombre del archivo: 8_ClinPhen_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000508
+		hp:0000616
+		hp:0000822
+		hp:0001251
+		hp:0002070
+		hp:0002172
+		hp:0002936
+		hp:0020038
+		hp:0100247
+	model_output:
+		hp:0000508
+		hp:0000616
+		hp:0000822
+		hp:0001251
+		hp:0001272
+		hp:0001297
+		hp:0002070
+		hp:0002078
+		hp:0002953
+		hp:0007728
+		hp:0007970
+		hp:0008568
+	true_positives:
+		hp:0000508
+		hp:0000616
+		hp:0000822
+		hp:0001251
+		hp:0002070
+	true_positives_partial:
+	false_positives:
+		hp:0001272
+		hp:0001297
+		hp:0002078
+		hp:0002953
+		hp:0007728
+		hp:0007970
+		hp:0008568
+	false_negatives:
+		hp:0002172
+		hp:0002936
+		hp:0020038
+		hp:0100247
+
+
+Nombre del archivo: 7_Nosotros_terms.txt
+
+TERMS:
+	ground_truth:
+		abnormal gait
+		ataxia of stance and gait
+		generalised myoclonic jerks
+		jerky limb movements
+		opsoclonus
+	model_output:
+		abnormal gait and sudden repetitive jerky limbs movements
+		ataxia
+		clonazepam
+		gadolinium
+		idiopathic
+		idiopathic opsoclonus
+		immune suppressants
+		jerks
+		myoclonic jerks
+		myoclonus
+		nystagmus
+		ocular dyskinesia
+		ocular flutter horizontal backtoback
+		opsoclonus
+		oscillopsia
+		parainfectious
+		paraneoplastic
+		paraneoplastic neuroblastoma
+		smallcell lung cancer
+		sudden involuntary chaotic arrhythmic and multidirectional upwards downwards and torsional conjugate saccadic ocular movements
+		toxic aetiologies
+		tumour
+		visual blurring
+	true_positives:
+		opsoclonus
+	true_positives_partial:
+		('ataxia', 'ataxia of stance and gait')
+		('jerks', 'generalised myoclonic jerks')
+		('myoclonic jerks', 'generalised myoclonic jerks')
+	false_positives:
+		abnormal gait and sudden repetitive jerky limbs movements
+		clonazepam
+		gadolinium
+		idiopathic
+		idiopathic opsoclonus
+		immune suppressants
+		myoclonus
+		nystagmus
+		ocular dyskinesia
+		ocular flutter horizontal backtoback
+		oscillopsia
+		parainfectious
+		paraneoplastic
+		paraneoplastic neuroblastoma
+		smallcell lung cancer
+		sudden involuntary chaotic arrhythmic and multidirectional upwards downwards and torsional conjugate saccadic ocular movements
+		toxic aetiologies
+		tumour
+		visual blurring
+	false_negatives:
+		abnormal gait
+		jerky limb movements
+
+
+Nombre del archivo: 14_Nosotros_terms.txt
+
+TERMS:
+	ground_truth:
+		diplopia
+		haemorrhage in midbrain
+		hydrocephalus
+		lobulated lesion
+		worsening ataxia
+	model_output:
+		ataxia
+		brainstem haemorrhage
+		diplopia
+		haemorrhage
+		hydrocephalus
+	true_positives:
+		diplopia
+		hydrocephalus
+	true_positives_partial:
+		('ataxia', 'worsening ataxia')
+		('haemorrhage', 'haemorrhage in midbrain')
+	false_positives:
+		brainstem haemorrhage
+	false_negatives:
+		lobulated lesion
+
+
+Nombre del archivo: 2_ClinPhen_terms.txt
+
+TERMS:
+	ground_truth:
+		alert
+		altered sensorium
+		ataxia
+		bilateral fingertonose ataxia
+		deep tendon reflexes
+		dysarthria
+		fever
+		head injury
+		headache
+		his speech apeared to scan each syllable
+		horizontal nystagmus
+		impaired heel knee test
+		motor strength
+		oriented
+		reflexes were normal
+		seizures
+		sensory loss
+		vertigo
+	model_output:
+	true_positives:
+	true_positives_partial:
+	false_positives:
+	false_negatives:
+		alert
+		altered sensorium
+		ataxia
+		bilateral fingertonose ataxia
+		deep tendon reflexes
+		dysarthria
+		fever
+		head injury
+		headache
+		his speech apeared to scan each syllable
+		horizontal nystagmus
+		impaired heel knee test
+		motor strength
+		oriented
+		reflexes were normal
+		seizures
+		sensory loss
+		vertigo
+
+
+Nombre del archivo: 13_Nosotros_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000819
+		hp:0001026
+		hp:0001260
+		hp:0001336
+		hp:0001350
+		hp:0002015
+		hp:0002070
+		hp:0002174
+		hp:0002317
+		hp:0002345
+		hp:0002406
+	model_output:
+		hp:0001251
+		hp:0001260
+		hp:0001298
+		hp:0001310
+		hp:0001336
+		hp:0001337
+		hp:0001350
+		hp:0002015
+		hp:0009830
+		hp:0011675
+		hp:0033413
+		hp:0100651
+		hp:0200042
+	true_positives:
+		hp:0001260
+		hp:0001336
+		hp:0001350
+		hp:0002015
+	true_positives_partial:
+	false_positives:
+		hp:0001251
+		hp:0001298
+		hp:0001310
+		hp:0001337
+		hp:0009830
+		hp:0011675
+		hp:0033413
+		hp:0100651
+		hp:0200042
+	false_negatives:
+		hp:0000819
+		hp:0001026
+		hp:0002070
+		hp:0002174
+		hp:0002317
+		hp:0002345
+		hp:0002406
+
+
+Nombre del archivo: 10_ataxaid_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0001260
+		hp:0001336
+		hp:0002013
+		hp:0002018
+		hp:0002066
+		hp:0003002
+		hp:0010543
+		hp:4000033
+	model_output:
+		hp:0001260
+		hp:0001336
+		hp:0002018
+		hp:0002066
+		hp:0003002
+		hp:0010543
+	true_positives:
+		hp:0001260
+		hp:0001336
+		hp:0002018
+		hp:0002066
+		hp:0003002
+		hp:0010543
+	true_positives_partial:
+	false_positives:
+	false_negatives:
+		hp:0002013
+		hp:4000033
+
+
+Nombre del archivo: 10_Doc2HPO_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0001260
+		hp:0001336
+		hp:0002013
+		hp:0002018
+		hp:0002066
+		hp:0003002
+		hp:0010543
+		hp:4000033
+	model_output:
+		hp:0001260
+		hp:0001336
+		hp:0002013
+		hp:0002018
+		hp:0002066
+		hp:0003002
+		hp:0010543
+	true_positives:
+		hp:0001260
+		hp:0001336
+		hp:0002013
+		hp:0002018
+		hp:0002066
+		hp:0003002
+		hp:0010543
+	true_positives_partial:
+	false_positives:
+	false_negatives:
+		hp:4000033
+
+
+Nombre del archivo: 7_Nosotros_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000733
+		hp:0001288
+		hp:0001336
+		hp:0002066
+		hp:0003698
+		hp:0010543
+	model_output:
+		hp:0000639
+		hp:0000733
+		hp:0001125
+		hp:0001251
+		hp:0001336
+		hp:0002664
+		hp:0003006
+		hp:0004305
+		hp:0010543
+		hp:0031931
+		hp:0033552
+		hp:0100660
+		hp:0410148
+	true_positives:
+		hp:0000733
+		hp:0001336
+		hp:0010543
+	true_positives_partial:
+	false_positives:
+		hp:0000639
+		hp:0001125
+		hp:0001251
+		hp:0002664
+		hp:0003006
+		hp:0004305
+		hp:0031931
+		hp:0033552
+		hp:0100660
+		hp:0410148
+	false_negatives:
+		hp:0001288
+		hp:0002066
+		hp:0003698
+
+
+Nombre del archivo: 7_ChatGPT_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000733
+		hp:0001288
+		hp:0001336
+		hp:0002066
+		hp:0003698
+		hp:0010543
+	model_output:
+		hp:0000003
+		hp:0000622
+		hp:0000639
+		hp:0001096
+		hp:0001198
+		hp:0001251
+		hp:0001288
+		hp:0001336
+		hp:0002528
+		hp:0002960
+		hp:0007187
+		hp:0007359
+		hp:0007391
+		hp:0007459
+		hp:0007702
+		hp:0045088
+		hp:0100639
+	true_positives:
+		hp:0001288
+		hp:0001336
+	true_positives_partial:
+	false_positives:
+		hp:0000003
+		hp:0000622
+		hp:0000639
+		hp:0001096
+		hp:0001198
+		hp:0001251
+		hp:0002528
+		hp:0002960
+		hp:0007187
+		hp:0007359
+		hp:0007391
+		hp:0007459
+		hp:0007702
+		hp:0045088
+		hp:0100639
+	false_negatives:
+		hp:0000733
+		hp:0002066
+		hp:0003698
+		hp:0010543
+
+
+Nombre del archivo: 13_Charlotte1_terms.txt
+
+TERMS:
+	ground_truth:
+		action tremor
+		appendicular dysmetria
+		diabetic
+		dysarthria
+		foot ulcers
+		gait unsteadiness
+		generalised postural tremor
+		hyperintensity of dentate nuclei
+		mild dysphagia over 2 months
+		progressive slurring of speech
+		severe axial ataxia
+		spontaneous myoclonus of lower face
+	model_output:
+		action tremor
+		appendicular dysmetria
+		dysarthria
+		gait unsteadiness
+		generalised postural tremor
+		mild dysphagia over 2 months
+		negative myoclonus of upper extremities
+		progressive slurring of speech
+		severe axial ataxia
+		spontaneous myoclonus of lower face
+	true_positives:
+		action tremor
+		appendicular dysmetria
+		dysarthria
+		gait unsteadiness
+		generalised postural tremor
+		mild dysphagia over 2 months
+		progressive slurring of speech
+		severe axial ataxia
+		spontaneous myoclonus of lower face
+	true_positives_partial:
+	false_positives:
+		negative myoclonus of upper extremities
+	false_negatives:
+		diabetic
+		foot ulcers
+		hyperintensity of dentate nuclei
+
+
+Nombre del archivo: 8_ChatGPT_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000508
+		hp:0000616
+		hp:0000822
+		hp:0001251
+		hp:0002070
+		hp:0002172
+		hp:0002936
+		hp:0020038
+		hp:0100247
+	model_output:
+		hp:0000508
+		hp:0000616
+		hp:0000737
+		hp:0000822
+		hp:0001251
+		hp:0001871
+		hp:0002172
+		hp:0004375
+		hp:0005516
+		hp:0006892
+		hp:0012443
+	true_positives:
+		hp:0000508
+		hp:0000616
+		hp:0000822
+		hp:0001251
+		hp:0002172
+	true_positives_partial:
+	false_positives:
+		hp:0000737
+		hp:0001871
+		hp:0004375
+		hp:0005516
+		hp:0006892
+		hp:0012443
+	false_negatives:
+		hp:0002070
+		hp:0002936
+		hp:0020038
+		hp:0100247
+
+
+Nombre del archivo: 13_Charlotte1_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000819
+		hp:0001026
+		hp:0001260
+		hp:0001336
+		hp:0001350
+		hp:0002015
+		hp:0002070
+		hp:0002174
+		hp:0002317
+		hp:0002345
+		hp:0002406
+	model_output:
+		hp:0001260
+		hp:0001336
+		hp:0001350
+		hp:0002015
+		hp:0002066
+		hp:0002078
+		hp:0002174
+		hp:0002345
+		hp:0002406
+		hp:0012508
+	true_positives:
+		hp:0001260
+		hp:0001336
+		hp:0001350
+		hp:0002015
+		hp:0002174
+		hp:0002345
+		hp:0002406
+	true_positives_partial:
+	false_positives:
+		hp:0002066
+		hp:0002078
+		hp:0012508
+	false_negatives:
+		hp:0000819
+		hp:0001026
+		hp:0002070
+		hp:0002317
+
+
+Nombre del archivo: 12_ChatGPT_terms.txt
+
+TERMS:
+	ground_truth:
+		he walk independently onlu from the age of three
+		independent for activities of daily living
+		mild perinatal hypoxic injury
+		mini mental status examination score 25/30
+		moderate mental retardation
+		motor milestones were acquired late
+		nonprogressive gait ataxia
+		scanning
+		slurred
+		staccato speech
+		truncal ataxia
+	model_output:
+		gait ataxia
+		hypotonia
+		mild mental retardation
+		perinatal hypoxic injury
+		staccato speech
+		truncal ataxia
+	true_positives:
+		staccato speech
+		truncal ataxia
+	true_positives_partial:
+		('gait ataxia', 'nonprogressive gait ataxia')
+		('perinatal hypoxic injury', 'mild perinatal hypoxic injury')
+	false_positives:
+		hypotonia
+		mild mental retardation
+	false_negatives:
+		he walk independently onlu from the age of three
+		independent for activities of daily living
+		mini mental status examination score 25/30
+		moderate mental retardation
+		motor milestones were acquired late
+		scanning
+		slurred
+
+
+Nombre del archivo: 7_Charlotte1_terms.txt
+
+TERMS:
+	ground_truth:
+		abnormal gait
+		ataxia of stance and gait
+		generalised myoclonic jerks
+		jerky limb movements
+		opsoclonus
+	model_output:
+		ataxia of gait
+		ataxia of stance
+		few days history
+		generalised myoclonic jerks
+		opsoclonus
+	true_positives:
+		generalised myoclonic jerks
+		opsoclonus
+	true_positives_partial:
+		('ataxia of stance', 'ataxia of stance and gait')
+	false_positives:
+		ataxia of gait
+		few days history
+	false_negatives:
+		abnormal gait
+		jerky limb movements
+
+
+Nombre del archivo: 12_ClinPhen_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0001270
+		hp:0001350
+		hp:0002066
+		hp:0002078
+		hp:0002168
+		hp:0002342
+		hp:0012418
+		hp:5200012
+	model_output:
+		hp:0001251
+		hp:0002066
+	true_positives:
+		hp:0002066
+	true_positives_partial:
+	false_positives:
+		hp:0001251
+	false_negatives:
+		hp:0001270
+		hp:0001350
+		hp:0002078
+		hp:0002168
+		hp:0002342
+		hp:0012418
+		hp:5200012
+
+
+Nombre del archivo: 10_PubCaseFinder_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0001260
+		hp:0001336
+		hp:0002013
+		hp:0002018
+		hp:0002066
+		hp:0003002
+		hp:0010543
+		hp:4000033
+	model_output:
+		hp:0001260
+		hp:0001336
+		hp:0002013
+		hp:0002018
+		hp:0002066
+		hp:0003002
+		hp:0010543
+	true_positives:
+		hp:0001260
+		hp:0001336
+		hp:0002013
+		hp:0002018
+		hp:0002066
+		hp:0003002
+		hp:0010543
+	true_positives_partial:
+	false_positives:
+	false_negatives:
+		hp:4000033
+
+
+Nombre del archivo: 6_ataxaid_terms.txt
+
+TERMS:
+	ground_truth:
+		both planter reflexes were flexors
+		conjunctival telangiectasias
+		patients eyes were red and....this is a chronic allergy
+		recurrent upper respiratory tract infections
+		the girl sways back and forth and side by side when she stands and walks
+		vitiligo
+	model_output:
+		allergy
+		ataxia
+		ataxia telangiectasia
+		ataxic cerebral palsy
+		burkitts lymphoma
+		chronic conjunctivitis
+		conjunctival telangiectasias
+		humour
+		impaired delayed hypersensitivity
+		impairment in stance and gait since the
+		malignancies
+		perennial allergy
+		respiratory tract infections
+		telangiectasia
+		telangiectasias
+		thymic hypoplasia
+		vitiligo
+	true_positives:
+		conjunctival telangiectasias
+		vitiligo
+	true_positives_partial:
+		('allergy', 'patients eyes were red and....this is a chronic allergy')
+		('respiratory tract infections', 'recurrent upper respiratory tract infections')
+		('telangiectasia', 'conjunctival telangiectasias')
+		('telangiectasias', 'conjunctival telangiectasias')
+	false_positives:
+		ataxia
+		ataxia telangiectasia
+		ataxic cerebral palsy
+		burkitts lymphoma
+		chronic conjunctivitis
+		humour
+		impaired delayed hypersensitivity
+		impairment in stance and gait since the
+		malignancies
+		perennial allergy
+		thymic hypoplasia
+	false_negatives:
+		both planter reflexes were flexors
+		the girl sways back and forth and side by side when she stands and walks
+
+
+Nombre del archivo: 6_ClinPhen_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000524
+		hp:0001045
+		hp:0002317
+		hp:0002788
+		hp:0003487
+		hp:0003698
+		hp:0007717
+		hp:0025337
+	model_output:
+		hp:0000509
+		hp:0000524
+		hp:0000777
+		hp:0001009
+		hp:0001045
+		hp:0001251
+		hp:0002205
+		hp:0002665
+		hp:0002715
+		hp:0002719
+		hp:0002720
+		hp:0002788
+		hp:0002972
+		hp:0004315
+		hp:0005479
+		hp:0011947
+		hp:0012393
+		hp:0025337
+		hp:0030080
+		hp:0100021
+	true_positives:
+		hp:0000524
+		hp:0001045
+		hp:0002788
+		hp:0025337
+	true_positives_partial:
+	false_positives:
+		hp:0000509
+		hp:0000777
+		hp:0001009
+		hp:0001251
+		hp:0002205
+		hp:0002665
+		hp:0002715
+		hp:0002719
+		hp:0002720
+		hp:0002972
+		hp:0004315
+		hp:0005479
+		hp:0011947
+		hp:0012393
+		hp:0030080
+		hp:0100021
+	false_negatives:
+		hp:0002317
+		hp:0003487
+		hp:0003698
+		hp:0007717
+
+
+Nombre del archivo: 14_ChatGPT_terms.txt
+
+TERMS:
+	ground_truth:
+		diplopia
+		haemorrhage in midbrain
+		hydrocephalus
+		lobulated lesion
+		worsening ataxia
+	model_output:
+		ataxia
+		diplopia
+		haemorrhage
+		hydrocephalus
+		lesion
+	true_positives:
+		diplopia
+		hydrocephalus
+	true_positives_partial:
+		('ataxia', 'worsening ataxia')
+		('haemorrhage', 'haemorrhage in midbrain')
+		('lesion', 'lobulated lesion')
+	false_positives:
+	false_negatives:
+
+
+Nombre del archivo: 2_Charlotte1_terms.txt
+
+TERMS:
+	ground_truth:
+		alert
+		altered sensorium
+		ataxia
+		bilateral fingertonose ataxia
+		deep tendon reflexes
+		dysarthria
+		fever
+		head injury
+		headache
+		his speech apeared to scan each syllable
+		horizontal nystagmus
+		impaired heel knee test
+		motor strength
+		oriented
+		reflexes were normal
+		seizures
+		sensory loss
+		vertigo
+	model_output:
+		5 years history
+		ataxia
+		bilateral fingertonose ataxia
+		dysarthria
+		episode of fever for 45 days
+		horizontal nystagmus on both vertical and lateral gaze
+		impaired heel knee test
+		progressive
+		relieved spontaneously
+		vertigo
+	true_positives:
+		ataxia
+		bilateral fingertonose ataxia
+		dysarthria
+		impaired heel knee test
+		vertigo
+	true_positives_partial:
+	false_positives:
+		5 years history
+		episode of fever for 45 days
+		horizontal nystagmus on both vertical and lateral gaze
+		progressive
+		relieved spontaneously
+	false_negatives:
+		alert
+		altered sensorium
+		deep tendon reflexes
+		fever
+		head injury
+		headache
+		his speech apeared to scan each syllable
+		horizontal nystagmus
+		motor strength
+		oriented
+		reflexes were normal
+		seizures
+		sensory loss
+
+
+Nombre del archivo: 6_ChatGPT_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000524
+		hp:0001045
+		hp:0002317
+		hp:0002788
+		hp:0003487
+		hp:0003698
+		hp:0007717
+		hp:0025337
+	model_output:
+		hp:0000516
+		hp:0000624
+		hp:0000778
+		hp:0001045
+		hp:0001251
+		hp:0002720, hp:0004843, hp:0011466
+		hp:0004875
+		hp:0008463
+		hp:0009726
+	true_positives:
+		hp:0001045
+	true_positives_partial:
+	false_positives:
+		hp:0000516
+		hp:0000624
+		hp:0000778
+		hp:0001251
+		hp:0002720, hp:0004843, hp:0011466
+		hp:0004875
+		hp:0008463
+		hp:0009726
+	false_negatives:
+		hp:0000524
+		hp:0002317
+		hp:0002788
+		hp:0003487
+		hp:0003698
+		hp:0007717
+		hp:0025337
+
+
+Nombre del archivo: 1_Doc2HPO_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000365
+		hp:0000505
+		hp:0000726
+		hp:0000736
+		hp:0000741
+		hp:0001288
+		hp:0001289
+		hp:0001342
+		hp:0002066
+		hp:0002070
+		hp:0002138
+		hp:0002315
+		hp:0002354
+		hp:0002403
+		hp:0004396
+		hp:0008619
+		hp:0030516
+		hp:0030731
+		hp:0031179
+	model_output:
+		hp:0000365
+		hp:0000726
+		hp:0000741
+		hp:0001251
+		hp:0001288
+		hp:0001289
+		hp:0001945
+		hp:0002066
+		hp:0002138
+		hp:0002315
+		hp:0002354
+		hp:0002633
+		hp:0002664
+		hp:0012175
+		hp:0030516
+		hp:0030731
+		hp:0031179
+	true_positives:
+		hp:0000365
+		hp:0000726
+		hp:0000741
+		hp:0001288
+		hp:0001289
+		hp:0002066
+		hp:0002138
+		hp:0002315
+		hp:0002354
+		hp:0030516
+		hp:0030731
+		hp:0031179
+	true_positives_partial:
+	false_positives:
+		hp:0001251
+		hp:0001945
+		hp:0002633
+		hp:0002664
+		hp:0012175
+	false_negatives:
+		hp:0000505
+		hp:0000736
+		hp:0001342
+		hp:0002070
+		hp:0002403
+		hp:0004396
+		hp:0008619
+
+
+Nombre del archivo: 1_ataxaid_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000365
+		hp:0000505
+		hp:0000726
+		hp:0000736
+		hp:0000741
+		hp:0001288
+		hp:0001289
+		hp:0001342
+		hp:0002066
+		hp:0002070
+		hp:0002138
+		hp:0002315
+		hp:0002354
+		hp:0002403
+		hp:0004396
+		hp:0008619
+		hp:0030516
+		hp:0030731
+		hp:0031179
+	model_output:
+		hp:0000256
+		hp:0000407
+		hp:0000421
+		hp:0000726
+		hp:0000741
+		hp:0001251
+		hp:0001288
+		hp:0001289
+		hp:0001945
+		hp:0002138
+		hp:0002315
+		hp:0002354
+		hp:0002633
+		hp:0002664
+		hp:0007018
+		hp:0008441
+		hp:0030516
+		hp:0030731
+		hp:0031179
+		hp:0033258
+		hp:0100034
+	true_positives:
+		hp:0000726
+		hp:0000741
+		hp:0001288
+		hp:0001289
+		hp:0002138
+		hp:0002315
+		hp:0002354
+		hp:0030516
+		hp:0030731
+		hp:0031179
+	true_positives_partial:
+	false_positives:
+		hp:0000256
+		hp:0000407
+		hp:0000421
+		hp:0001251
+		hp:0001945
+		hp:0002633
+		hp:0002664
+		hp:0007018
+		hp:0008441
+		hp:0033258
+		hp:0100034
+	false_negatives:
+		hp:0000365
+		hp:0000505
+		hp:0000736
+		hp:0001342
+		hp:0002066
+		hp:0002070
+		hp:0002403
+		hp:0004396
+		hp:0008619
+
+
+Nombre del archivo: 15_Charlotte1_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000639
+		hp:0001252
+		hp:0001270
+		hp:0002078
+		hp:0030903
+	model_output:
+		hp:0001263
+		hp:0001290
+		hp:0001555
+		hp:0002078
+		hp:0002313
+		hp:0002462
+		hp:0004298
+	true_positives:
+		hp:0002078
+	true_positives_partial:
+	false_positives:
+		hp:0001263
+		hp:0001290
+		hp:0001555
+		hp:0002313
+		hp:0002462
+		hp:0004298
+	false_negatives:
+		hp:0000639
+		hp:0001252
+		hp:0001270
+		hp:0030903
+
+
+Nombre del archivo: 6_Charlotte1_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000524
+		hp:0001045
+		hp:0002317
+		hp:0002788
+		hp:0003487
+		hp:0003698
+		hp:0007717
+		hp:0025337
+	model_output:
+		hp:0000524
+		hp:0001045
+		hp:0001251
+		hp:0001288
+		hp:0004875
+	true_positives:
+		hp:0000524
+		hp:0001045
+	true_positives_partial:
+	false_positives:
+		hp:0001251
+		hp:0001288
+		hp:0004875
+	false_negatives:
+		hp:0002317
+		hp:0002788
+		hp:0003487
+		hp:0003698
+		hp:0007717
+		hp:0025337
+
+
+Nombre del archivo: 13_PubCaseFinder_terms.txt
+
+TERMS:
+	ground_truth:
+		action tremor
+		appendicular dysmetria
+		diabetic
+		dysarthria
+		foot ulcers
+		gait unsteadiness
+		generalised postural tremor
+		hyperintensity of dentate nuclei
+		mild dysphagia over 2 months
+		progressive slurring of speech
+		severe axial ataxia
+		spontaneous myoclonus of lower face
+	model_output:
+		action tremor
+		ataxia
+		dysarthria
+		dysmetria
+		dysphagia
+		encephalopathy
+		myoclonus
+		peripheral neuropathy
+		tremor
+	true_positives:
+		action tremor
+		dysarthria
+	true_positives_partial:
+		('ataxia', 'severe axial ataxia')
+		('dysmetria', 'appendicular dysmetria')
+		('dysphagia', 'mild dysphagia over 2 months')
+		('myoclonus', 'spontaneous myoclonus of lower face')
+		('tremor', 'generalised postural tremor')
+	false_positives:
+		encephalopathy
+		peripheral neuropathy
+	false_negatives:
+		diabetic
+		foot ulcers
+		gait unsteadiness
+		hyperintensity of dentate nuclei
+		progressive slurring of speech
+
+
+Nombre del archivo: 1_Nosotros_terms.txt
+
+TERMS:
+	ground_truth:
+		apathy
+		ataxic fingernose and heelshin test negative
+		ataxic gait
+		bilateral sensorineural hearing and visual deficits
+		brain hernation
+		cerebral bleeding
+		dementia
+		disorientation
+		fell without losing consciousness
+		forgetfulness
+		gait disturbance
+		headache
+		hearing deficits
+		lost appetite
+		meningism
+		metastases
+		negative rombergs test
+		nonattention
+		right homonymous hemianopsia
+		right occipital bleeding
+		siderosis
+		subarachnoid haemorrhage
+		undifferentiated carcinoma
+		visual deficits
+	model_output:
+		apathy
+		ataxia hypoacusis
+		ataxic
+		bleeding
+		cerebral bleeding
+		chronic bleeding
+		death
+		dementia
+		disorientation
+		fever
+		forgetfulness
+		gait disturbances
+		head trauma
+		headache
+		hearing deficits
+		herniation
+		meningism
+		motor deficits
+		right homonymous hemianopsia
+		sensorineural hearing and visual deficits
+		subarachnoid haemorrhage
+		tumour
+		undifferentiated carcinoma
+		vasculitis
+	true_positives:
+		apathy
+		cerebral bleeding
+		dementia
+		disorientation
+		forgetfulness
+		headache
+		hearing deficits
+		meningism
+		right homonymous hemianopsia
+		subarachnoid haemorrhage
+		undifferentiated carcinoma
+	true_positives_partial:
+		('ataxic', 'ataxic fingernose and heelshin test negative')
+		('bleeding', 'cerebral bleeding')
+		('sensorineural hearing and visual deficits', 'bilateral sensorineural hearing and visual deficits')
+	false_positives:
+		ataxia hypoacusis
+		chronic bleeding
+		death
+		fever
+		gait disturbances
+		head trauma
+		herniation
+		motor deficits
+		tumour
+		vasculitis
+	false_negatives:
+		ataxic gait
+		brain hernation
+		fell without losing consciousness
+		gait disturbance
+		lost appetite
+		metastases
+		negative rombergs test
+		nonattention
+		right occipital bleeding
+		siderosis
+		visual deficits
+
+
+Nombre del archivo: 12_Nosotros_terms.txt
+
+TERMS:
+	ground_truth:
+		he walk independently onlu from the age of three
+		independent for activities of daily living
+		mild perinatal hypoxic injury
+		mini mental status examination score 25/30
+		moderate mental retardation
+		motor milestones were acquired late
+		nonprogressive gait ataxia
+		scanning
+		slurred
+		staccato speech
+		truncal ataxia
+	model_output:
+		gait ataxia
+		hypotonia
+		hypoxic injury
+		slurred
+		truncal ataxia
+	true_positives:
+		slurred
+		truncal ataxia
+	true_positives_partial:
+		('gait ataxia', 'nonprogressive gait ataxia')
+		('hypoxic injury', 'mild perinatal hypoxic injury')
+	false_positives:
+		hypotonia
+	false_negatives:
+		he walk independently onlu from the age of three
+		independent for activities of daily living
+		mini mental status examination score 25/30
+		moderate mental retardation
+		motor milestones were acquired late
+		scanning
+		staccato speech
+
+
+Nombre del archivo: 6_Doc2HPO_terms.txt
+
+TERMS:
+	ground_truth:
+		both planter reflexes were flexors
+		conjunctival telangiectasias
+		patients eyes were red and....this is a chronic allergy
+		recurrent upper respiratory tract infections
+		the girl sways back and forth and side by side when she stands and walks
+		vitiligo
+	model_output:
+		allergy
+		ataxia
+		cerebral palsy
+		conjunctivitis
+		impaired delayed hypersensitivity
+		lymphoma
+		recurrent upper respiratory tract infections
+		telangiectasia
+		thymic hypoplasia
+		vitiligo
+	true_positives:
+		recurrent upper respiratory tract infections
+		vitiligo
+	true_positives_partial:
+		('allergy', 'patients eyes were red and....this is a chronic allergy')
+		('telangiectasia', 'conjunctival telangiectasias')
+	false_positives:
+		ataxia
+		cerebral palsy
+		conjunctivitis
+		impaired delayed hypersensitivity
+		lymphoma
+		thymic hypoplasia
+	false_negatives:
+		both planter reflexes were flexors
+		the girl sways back and forth and side by side when she stands and walks
+
+
+Nombre del archivo: 10_Charlotte2_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0001260
+		hp:0001336
+		hp:0002013
+		hp:0002018
+		hp:0002066
+		hp:0003002
+		hp:0010543
+		hp:4000033
+	model_output:
+		hp:0001336
+		hp:0002013
+		hp:0002018
+		hp:0002066
+	true_positives:
+		hp:0001336
+		hp:0002013
+		hp:0002018
+		hp:0002066
+	true_positives_partial:
+	false_positives:
+	false_negatives:
+		hp:0001260
+		hp:0003002
+		hp:0010543
+		hp:4000033
+
+
+Nombre del archivo: 8_ChatGPT_terms.txt
+
+TERMS:
+	ground_truth:
+		(leftsided) miosis
+		1 year history of ataxia
+		bilateral limb ataxia
+		he lost balance
+		hiccough
+		hypertension for 10 years
+		leaned to the left side while standing
+		leftsided ptosis
+		leftsided vertebral artery dolichoectasia
+		rightsided hypaesthesia
+	model_output:
+		ataxia
+		balance loss
+		brain mri
+		ct angiography
+		hiccough
+		hypaesthesia
+		hypertension
+		lateral medullary syndrome
+		limb ataxia
+		miosis
+		ptosis
+		vertebral artery dolichoectasia
+	true_positives:
+		hiccough
+	true_positives_partial:
+		('ataxia', '1 year history of ataxia')
+		('hypaesthesia', 'rightsided hypaesthesia')
+		('hypertension', 'hypertension for 10 years')
+		('limb ataxia', 'bilateral limb ataxia')
+		('miosis', '(leftsided) miosis')
+		('ptosis', 'leftsided ptosis')
+		('vertebral artery dolichoectasia', 'leftsided vertebral artery dolichoectasia')
+	false_positives:
+		balance loss
+		brain mri
+		ct angiography
+		lateral medullary syndrome
+	false_negatives:
+		he lost balance
+		leaned to the left side while standing
+
+
+Nombre del archivo: 2_Nosotros_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000639
+		hp:0001250
+		hp:0001251
+		hp:0001260
+		hp:0001289
+		hp:0001315
+		hp:0001324
+		hp:0001347
+		hp:0001365
+		hp:0001945
+		hp:0002070
+		hp:0002168
+		hp:0002315
+		hp:0002321
+		hp:0003474
+		hp:0025267
+	model_output:
+		hp:0000639
+		hp:0001250
+		hp:0001251
+		hp:0001260
+		hp:0001350
+		hp:0001945
+		hp:0002013
+		hp:0002315
+		hp:0002321
+		hp:0002344
+		hp:0010835
+		hp:0041064
+		hp:0100716
+	true_positives:
+		hp:0000639
+		hp:0001250
+		hp:0001251
+		hp:0001260
+		hp:0001945
+		hp:0002315
+		hp:0002321
+	true_positives_partial:
+	false_positives:
+		hp:0001350
+		hp:0002013
+		hp:0002344
+		hp:0010835
+		hp:0041064
+		hp:0100716
+	false_negatives:
+		hp:0001289
+		hp:0001315
+		hp:0001324
+		hp:0001347
+		hp:0001365
+		hp:0002070
+		hp:0002168
+		hp:0003474
+		hp:0025267
+
+
+Nombre del archivo: 14_Charlotte2_terms.txt
+
+TERMS:
+	ground_truth:
+		diplopia
+		haemorrhage in midbrain
+		hydrocephalus
+		lobulated lesion
+		worsening ataxia
+	model_output:
+		4week history
+		diplopia
+		worsening ataxia
+	true_positives:
+		diplopia
+		worsening ataxia
+	true_positives_partial:
+	false_positives:
+		4week history
+	false_negatives:
+		haemorrhage in midbrain
+		hydrocephalus
+		lobulated lesion
+
+
+Nombre del archivo: 8_Charlotte1_terms.txt
+
+TERMS:
+	ground_truth:
+		(leftsided) miosis
+		1 year history of ataxia
+		bilateral limb ataxia
+		he lost balance
+		hiccough
+		hypertension for 10 years
+		leaned to the left side while standing
+		leftsided ptosis
+		leftsided vertebral artery dolichoectasia
+		rightsided hypaesthesia
+	model_output:
+		1 year history of ataxia
+		bilateral limb ataxia
+		contralateral hypaesthesia
+		ipsilateral horners symptom
+		leaned to the left side while standing when putting his feet together
+		leftsided miosis
+		leftsided ptosis
+		limb and truncal ataxia more prominent ipsilaterally
+		more prominent on the left side
+		recently developed hiccough
+		rightsided hypaesthesia
+	true_positives:
+		1 year history of ataxia
+		bilateral limb ataxia
+		leftsided ptosis
+		rightsided hypaesthesia
+	true_positives_partial:
+	false_positives:
+		contralateral hypaesthesia
+		ipsilateral horners symptom
+		leaned to the left side while standing when putting his feet together
+		leftsided miosis
+		limb and truncal ataxia more prominent ipsilaterally
+		more prominent on the left side
+		recently developed hiccough
+	false_negatives:
+		(leftsided) miosis
+		he lost balance
+		hiccough
+		hypertension for 10 years
+		leaned to the left side while standing
+		leftsided vertebral artery dolichoectasia
+
+
+Nombre del archivo: 4_ClinPhen_terms.txt
+
+TERMS:
+	ground_truth:
+		cerebellar incoordination
+		dandywalker complex
+		headache
+		hydrocephalus
+		mild mental subnormality
+		progressive instability of stance and gait since the age of 2 years
+		vermis is hypoplastic
+		vomiting
+	model_output:
+	true_positives:
+	true_positives_partial:
+	false_positives:
+	false_negatives:
+		cerebellar incoordination
+		dandywalker complex
+		headache
+		hydrocephalus
+		mild mental subnormality
+		progressive instability of stance and gait since the age of 2 years
+		vermis is hypoplastic
+		vomiting
+
+
+Nombre del archivo: 6_PubCaseFinder_terms.txt
+
+TERMS:
+	ground_truth:
+		both planter reflexes were flexors
+		conjunctival telangiectasias
+		patients eyes were red and....this is a chronic allergy
+		recurrent upper respiratory tract infections
+		the girl sways back and forth and side by side when she stands and walks
+		vitiligo
+	model_output:
+		allergy
+		ataxia
+		cerebral palsy
+		conjunctival telangiectasia
+		conjunctivitis
+		impaired delayed hypersensitivity
+		lymphoma
+		recurrent upper respiratory tract infections
+		red eye
+		telangiectasia
+		thymic hypoplasia
+		vitiligo
+	true_positives:
+		recurrent upper respiratory tract infections
+		vitiligo
+	true_positives_partial:
+		('allergy', 'patients eyes were red and....this is a chronic allergy')
+		('conjunctival telangiectasia', 'conjunctival telangiectasias')
+		('telangiectasia', 'conjunctival telangiectasias')
+	false_positives:
+		ataxia
+		cerebral palsy
+		conjunctivitis
+		impaired delayed hypersensitivity
+		lymphoma
+		red eye
+		thymic hypoplasia
+	false_negatives:
+		both planter reflexes were flexors
+		the girl sways back and forth and side by side when she stands and walks
+
+
+Nombre del archivo: 6_Nosotros_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000524
+		hp:0001045
+		hp:0002317
+		hp:0002788
+		hp:0003487
+		hp:0003698
+		hp:0007717
+		hp:0025337
+	model_output:
+		hp:0000509
+		hp:0000778
+		hp:0001009
+		hp:0001045
+		hp:0001251
+		hp:0002972
+		hp:0003193
+		hp:0007841
+		hp:0011947
+		hp:0030080
+		hp:0100021
+		hp:0100697
+		hp:0100704
+	true_positives:
+		hp:0001045
+	true_positives_partial:
+	false_positives:
+		hp:0000509
+		hp:0000778
+		hp:0001009
+		hp:0001251
+		hp:0002972
+		hp:0003193
+		hp:0007841
+		hp:0011947
+		hp:0030080
+		hp:0100021
+		hp:0100697
+		hp:0100704
+	false_negatives:
+		hp:0000524
+		hp:0002317
+		hp:0002788
+		hp:0003487
+		hp:0003698
+		hp:0007717
+		hp:0025337
+
+
+Nombre del archivo: 7_ataxaid_terms.txt
+
+TERMS:
+	ground_truth:
+		abnormal gait
+		ataxia of stance and gait
+		generalised myoclonic jerks
+		jerky limb movements
+		opsoclonus
+	model_output:
+		abnormal gait and sudden repetitive jerky limbs movements
+		ataxia
+		idiopathic
+		idiopathic opsoclonus
+		jerks
+		myoclonic jerks
+		myoclonus
+		nystagmus
+		ocular dyskinesia
+		ocular flutter horizontal backtoback
+		opsoclonus
+		paraneoplastic neuroblastoma
+		smallcell lung cancer
+		sudden involuntary chaotic arrhythmic and multidirectional upwards downwards and torsional conjugate saccadic ocular movements
+		toxic aetiologies
+		tumour
+		visual blurring
+	true_positives:
+		opsoclonus
+	true_positives_partial:
+		('ataxia', 'ataxia of stance and gait')
+		('jerks', 'generalised myoclonic jerks')
+		('myoclonic jerks', 'generalised myoclonic jerks')
+	false_positives:
+		abnormal gait and sudden repetitive jerky limbs movements
+		idiopathic
+		idiopathic opsoclonus
+		myoclonus
+		nystagmus
+		ocular dyskinesia
+		ocular flutter horizontal backtoback
+		paraneoplastic neuroblastoma
+		smallcell lung cancer
+		sudden involuntary chaotic arrhythmic and multidirectional upwards downwards and torsional conjugate saccadic ocular movements
+		toxic aetiologies
+		tumour
+		visual blurring
+	false_negatives:
+		abnormal gait
+		jerky limb movements
+
+
+Nombre del archivo: 12_Charlotte1_terms.txt
+
+TERMS:
+	ground_truth:
+		he walk independently onlu from the age of three
+		independent for activities of daily living
+		mild perinatal hypoxic injury
+		mini mental status examination score 25/30
+		moderate mental retardation
+		motor milestones were acquired late
+		nonprogressive gait ataxia
+		scanning
+		slurred
+		staccato speech
+		truncal ataxia
+	model_output:
+		hypotonia
+		moderate mental retardation
+		motor milestones were acquired late
+		nonprogressive gait ataxia
+		since childhood
+		slurred scanning
+		staccato speech
+		truncal ataxia
+	true_positives:
+		moderate mental retardation
+		motor milestones were acquired late
+		nonprogressive gait ataxia
+		staccato speech
+		truncal ataxia
+	true_positives_partial:
+	false_positives:
+		hypotonia
+		since childhood
+		slurred scanning
+	false_negatives:
+		he walk independently onlu from the age of three
+		independent for activities of daily living
+		mild perinatal hypoxic injury
+		mini mental status examination score 25/30
+		scanning
+		slurred
+
+
+Nombre del archivo: 12_Nosotros_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0001270
+		hp:0001350
+		hp:0002066
+		hp:0002078
+		hp:0002168
+		hp:0002342
+		hp:0012418
+		hp:5200012
+	model_output:
+		hp:0001252
+		hp:0001350
+		hp:0002066
+		hp:0002078
+		hp:0100716
+	true_positives:
+		hp:0001350
+		hp:0002066
+		hp:0002078
+	true_positives_partial:
+	false_positives:
+		hp:0001252
+		hp:0100716
+	false_negatives:
+		hp:0001270
+		hp:0002168
+		hp:0002342
+		hp:0012418
+		hp:5200012
+
+
+Nombre del archivo: 2_Doc2HPO_terms.txt
+
+TERMS:
+	ground_truth:
+		alert
+		altered sensorium
+		ataxia
+		bilateral fingertonose ataxia
+		deep tendon reflexes
+		dysarthria
+		fever
+		head injury
+		headache
+		his speech apeared to scan each syllable
+		horizontal nystagmus
+		impaired heel knee test
+		motor strength
+		oriented
+		reflexes were normal
+		seizures
+		sensory loss
+		vertigo
+	model_output:
+		ataxia
+		dysarthria
+		fever
+		headache
+		horizontal nystagmus
+		seizures
+		slurred speech
+		vertigo
+		vomiting
+	true_positives:
+		ataxia
+		dysarthria
+		fever
+		headache
+		horizontal nystagmus
+		seizures
+		vertigo
+	true_positives_partial:
+	false_positives:
+		slurred speech
+		vomiting
+	false_negatives:
+		alert
+		altered sensorium
+		bilateral fingertonose ataxia
+		deep tendon reflexes
+		head injury
+		his speech apeared to scan each syllable
+		impaired heel knee test
+		motor strength
+		oriented
+		reflexes were normal
+		sensory loss
+
+
+Nombre del archivo: 14_ClinPhen_terms.txt
+
+TERMS:
+	ground_truth:
+		diplopia
+		haemorrhage in midbrain
+		hydrocephalus
+		lobulated lesion
+		worsening ataxia
+	model_output:
+	true_positives:
+	true_positives_partial:
+	false_positives:
+	false_negatives:
+		diplopia
+		haemorrhage in midbrain
+		hydrocephalus
+		lobulated lesion
+		worsening ataxia
+
+
+Nombre del archivo: 7_ClinPhen_terms.txt
+
+TERMS:
+	ground_truth:
+		abnormal gait
+		ataxia of stance and gait
+		generalised myoclonic jerks
+		jerky limb movements
+		opsoclonus
+	model_output:
+	true_positives:
+	true_positives_partial:
+	false_positives:
+	false_negatives:
+		abnormal gait
+		ataxia of stance and gait
+		generalised myoclonic jerks
+		jerky limb movements
+		opsoclonus
+
+
+Nombre del archivo: 2_Nosotros_terms.txt
+
+TERMS:
+	ground_truth:
+		alert
+		altered sensorium
+		ataxia
+		bilateral fingertonose ataxia
+		deep tendon reflexes
+		dysarthria
+		fever
+		head injury
+		headache
+		his speech apeared to scan each syllable
+		horizontal nystagmus
+		impaired heel knee test
+		motor strength
+		oriented
+		reflexes were normal
+		seizures
+		sensory loss
+		vertigo
+	model_output:
+		ataxia
+		ataxia dysarthria
+		ataxic
+		fever
+		fingertonose ataxia
+		head injury
+		headache
+		impaired heel knee
+		neurological symptoms
+		nystagmus
+		seizures fever
+		sensory loss
+		slurred
+		vertigo
+		vomiting
+	true_positives:
+		ataxia
+		fever
+		head injury
+		headache
+		sensory loss
+		vertigo
+	true_positives_partial:
+		('fingertonose ataxia', 'bilateral fingertonose ataxia')
+		('impaired heel knee', 'impaired heel knee test')
+		('nystagmus', 'horizontal nystagmus')
+	false_positives:
+		ataxia dysarthria
+		ataxic
+		neurological symptoms
+		seizures fever
+		slurred
+		vomiting
+	false_negatives:
+		alert
+		altered sensorium
+		deep tendon reflexes
+		dysarthria
+		his speech apeared to scan each syllable
+		motor strength
+		oriented
+		reflexes were normal
+		seizures
+
+
+Nombre del archivo: 15_ChatGPT_terms.txt
+
+TERMS:
+	ground_truth:
+		delayed milestones
+		developemental delay
+		hypotonia
+		not able to pull to sit or stand
+		nystagmus
+		premature grasp
+		second degree consanguineous
+		swaying from side to side when pulled to sit
+		tremulousness
+		truncal ataxia
+	model_output:
+		consanguinity
+		delayed milestones
+		gross developmental delay
+		hypotonia
+		nystagmus
+		premature grasp
+		tremulousness
+		truncal ataxia
+	true_positives:
+		delayed milestones
+		hypotonia
+		nystagmus
+		premature grasp
+		tremulousness
+		truncal ataxia
+	true_positives_partial:
+	false_positives:
+		consanguinity
+		gross developmental delay
+	false_negatives:
+		developemental delay
+		not able to pull to sit or stand
+		second degree consanguineous
+		swaying from side to side when pulled to sit
+
+
+Nombre del archivo: 12_PubCaseFinder_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0001270
+		hp:0001350
+		hp:0002066
+		hp:0002078
+		hp:0002168
+		hp:0002342
+		hp:0012418
+		hp:5200012
+	model_output:
+		hp:0001290
+		hp:0002078
+		hp:0002342
+		hp:0007240
+	true_positives:
+		hp:0002078
+		hp:0002342
+	true_positives_partial:
+	false_positives:
+		hp:0001290
+		hp:0007240
+	false_negatives:
+		hp:0001270
+		hp:0001350
+		hp:0002066
+		hp:0002168
+		hp:0012418
+		hp:5200012
+
+
+Nombre del archivo: 13_Charlotte2_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000819
+		hp:0001026
+		hp:0001260
+		hp:0001336
+		hp:0001350
+		hp:0002015
+		hp:0002070
+		hp:0002174
+		hp:0002317
+		hp:0002345
+		hp:0002406
+	model_output:
+		hp:0001260
+		hp:0001310
+		hp:0001336
+		hp:0001350
+		hp:0002015
+		hp:0002070
+		hp:0002174
+		hp:0002317
+		hp:0002345
+	true_positives:
+		hp:0001260
+		hp:0001336
+		hp:0001350
+		hp:0002015
+		hp:0002070
+		hp:0002174
+		hp:0002317
+		hp:0002345
+	true_positives_partial:
+	false_positives:
+		hp:0001310
+	false_negatives:
+		hp:0000819
+		hp:0001026
+		hp:0002406
+
+
+Nombre del archivo: 2_ataxaid_terms.txt
+
+TERMS:
+	ground_truth:
+		alert
+		altered sensorium
+		ataxia
+		bilateral fingertonose ataxia
+		deep tendon reflexes
+		dysarthria
+		fever
+		head injury
+		headache
+		his speech apeared to scan each syllable
+		horizontal nystagmus
+		impaired heel knee test
+		motor strength
+		oriented
+		reflexes were normal
+		seizures
+		sensory loss
+		vertigo
+	model_output:
+		ataxia
+		ataxia dysarthria
+		ataxic
+		fever
+		fingertonose ataxia
+		head injury
+		headache
+		impaired heel knee
+		neurological symptoms
+		nystagmus
+		seizures fever
+		sensory loss
+		slurred
+		vertigo
+		vomiting
+	true_positives:
+		ataxia
+		fever
+		head injury
+		headache
+		sensory loss
+		vertigo
+	true_positives_partial:
+		('fingertonose ataxia', 'bilateral fingertonose ataxia')
+		('impaired heel knee', 'impaired heel knee test')
+		('nystagmus', 'horizontal nystagmus')
+	false_positives:
+		ataxia dysarthria
+		ataxic
+		neurological symptoms
+		seizures fever
+		slurred
+		vomiting
+	false_negatives:
+		alert
+		altered sensorium
+		deep tendon reflexes
+		dysarthria
+		his speech apeared to scan each syllable
+		motor strength
+		oriented
+		reflexes were normal
+		seizures
+
+
+Nombre del archivo: 6_ataxaid_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000524
+		hp:0001045
+		hp:0002317
+		hp:0002788
+		hp:0003487
+		hp:0003698
+		hp:0007717
+		hp:0025337
+	model_output:
+		hp:0000509
+		hp:0000524
+		hp:0000778
+		hp:0001009
+		hp:0001045
+		hp:0001251
+		hp:0002972
+		hp:0003193
+		hp:0006962
+		hp:0007841
+		hp:0011947
+		hp:0030080
+		hp:0100021
+		hp:0100242
+	true_positives:
+		hp:0000524
+		hp:0001045
+	true_positives_partial:
+	false_positives:
+		hp:0000509
+		hp:0000778
+		hp:0001009
+		hp:0001251
+		hp:0002972
+		hp:0003193
+		hp:0006962
+		hp:0007841
+		hp:0011947
+		hp:0030080
+		hp:0100021
+		hp:0100242
+	false_negatives:
+		hp:0002317
+		hp:0002788
+		hp:0003487
+		hp:0003698
+		hp:0007717
+		hp:0025337
+
+
+Nombre del archivo: 1_PubCaseFinder_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000365
+		hp:0000505
+		hp:0000726
+		hp:0000736
+		hp:0000741
+		hp:0001288
+		hp:0001289
+		hp:0001342
+		hp:0002066
+		hp:0002070
+		hp:0002138
+		hp:0002315
+		hp:0002354
+		hp:0002403
+		hp:0004396
+		hp:0008619
+		hp:0030516
+		hp:0030731
+		hp:0031179
+	model_output:
+		hp:0000365
+		hp:0000726
+		hp:0000741
+		hp:0001251
+		hp:0001288
+		hp:0001289
+		hp:0001945
+		hp:0002066
+		hp:0002138
+		hp:0002315
+		hp:0002354
+		hp:0002633
+		hp:0002664
+		hp:0012175
+		hp:0030516
+		hp:0030731
+		hp:0031179
+		hp:0100790
+	true_positives:
+		hp:0000365
+		hp:0000726
+		hp:0000741
+		hp:0001288
+		hp:0001289
+		hp:0002066
+		hp:0002138
+		hp:0002315
+		hp:0002354
+		hp:0030516
+		hp:0030731
+		hp:0031179
+	true_positives_partial:
+	false_positives:
+		hp:0001251
+		hp:0001945
+		hp:0002633
+		hp:0002664
+		hp:0012175
+		hp:0100790
+	false_negatives:
+		hp:0000505
+		hp:0000736
+		hp:0001342
+		hp:0002070
+		hp:0002403
+		hp:0004396
+		hp:0008619
+
+
+Nombre del archivo: 6_Doc2HPO_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000524
+		hp:0001045
+		hp:0002317
+		hp:0002788
+		hp:0003487
+		hp:0003698
+		hp:0007717
+		hp:0025337
+	model_output:
+		hp:0000509
+		hp:0000777
+		hp:0001009
+		hp:0001045
+		hp:0001251
+		hp:0002665
+		hp:0002788
+		hp:0002972
+		hp:0012393
+		hp:0100021
+	true_positives:
+		hp:0001045
+		hp:0002788
+	true_positives_partial:
+	false_positives:
+		hp:0000509
+		hp:0000777
+		hp:0001009
+		hp:0001251
+		hp:0002665
+		hp:0002972
+		hp:0012393
+		hp:0100021
+	false_negatives:
+		hp:0000524
+		hp:0002317
+		hp:0003487
+		hp:0003698
+		hp:0007717
+		hp:0025337
+
+
+Nombre del archivo: 7_Doc2HPO_terms.txt
+
+TERMS:
+	ground_truth:
+		abnormal gait
+		ataxia of stance and gait
+		generalised myoclonic jerks
+		jerky limb movements
+		opsoclonus
+	model_output:
+		abnormal gait
+		ataxia
+		dyskinesia
+		lung cancer
+		myoclonic jerks
+		neuroblastoma
+		nystagmus
+		opsoclonus
+		tumour
+	true_positives:
+		abnormal gait
+		opsoclonus
+	true_positives_partial:
+		('ataxia', 'ataxia of stance and gait')
+		('myoclonic jerks', 'generalised myoclonic jerks')
+	false_positives:
+		dyskinesia
+		lung cancer
+		neuroblastoma
+		nystagmus
+		tumour
+	false_negatives:
+		jerky limb movements
+
+
+Nombre del archivo: 1_ChatGPT_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000365
+		hp:0000505
+		hp:0000726
+		hp:0000736
+		hp:0000741
+		hp:0001288
+		hp:0001289
+		hp:0001342
+		hp:0002066
+		hp:0002070
+		hp:0002138
+		hp:0002315
+		hp:0002354
+		hp:0002403
+		hp:0004396
+		hp:0008619
+		hp:0030516
+		hp:0030731
+		hp:0031179
+	model_output:
+		hp:0000365
+		hp:0000726
+		hp:0000741
+		hp:0001264
+		hp:0001288
+		hp:0001342
+		hp:0001348
+		hp:0002066
+		hp:0002138
+		hp:0002315
+		hp:0002354
+		hp:0002425
+		hp:0005068
+		hp:0007182
+		hp:0011446
+		hp:0012781
+	true_positives:
+		hp:0000365
+		hp:0000726
+		hp:0000741
+		hp:0001288
+		hp:0001342
+		hp:0002066
+		hp:0002138
+		hp:0002315
+		hp:0002354
+	true_positives_partial:
+	false_positives:
+		hp:0001264
+		hp:0001348
+		hp:0002425
+		hp:0005068
+		hp:0007182
+		hp:0011446
+		hp:0012781
+	false_negatives:
+		hp:0000505
+		hp:0000736
+		hp:0001289
+		hp:0002070
+		hp:0002403
+		hp:0004396
+		hp:0008619
+		hp:0030516
+		hp:0030731
+		hp:0031179
+
+
+Nombre del archivo: 8_Charlotte1_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000508
+		hp:0000616
+		hp:0000822
+		hp:0001251
+		hp:0002070
+		hp:0002172
+		hp:0002936
+		hp:0020038
+		hp:0100247
+	model_output:
+		hp:0000508
+		hp:0000636
+		hp:0001251
+		hp:0001298
+		hp:0002070
+		hp:0002078
+		hp:0002277
+		hp:0002514
+		hp:0003397
+		hp:0010824
+		hp:0031364
+	true_positives:
+		hp:0000508
+		hp:0001251
+		hp:0002070
+	true_positives_partial:
+	false_positives:
+		hp:0000636
+		hp:0001298
+		hp:0002078
+		hp:0002277
+		hp:0002514
+		hp:0003397
+		hp:0010824
+		hp:0031364
+	false_negatives:
+		hp:0000616
+		hp:0000822
+		hp:0002172
+		hp:0002936
+		hp:0020038
+		hp:0100247
+
+
+Nombre del archivo: 4_Charlotte2_terms.txt
+
+TERMS:
+	ground_truth:
+		cerebellar incoordination
+		dandywalker complex
+		headache
+		hydrocephalus
+		mild mental subnormality
+		progressive instability of stance and gait since the age of 2 years
+		vermis is hypoplastic
+		vomiting
+	model_output:
+		cerebellar dysfunction
+		cerebellar incoordination
+		headache
+		mild mental subnormality
+		occasional vomiting
+		progressive instability of stance and gait since the age of 2 years
+	true_positives:
+		cerebellar incoordination
+		headache
+		mild mental subnormality
+		progressive instability of stance and gait since the age of 2 years
+	true_positives_partial:
+	false_positives:
+		cerebellar dysfunction
+		occasional vomiting
+	false_negatives:
+		dandywalker complex
+		hydrocephalus
+		vermis is hypoplastic
+		vomiting
+
+
+Nombre del archivo: 2_PubCaseFinder_terms.txt
+
+TERMS:
+	ground_truth:
+		alert
+		altered sensorium
+		ataxia
+		bilateral fingertonose ataxia
+		deep tendon reflexes
+		dysarthria
+		fever
+		head injury
+		headache
+		his speech apeared to scan each syllable
+		horizontal nystagmus
+		impaired heel knee test
+		motor strength
+		oriented
+		reflexes were normal
+		seizures
+		sensory loss
+		vertigo
+	model_output:
+		ataxia
+		dysarthria
+		fever
+		headache
+		horizontal nystagmus
+		seizures
+		slurred speech
+		vertigo
+		vomiting
+	true_positives:
+		ataxia
+		dysarthria
+		fever
+		headache
+		horizontal nystagmus
+		seizures
+		vertigo
+	true_positives_partial:
+	false_positives:
+		slurred speech
+		vomiting
+	false_negatives:
+		alert
+		altered sensorium
+		bilateral fingertonose ataxia
+		deep tendon reflexes
+		head injury
+		his speech apeared to scan each syllable
+		impaired heel knee test
+		motor strength
+		oriented
+		reflexes were normal
+		sensory loss
+
+
+Nombre del archivo: 10_ChatGPT_terms.txt
+
+TERMS:
+	ground_truth:
+		2 years before the first...
+		breast carcinoma
+		cerebellar gait ataxia
+		cervical myoclonus
+		dysarthria
+		nausea
+		opsoclonus
+		oscillopsia
+		she has refused mastectomy
+		vomiting
+	model_output:
+		breast carcinoma
+		broad-based gait
+		cerebellar gait ataxia
+		cervical myoclonus
+		dysarthria
+		myoclonus
+		nausea
+		opsoclonus
+		oscillopsia
+		vomiting
+	true_positives:
+		breast carcinoma
+		cerebellar gait ataxia
+		cervical myoclonus
+		dysarthria
+		nausea
+		opsoclonus
+		oscillopsia
+		vomiting
+	true_positives_partial:
+		('myoclonus', 'cervical myoclonus')
+	false_positives:
+		broad-based gait
+	false_negatives:
+		2 years before the first...
+		she has refused mastectomy
+
+
+Nombre del archivo: 1_Charlotte2_terms.txt
+
+TERMS:
+	ground_truth:
+		apathy
+		ataxic fingernose and heelshin test negative
+		ataxic gait
+		bilateral sensorineural hearing and visual deficits
+		brain hernation
+		cerebral bleeding
+		dementia
+		disorientation
+		fell without losing consciousness
+		forgetfulness
+		gait disturbance
+		headache
+		hearing deficits
+		lost appetite
+		meningism
+		metastases
+		negative rombergs test
+		nonattention
+		right homonymous hemianopsia
+		right occipital bleeding
+		siderosis
+		subarachnoid haemorrhage
+		undifferentiated carcinoma
+		visual deficits
+	model_output:
+		apathy
+		ataxic fingernose negative
+		ataxic gait
+		bilateral sensorineural hearing deficits
+		dementia
+		disorientation
+		fell without losing consciousness
+		forgetfulness
+		headache
+		hearing deficits
+		heelshin test negative
+		lost appetite
+		meningism
+		negative rombergs test
+		nonattention
+		right homonymous hemianopsia
+		visual deficits
+	true_positives:
+		apathy
+		ataxic gait
+		dementia
+		disorientation
+		fell without losing consciousness
+		forgetfulness
+		headache
+		hearing deficits
+		lost appetite
+		meningism
+		negative rombergs test
+		nonattention
+		right homonymous hemianopsia
+		visual deficits
+	true_positives_partial:
+		('heelshin test negative', 'ataxic fingernose and heelshin test negative')
+	false_positives:
+		ataxic fingernose negative
+		bilateral sensorineural hearing deficits
+	false_negatives:
+		bilateral sensorineural hearing and visual deficits
+		brain hernation
+		cerebral bleeding
+		gait disturbance
+		metastases
+		right occipital bleeding
+		siderosis
+		subarachnoid haemorrhage
+		undifferentiated carcinoma
+
+
+Nombre del archivo: 2_ClinPhen_hpo.txt
+
+HPO:
+	ground_truth:
+		hp:0000639
+		hp:0001250
+		hp:0001251
+		hp:0001260
+		hp:0001289
+		hp:0001315
+		hp:0001324
+		hp:0001347
+		hp:0001365
+		hp:0001945
+		hp:0002070
+		hp:0002168
+		hp:0002315
+		hp:0002321
+		hp:0003474
+		hp:0025267
+	model_output:
+		hp:0000639
+		hp:0000666
+		hp:0001251
+		hp:0001260
+		hp:0001350
+		hp:0002073
+		hp:0002321
+		hp:0006934
+		hp:0007811
+		hp:0007859
+		hp:0010544
+	true_positives:
+		hp:0000639
+		hp:0001251
+		hp:0001260
+		hp:0002321
+	true_positives_partial:
+	false_positives:
+		hp:0000666
+		hp:0001350
+		hp:0002073
+		hp:0006934
+		hp:0007811
+		hp:0007859
+		hp:0010544
+	false_negatives:
+		hp:0001250
+		hp:0001289
+		hp:0001315
+		hp:0001324
+		hp:0001347
+		hp:0001365
+		hp:0001945
+		hp:0002070
+		hp:0002168
+		hp:0002315
+		hp:0003474
+		hp:0025267
+
+

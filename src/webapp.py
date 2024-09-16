@@ -29,7 +29,7 @@ def resultados():
         element_str = f'{element.text} {element.label_} {negated}'
         #entities_str.append(element_str)
         elementos_informe.append((informe[last_printed_char:element.start_char], None, None, None))
-        elementos_informe.append((element.text, f'{i} - {element_str}', element.label_.lower(), negated))
+        elementos_informe.append((element.text, f'{i} - {element_str}', element.label_.lower() if element.label_!="ENTITY" else "disease", negated))
         last_printed_char = element.end_char
     elementos_informe.append((informe[last_printed_char:], None, None, None))
 
@@ -51,7 +51,7 @@ def resultados():
             m = matches[0]
             listado.append((entity,m.HPO.name,m.HPO.id))
             patient_hpos.append(m.HPO.id)
-        elif entity.label_ == 'DISEASE':
+        elif entity.label_ == 'ENTITY':#'DISEASE':
             listado.append((entity, '--NO MATCH--', '--NO MATCH--'))
 
     disease_hits = ataxaid.find_matching_diseases(patient_hpos)

@@ -1,0 +1,11 @@
+name: ataxaid
+
+channels:
+  - akode
+  - defaults
+
+dependencies:
+  - python
+  - nmslib
+  - nltk
+  - jupyter

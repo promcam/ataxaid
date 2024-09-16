@@ -12,7 +12,7 @@ from nltk.stem import PorterStemmer
 import pickle
 import os
 import numpy as np
-import googletrans
+#import googletrans
 
 PROJ_DIR = os.path.realpath(os.path.dirname(os.path.dirname(__file__)))
 DB_PATH = os.path.join(PROJ_DIR, 'assets', 'database.pickle')
@@ -32,26 +32,36 @@ def remove_contractions(phrase):
     phrase = re.sub(r"\'m", " am", phrase)
     return phrase
 
-def extract_entities_from_file(path:str) -> list[Span]:
+def extract_entities_from_file(path:str, ner_type:str) -> tuple[list[Span], str]:
     text = Path(path).read_text()
-    return extract_entities(text)
+    return extract_entities(text, ner_type)
 
-nlp_model = None # Global variable to retain between calls and avoid loading the model everytime
+nlp_models = {} # Global variable to retain between calls and avoid loading the model everytime
 
-def extract_entities(text:str) -> tuple[list[Span], str]: #Also returns the text
-    translator = googletrans.Translator()
-    if translator.detect(text).lang=="es":
-        text = translator.translate(text, dest='en').text
+def extract_entities(text:str, ner_type:str) -> tuple[list[Span], str]: #Also returns the text
+    # ner_type in [en_ner_bc5cdr_md | en_ner_bionlp13cg_md | en_core_sci_scibert]
+    # translator = googletrans.Translator()
+    # if translator.detect(text).lang=="es":
+    #     text = translator.translate(text, dest='en').text
     text = remove_contractions(text)
 
     # Load spaCy model
-    global nlp_model
-    if nlp_model is None:
-        logging.debug('Loading en_ner_bc5cdr_md...')
-        nlp_model = spacy.load("en_ner_bc5cdr_md")
-        nlp_model.add_pipe("negex", config={"ent_types":["DISEASE"]})
+    global nlp_models
+    if ner_type not in nlp_models:
+        # OPCIÓN 1
+        if ner_type == 'en_ner_bc5cdr_md':
+            logging.debug('Loading en_ner_bc5cdr_md...')
+            nlp_models[ner_type] = spacy.load("en_ner_bc5cdr_md")
+            nlp_models[ner_type].add_pipe("negex", config={"ent_types":["DISEASE"]})
+        elif ner_type == 'en_ner_bionlp13cg_md': # OPCIÓN 2
+            logging.debug('Loading en_ner_bionlp13cg_md...')
+            nlp_models[ner_type] = spacy.load("en_ner_bionlp13cg_md")
+        elif ner_type == 'en_core_sci_scibert': # OPCIÓN 3
+            logging.debug('Loading en_core_sci_scibert...')
+            nlp_models[ner_type] = spacy.load("en_core_sci_scibert")
+            nlp_models[ner_type].add_pipe("negex", config={"ent_types":["ENTITY"]})
 
-    spacy_doc = nlp_model(text)
+    spacy_doc = nlp_models[ner_type](text)
     return list(spacy_doc.ents), text
 
 def _get_combinations(token_list:list[Token]) -> list[str]:
@@ -116,7 +126,7 @@ def _stem_phrase(phrase:str) -> str:
     return "".join(stem_sentence).strip()
 
 stopwords = None # Global variable to retain between calls and avoid loading the stopword list everytime
-def _hamming_distance(original:str, find:str, partial_match_value:float = 0.51) -> float:
+def _levenshtein_distance(original:str, find:str, partial_match_value:float = 0.51) -> float:
     original = original.lower()
     find = find.lower()
     
@@ -142,7 +152,7 @@ def _hamming_distance(original:str, find:str, partial_match_value:float = 0.51) 
     original_stems = original_stemmed.split(" ")
     find_stems = find_stemmed.split(" ")
 
-    # Separamos original y find en palabras
+    # Separate original and find in words
     original = re.sub(r'[^a-z0-9\-]+',' ', original).split(' ')
     find = re.sub(r'[^a-z0-9\-]+',' ', find).split(' ')
     
@@ -165,7 +175,7 @@ def _hamming_distance(original:str, find:str, partial_match_value:float = 0.51) 
             # Añadido para hacer más permisiva la comparación para intentar subsanar errores del stemmer
             matches += partial_match_value
 
-    # Compute Hamming distance: # chars to be added/removed + #chars to be changed
+    # Compute Levenshtein distance: # chars to be added/removed + #chars to be changed
     return abs(num_original - num_find) + min(num_original, num_find) - matches
 
 def _get_mins(iterable:Iterable[Any], key:Callable[[Any], float]) ->  list[Any]:
@@ -187,7 +197,7 @@ def _get_mins(iterable:Iterable[Any], key:Callable[[Any], float]) ->  list[Any]:
 
 
 Ontology = None # Global variable to retain between calls and avoid loading and initializing the ontology everytime it's needed
-def _search_HPO(query:str, string_to_match:str, distance_measurer:Callable[[str, str], float] = _hamming_distance) -> list[HPOMatch]:
+def _search_HPO(query:str, string_to_match:str, distance_measurer:Callable[[str, str], float] = _levenshtein_distance) -> list[HPOMatch]:
     '''
     Given a query term, finds the best (according to distance_measurer) HPO matches resulting from matching HPO terms with it
     '''
@@ -210,11 +220,17 @@ def _search_HPO(query:str, string_to_match:str, distance_measurer:Callable[[str,
         results = list(results)
     
     if len(results) > 0:
+        checked_hpo_results = {}
         logging.info(f'{len(results)} results for "{query}"({stemmed_query})')
         all_matches:list[str] = []
         for i,r in enumerate(results):
             # possible_names will store all possible ways to refer to the HPO term from search result r
             possible_names = r.synonym + [r.name]
+
+            if r.id in checked_hpo_results:
+                print('!! DUPLICATE RESULT')
+            else:
+                checked_hpo_results[r.id] = r
 
             # Measure how well query matches each of the possible_names
             all_matches += list(map(lambda x: HPOMatch(query, r, x, distance_measurer(string_to_match, x)), possible_names))
@@ -228,7 +244,7 @@ def _search_HPO(query:str, string_to_match:str, distance_measurer:Callable[[str,
         if logging.getLogger().isEnabledFor(logging.INFO):
             all_matches.sort(key=lambda x:-x.distance)
             for match in all_matches:
-                print(f'\t\t\t{match.matching_HPO_term} ({match.distance})')
+                logging.info(f'\t\t\t{match.matching_HPO_term} ({match.distance})')
 
         logging.info(f'Got {" | ".join(map(lambda x: f"{x.HPO.id} ({x.matching_HPO_term})",best_matches))} for "{query}"({stemmed_query}) {min_distance}')
     else:
@@ -240,7 +256,9 @@ def get_HPO_matches(entity:Span) -> list[HPOMatch]:
     Given an entity, returns a list of HPOMatches
     '''
     all_matches:list[HPOMatch] = []
-    if entity.label_=='DISEASE': # Only process diseases, ignore rest 
+    # OPCIÓN 1 or OPCIÓN 3
+    #if (NER_TYPE == 'en_ner_bc5cdr_md' and entity.label_=='DISEASE') or (NER_TYPE == 'en_core_sci_scibert' and entity.label_=='ENTITY'): # Only process diseases, ignore rest 
+    if entity.label_=='DISEASE' or entity.label_=='ENTITY': # Only process diseases, ignore rest 
         # Get all alternative ways of referring to entity
         alternative_names = _get_alternative_names(entity)
         
@@ -260,7 +278,7 @@ def get_HPO_matches(entity:Span) -> list[HPOMatch]:
                 logging.info(f'Found these options for {entity.text} with distance {best_entity_matches[0].distance}:')
                 if logging.getLogger().isEnabledFor(logging.INFO):
                     for match in best_entity_matches:
-                        print(f'\t{match.HPO.id} ({match.matching_HPO_term}) para "{match.query}"')
+                        logging.info(f'\t{match.HPO.id} ({match.matching_HPO_term}) para "{match.query}"')
                 # Select the longest ones
                 best_entity_matches = _get_mins(best_entity_matches, lambda x: len(x.matching_HPO_term))
                 logging.warning(f'More than one HPOMatch for {entity.text}')
@@ -298,6 +316,8 @@ if __name__ == '__main__':
     print(f'Extracting entities from {FILE_PATH}...')
     entities = extract_entities_from_file(FILE_PATH)
 
+    '''
+    entities, text = extract_entities('The patient has Headache, Right homonymous hemianopsia, Bleeding in the brain, Gait disturbances, Hearing deficits, Disorientation, Meningism, Ataxia, Dementia, Forgetfulness, Nonattention, Apathy, Superficial CNS siderosis, Cerebral angiography, Subarachnoid hemorrhage, Brain herniation, Metastases of an undifferentiated carcinoma.')
     print('Las entidades extraídas por en_ner_bc5cdr_md con negaciones son:')
     for element in entities:
         negated = "NEGATED" if element._.negex else ""
@@ -310,6 +330,7 @@ if __name__ == '__main__':
         if entity in processed: # Skip entities that have already been processed
             continue
         processed[element.text] = True
+        print(element.text)
         matches = get_HPO_matches(entity)
 
         if len(matches) > 0:
@@ -318,6 +339,7 @@ if __name__ == '__main__':
                 print(f'\t{m.HPO.id} - {m.HPO.name} ({m.query} vs. {m.matching_HPO_term} - dist={m.distance})')
         else:
             print(f'No se han detectado términos HPO para "{entity.text}"')
-    '''
-    print(find_matching_diseases(['HP:0000158','HP:0001344', 'HP:0006380']))
+    
+    #print(find_matching_diseases(['HP:0000158','HP:0001344', 'HP:0006380']))
+    
 
