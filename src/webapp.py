@@ -20,7 +20,7 @@ def resultados():
     if informe is None or informe == '':
         return redirect("/?error=1", code=302)
     
-    entities, informe = ataxaid.extract_entities(informe)
+    entities, informe = ataxaid.extract_entities(informe, 'en_ner_bc5cdr_md')
     #entities_str = []
     elementos_informe:list[tuple[str, str, str, str]] = []
     last_printed_char = 0
