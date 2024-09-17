@@ -12,7 +12,7 @@ from nltk.stem import PorterStemmer
 import pickle
 import os
 import numpy as np
-#import googletrans
+import googletrans
 
 PROJ_DIR = os.path.realpath(os.path.dirname(os.path.dirname(__file__)))
 DB_PATH = os.path.join(PROJ_DIR, 'assets', 'database.pickle')
@@ -40,9 +40,9 @@ nlp_models = {} # Global variable to retain between calls and avoid loading the 
 
 def extract_entities(text:str, ner_type:str) -> tuple[list[Span], str]: #Also returns the text
     # ner_type in [en_ner_bc5cdr_md | en_ner_bionlp13cg_md | en_core_sci_scibert]
-    # translator = googletrans.Translator()
-    # if translator.detect(text).lang=="es":
-    #     text = translator.translate(text, dest='en').text
+    translator = googletrans.Translator()
+    if translator.detect(text).lang=="es":
+        text = translator.translate(text, dest='en').text
     text = remove_contractions(text)
 
     # Load spaCy model
